@@ -1,21 +1,23 @@
 {
-  "name": "skeleton",
-  "version": "2.0.4",
-  "homepage": "http://getskeleton.com/",
+  "name": "armazon.css",
+  "version": "0.0.1",
+  "homepage": "http://alterebro.github.io/armazon.css/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dhg/Skeleton"
+    "url": "https://github.com/alterebro/armazon.css"
   },
   "authors": [
-    "Dave Gamache <hello@davegamache.com> (http://davegamache.com/)"
+    "Jorge Moreno <alterebro@gmail.com> (http://moro.es)"
   ],
-  "description": "Skeleton is a dead-simple, responsive boilerplate to kickstart any responsive project.",
-  "main": "css/skeleton.css",
+  "description": "armazon.css is based on Skeleton, a dead-simple, responsive boilerplate to kickstart any responsive project.",
+  "main": "css/armazon.css",
   "keywords": [
     "css",
+    "armazon",
     "skeleton",
     "responsive",
-    "boilerplate"
+    "boilerplate",
+    "normalize"
   ],
   "license": "MIT"
 }
