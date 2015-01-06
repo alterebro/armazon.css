@@ -1,4 +1,13 @@
-/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/*
+* normalize.css v3.0.2
+* MIT License
+* git.io/normalize
+*/
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
@@ -11,12 +20,17 @@ html {
   /* 2 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
+  box-sizing: border-box;
+  font-size: 62.5%;
 }
-/**
- * Remove default margin.
- */
 body {
-  margin: 0;
+  font-size: 1.6em;
+  line-height: 1.45;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 /* HTML5 display definitions
    ========================================================================== */
@@ -77,6 +91,7 @@ template {
  */
 a {
   background-color: transparent;
+  text-decoration: none;
 }
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
@@ -105,14 +120,6 @@ strong {
  */
 dfn {
   font-style: italic;
-}
-/**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari, and Chrome.
- */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
 }
 /**
  * Address styling not present in IE 8/9.
@@ -174,6 +181,14 @@ hr {
   height: 0;
 }
 /**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+/**
  * Contain overflow in all browsers.
  */
 pre {
@@ -186,7 +201,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
+  font-family: monospace;
   font-size: 1em;
 }
 /* Forms
