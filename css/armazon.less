@@ -1,5 +1,19 @@
+/*! armazon.css - MIT License - http://git.io/armazon */
 // --------------------------------------------
-// normalize.css v3.0.2 - MIT License - git.io/normalize
+// armazon.css : CSS3 Boilerplate based in the following projects:
+// 	- normalize.css v3.0.2 - MIT License - git.io/normalize
+// 	- Skeleton V2.0.4 - Copyright 2014, Dave Gamache - MIT license - www.getskeleton.com
+
+// --------------------------------------------
+// Variables @Less
+@global-margin: 3rem;
+@global-color-primary: #09c;
+@global-color-background: #f0f0f0;
+@global-color-foreground: #333;
+@global-color-grey-dark: #555;
+@global-color-grey-medium: #999;
+@global-color-grey-light: #ccc;
+
 
 // Remove default margin spacing
 html, body {
@@ -9,16 +23,19 @@ html, body {
 
 // 1. Set default font family to sans-serif.
 // 2. Prevent iOS text size adjust after orientation change, without disabling user zoom.
+// 3. html is set to 62.5% so that all the REM measurements throughout Skeleton are based on 10px sizing. So basically 1.5rem = 15px :)
 html {
 	font-family: sans-serif; 		// 1
 	-ms-text-size-adjust: 100%; 	// 2
 	-webkit-text-size-adjust: 100%; // 2
 	box-sizing: border-box; 		// Box model
-	font-size: 62.5%;  				// Base 10 pixels
+	font-size: 62.5%;  				// 3
 }
 body {
-	font-size: 1.6em; 				// 16 pixels
+	font-size: 1.6em; 				// 16 pixels - currently ems cause chrome bug misinterpreting rems on body element
 	line-height: 1.45;  
+	background: @global-color-background;
+	color: @global-color-foreground;
 }
 *, *:before, *:after {
 	box-sizing: inherit; 			// Box model cont.
@@ -62,12 +79,13 @@ audio:not([controls]) {
 a {
 	background-color: transparent;
 	text-decoration: none;
-	// set global a-tag color   
+	color: @global-color-primary; 
 }
 
 // Improve readability when focused and also mouse hovered in all browsers.
 a:active, a:hover {
 	outline: 0;
+	text-decoration: underline;
 }
 
 // --------------------------------------------
@@ -116,7 +134,7 @@ sub { bottom: -0.25em; }
 // Remove border when inside `a` element in IE 8/9/10.
 img {
 	border: 0;
-	// block displayed?
+	display: block;
 }
 
 // Correct overflow not hidden in IE 9/10/11.
@@ -129,22 +147,15 @@ svg:not(:root) {
 
 // Address margin not present in IE 8/9 and Safari.
 figure {
-	margin: 1em 40px;
+	margin: 1em 4em;
 }
 
 // Address differences between Firefox and other browsers.
 hr {
-	-moz-box-sizing: content-box;
-	box-sizing: content-box;
 	height: 0;
-	// set margin
-	// set border line (top)
-}
-
-// Address variable `h1` font-size and margin within `section` and `article` contexts in Firefox 4+, Safari, and Chrome.
-h1 {
-	font-size: 2em;
-	margin: 0.67em 0;
+	margin: @global-margin 0;
+	border: none;
+	border-top: dotted @global-color-grey-light 1px;
 }
 
 // Contain overflow in all browsers.
@@ -157,6 +168,7 @@ code, kbd, pre, samp {
 	font-family: monospace;
 	font-size: 1em;
 }
+
 
 // --------------------------------------------
 // Forms
@@ -199,6 +211,23 @@ input[type="reset"],
 input[type="submit"] {
 	-webkit-appearance: button; 	// 2 
 	cursor: pointer; 				// 3 
+
+	display: inline-block;
+	padding: 0 4rem;
+	height: 4rem;
+	background: @global-color-background;
+	border: solid @global-color-grey-light 1px;
+	text-transform: uppercase;
+	font-size: 75%;
+	letter-spacing: .3rem;
+	color: @global-color-grey-dark;	
+}
+
+button, button:hover, button:focus,
+html input[type="button"], html input[type="button"]:hover, html input[type="button"]:focus,  
+input[type="reset"], input[type="reset"]:hover, input[type="reset"]:focus,
+input[type="submit"], input[type="submit"]:hover, input[type="submit"]:focus {
+	border: solid @global-color-grey-dark 1px;	
 }
 
 // Re-set default cursor for disabled elements.
@@ -221,12 +250,10 @@ input {
 
 // It's recommended that you don't attempt to style these elements.
 // Firefox's implementation doesn't respect box-sizing, padding, or width.
-// 1. Address box sizing set to `content-box` in IE 8/9/10.
-// 2. Remove excess padding in IE 8/9/10.
+// 1. Remove excess padding in IE 8/9/10.
 input[type="checkbox"],
 input[type="radio"] {
-	box-sizing: border-box; 	// 1 
-	padding: 0; 				// 2 
+	padding: 0; 				// 1 
 }
 
 // Fix the cursor style for Chrome's increment/decrement buttons. For certain `font-size` values of the `input`, it causes the cursor style of the decrement button to change from `default` to `text`.
@@ -236,13 +263,8 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 // 1. Address `appearance` set to `searchfield` in Safari and Chrome.
-// 2. Address `box-sizing` set to `border-box` in Safari and Chrome
-//    (include `-moz` to future-proof).
 input[type="search"] {
 	-webkit-appearance: textfield; 		// 1
-	-moz-box-sizing: content-box;
-	-webkit-box-sizing: content-box; 	// 2
-	box-sizing: content-box;
 }
 
 // Remove inner padding and search cancel button in Safari and Chrome on OS X.
@@ -254,9 +276,9 @@ input[type="search"]::-webkit-search-decoration {
 
 // Define consistent border, margin, and padding.
 fieldset {
-	border: 1px solid #c0c0c0;
-	margin: 0 2px;
-	padding: 0.35em 0.625em 0.75em;
+	border: solid @global-color-grey-light 1px;
+	margin: 0 1px;
+	padding: (@global-margin/2);
 }
 
 // 1. Correct `color` not being inherited in IE 8/9/10/11.
@@ -291,15 +313,16 @@ td, th {
 
 
 
-// --------------------------------------------
-// Skeleton V2.0.4 - Copyright 2014, Dave Gamache - MIT license - www.getskeleton.com
+
+
+
+
 
 
 // --------------------------------------------
 /* Table of contents
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 - Grid
-- Base Styles
 - Typography
 - Links
 - Buttons
@@ -401,24 +424,16 @@ td, th {
 }
 
 
-// --------------------------------------------
-// Base Styles
-
-// NOTE
-// 	html is set to 62.5% so that all the REM measurements throughout Skeleton 
-// 	are based on 10px sizing. So basically 1.5rem = 15px :)
-html {
-	font-size: 62.5%; }
-body {
-	font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
-	line-height: 1.6;
-	font-weight: 400;
-	font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: #222; }
-
 
 // --------------------------------------------
 // Typography
+
+// Skeleton: Address variable `h1` font-size and margin within `section` and `article` contexts in Firefox 4+, Safari, and Chrome.
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	margin-top: 0;
 	margin-bottom: 2rem;
