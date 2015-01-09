@@ -540,6 +540,43 @@ blockquote, figure, table, ul, ol, dl, form {
 
 
 
+.row {
+	clear: both;
+	overflow: auto;
+	margin: 0 0 @global-margin/2 0;
+}
+[class^="column-"] {
+	width: 100%;
+	float: left;
+	margin: 0 2% 0 0;
+border-radius: 3px;
+border: solid @global-color-grey-light 1px;
+text-align: center;
+font-size: 1.2rem;
+color: @global-color-grey-medium;
+padding: .5rem 0;
+}
+[class^="column-"]:first-child {}
+[class^="column-"]:last-child { margin-right: 0; }
+
+.column-2-12, .column-one-sixth 	{ width: 15%;   }
+.column-3-12, .column-one-fourth 	{ width: 23.5%; }
+.column-4-12, .column-one-third 	{ width: 32%;   }
+.column-6-12, .column-one-half 		{ width: 49%;   }
+.column-8-12, .column-two-thirds 	{ width: 66%;   }
+.column-9-12, .column-three-fourths { width: 74.5%; }
+.column-10-12, .column-five-sixths 	{ width: 83%;   }
+
+.offset-by-one-sixth 		{ margin-left: 17%; 	}
+.offset-by-one-fourth 		{ margin-left: 25.5%; 	}
+.offset-by-one-third	 	{ margin-left: 34%; 	}
+.offset-by-one-half 		{ margin-left: 51%;  	}
+.offset-by-two-thirds 		{ margin-left: 68%; 	}
+.offset-by-three-fourths 	{ margin-left: 76.5%; 	}
+.offset-by-five-sixths 		{ margin-left: 85%; 	}
+
+
+
 
 
 
