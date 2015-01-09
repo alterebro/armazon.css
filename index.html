@@ -7,9 +7,10 @@
 	<meta name="description" content="armazon.css - lightweight and simple CSS3 Boilerplate" />
 	<meta name="author" content="Jorge Moreno @alterebro" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="styles/armazon.min.css" />
+	<link rel="stylesheet" href="styles/armazon.css" />
 
 <style type="text/css">
+
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Inconsolata:400,700);
 body {
 	font-family: 'Lato';
@@ -21,6 +22,7 @@ body {
 code, kbd, pre, samp {
 	font-family: 'Inconsolata';
 }
+
 </style>
 
 </head>
@@ -28,8 +30,19 @@ code, kbd, pre, samp {
 
 <div class="container">
 	<div class="row">
-		<div class="ten columns" style="margin-top: 5rem">
+		<div class="twelve columns" style="margin-top: 3rem">
 			<h1>armazon.css</h1>
+			<p>
+				Built on LESS, <strong>armazon.css</strong> is a simple and lightweight CSS3 Boilerplate based on normalize.css and Skeleton.
+				It only styles the standard HTML tags and includes a responsive grid system semantically named using classes as : 'one third',
+				'one fourth', 'two thirds'...
+			</p>
+			<nav>
+				<ul>
+					<li><a href="#basic">Typography and Text</a></li>
+					<li><a href="#form-elements">Form Elements</a></li>
+				</ul>
+			</nav>
 			<hr />
 			
 			<h4>Basic Page</h4>
@@ -39,13 +52,13 @@ code, kbd, pre, samp {
 				hit up the <a href="http://git.io/armazon">armazon.css documentation</a>.
 			</p>
 			<p>
-				<mark>Sample text with formatted elements</mark>:
+				Sample text with formatted elements :
 				<br />
 				<abbr title="Too Long; Didn't Read">TLDR</abbr> : Sample nonsense lipsum text, 
 				Lorem ipsum dolor sit amet, consectetur<sub>2</sub> adipiscing elit. Ut eget massa commodo, 
 				venenatis<sup>3</sup> nisl in, <b>vestibulum turpis</b>. Ut ut tristique lorem, eget suscipit ante. 
 				Nam faucibus nisl ut dui faucibus volutpat. In hac <dfn>habitasse</dfn> platea dictumst. 
-				Duis vel ipsum scelerisque, venenatis nulla ac, venenatis magna. Suspendisse 
+				<mark>Duis vel ipsum scelerisque</mark>, venenatis nulla ac, venenatis magna. Suspendisse 
 				vulputate placerat lorem in tristique. 
 				<br />
 					<small>Small text : Donec eget dictum nisl, non gravida turpis. Etiam pharetra lorem a lobortis dapibus.</small>
@@ -59,12 +72,24 @@ code, kbd, pre, samp {
 
 			<h4>Form Elements</h4>
 
-			<fieldset>
-				<p>
-					<button>Sample button</button>
+			<fieldset class="row">
+				<p class="four columns">
+					<a href="#" class="button">button link</a> 	
+					<br />	<span class="button">span w/button class</span>
+					<br />	<button>Sample button</button>
 					<br />	<input type="button" value="Button Input Element" />
-					<br />	<input type="reset" value="Reset Input Element" />
+				</p>
+				<p class="four columns">
+					<input type="reset" value="Reset Input Element" />
 					<br />	<input type="submit" value="Submit Input Element" />
+					<br />	<a href="#" class="button button-main">button link</a> 	
+					<br />	<span class="button button-main">span w/button class</span>
+				</p>
+				<p class="four columns">
+					<button class="button-main">Sample button</button>
+					<br />	<input class="button-main" type="button" value="Button Input Element" />
+					<br />	<input class="button-main" type="reset" value="Reset Input Element" />
+					<br />	<input class="button-main" type="submit" value="Submit Input Element" />
 				</p>
 			</fieldset>
 
@@ -90,7 +115,6 @@ code, kbd, pre, samp {
 			</table>
 
 
-			<hr />
 			<h4>Code</h4>
 			<p>
 				This is an example of a paragraph with some inline <code>code</code>, it also has  
