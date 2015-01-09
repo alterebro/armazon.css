@@ -14,13 +14,15 @@ html {
 body {
   font-size: 1.6em;
   line-height: 1.45;
-  background: #f0f0f0;
-  color: #333333;
+  background: #ffffff;
+  color: #222222;
 }
 *,
 *:before,
 *:after {
   box-sizing: inherit;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 article,
 aside,
@@ -60,7 +62,7 @@ a {
 a:active,
 a:hover {
   outline: 0;
-  text-decoration: underline;
+  color: #222222;
 }
 abbr[title] {
   border-bottom: 1px dotted;
@@ -111,6 +113,22 @@ hr {
 pre {
   overflow: auto;
 }
+code {
+  padding: .25rem .5rem;
+  margin: 0 .25rem;
+  font-size: 80%;
+  white-space: nowrap;
+  background: #f2f2f2;
+  color: #555555;
+  border: solid #cccccc 1px;
+  border-radius: 2px;
+}
+pre > code {
+  display: block;
+  padding: 1.5rem;
+  white-space: pre;
+  line-height: 1.3;
+}
 code,
 kbd,
 pre,
@@ -143,7 +161,7 @@ input[type="submit"] {
   display: inline-block;
   padding: 0 4rem;
   height: 4rem;
-  background: #f0f0f0;
+  background: #ffffff;
   border: solid #cccccc 1px;
   text-transform: uppercase;
   font-size: 75%;
@@ -209,21 +227,30 @@ optgroup {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  width: 100%;
 }
-td,
-th {
-  padding: 0;
+th,
+td {
+  padding: 1rem 2rem;
+  text-align: left;
+  border-bottom: solid #cccccc 1px;
+  vertical-align: baseline;
+}
+th:first-child,
+td:first-child {
+  padding-left: 0;
+}
+th:last-child,
+td:last-child {
+  padding-right: 0;
 }
 /* Table of contents
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 - Grid
 - Typography
-- Links
 - Buttons
 - Forms
 - Lists
-- Code
-- Tables
 - Spacing
 - Utilities
 - Clearing
@@ -435,12 +462,6 @@ h6 {
 p {
   margin-top: 0;
 }
-a {
-  color: #1EAEDB;
-}
-a:hover {
-  color: #0FA0CE;
-}
 .button,
 button,
 input[type="submit"],
@@ -586,34 +607,6 @@ ol ul {
 }
 li {
   margin-bottom: 1rem;
-}
-code {
-  padding: .2rem .5rem;
-  margin: 0 .2rem;
-  font-size: 90%;
-  white-space: nowrap;
-  background: #F1F1F1;
-  border: 1px solid #E1E1E1;
-  border-radius: 4px;
-}
-pre > code {
-  display: block;
-  padding: 1rem 1.5rem;
-  white-space: pre;
-}
-th,
-td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #E1E1E1;
-}
-th:first-child,
-td:first-child {
-  padding-left: 0;
-}
-th:last-child,
-td:last-child {
-  padding-right: 0;
 }
 button,
 .button {

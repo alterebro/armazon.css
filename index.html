@@ -3,11 +3,12 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />  
-	<title>[Edit me]</title>
-	<meta name="description" content="[Edit me]" />
-	<meta name="author" content="[Edit me]" />
+	<title>armazon.css</title>
+	<meta name="description" content="armazon.css - lightweight and simple CSS3 Boilerplate" />
+	<meta name="author" content="Jorge Moreno @alterebro" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="css/armazon.min.css">
+	<link rel="stylesheet" href="styles/armazon.min.css" />
+
 <style type="text/css">
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Inconsolata:400,700);
 body {
@@ -21,28 +22,82 @@ code, kbd, pre, samp {
 	font-family: 'Inconsolata';
 }
 </style>
+
 </head>
 <body>
 
 <div class="container">
 	<div class="row">
-		<div class="one-half column" style="margin-top: 25%">
+		<div class="ten columns" style="margin-top: 5rem">
+			<h1>armazon.css</h1>
+			<hr />
+			
 			<h4>Basic Page</h4>
 			<p>
-				This index.html page is a placeholder with the CSS, font and favicon. 
+				This index.html page is a placeholder with the CSS and WebFont. 
 				It's just waiting for you to add some content! If you need some help 
-				hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.
+				hit up the <a href="http://git.io/armazon">armazon.css documentation</a>.
+			</p>
+			<p>
+				<mark>Sample text with formatted elements</mark>:
+				<br />
+				<abbr title="Too Long; Didn't Read">TLDR</abbr> : Sample nonsense lipsum text, 
+				Lorem ipsum dolor sit amet, consectetur<sub>2</sub> adipiscing elit. Ut eget massa commodo, 
+				venenatis<sup>3</sup> nisl in, <b>vestibulum turpis</b>. Ut ut tristique lorem, eget suscipit ante. 
+				Nam faucibus nisl ut dui faucibus volutpat. In hac <dfn>habitasse</dfn> platea dictumst. 
+				Duis vel ipsum scelerisque, venenatis nulla ac, venenatis magna. Suspendisse 
+				vulputate placerat lorem in tristique. 
+				<br />
+					<small>Small text : Donec eget dictum nisl, non gravida turpis. Etiam pharetra lorem a lobortis dapibus.</small>
+				<br />
+				<strong>Sed dapibus orci eu dictum consectetur</strong>. 
+				Sed consequat ligula vitae metus finibus, at pulvinar quam feugiat. 
+				<a href="about://" target="_blank">Aliquam quis sagittis velit</a>.
 			</p>
 
 			<hr />
 
 			<h4>Form Elements</h4>
+
+			<fieldset>
+				<p>
+					<button>Sample button</button>
+					<br />	<input type="button" value="Button Input Element" />
+					<br />	<input type="reset" value="Reset Input Element" />
+					<br />	<input type="submit" value="Submit Input Element" />
+				</p>
+			</fieldset>
+
+			<hr />
+			<h4>Tables</h4>
+			<table>
+				<thead>
+					<tr>
+						<th>Table Header #1</th>
+						<th>Table Header #2</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Sample text ... Donec eget dictum nisl</td>
+						<td>Sample text ... Etiam pharetra lorem a lobortis dapibus</td>
+					</tr>
+					<tr>
+						<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+						<td>Ut eget massa commodo, venenatis nisl in, vestibulum turpis.</td>
+					</tr>
+				</tbody>
+			</table>
+
+
+			<hr />
+			<h4>Code</h4>
 			<p>
-				<button>Sample button</button>
-				<br />	<input type="button" value="Button Input Element" />
-				<br />	<input type="reset" value="Reset Input Element" />
-				<br />	<input type="submit" value="Submit Input Element" />
+				This is an example of a paragraph with some inline <code>code</code>, it also has  
+				a <kbd>kbd</kbd> tag element and of course a <samp>samp</samp> text aswell ...
 			</p>
+			<pre>This is a pre code block</pre>
+			<pre><code>This is a code string contained within a pre element</code></pre>
 
 		</div>
 	</div>
