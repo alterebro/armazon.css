@@ -17,6 +17,7 @@ body {
 	font-weight: 300;
 	font-size: 1.6rem;
 	width: 80%;
+	max-width: 980px;
 	margin: 5rem auto;
 }
 code, kbd, pre, samp {
@@ -39,217 +40,259 @@ nav ul li a {
 	letter-spacing: .2rem;
 	padding: 0 3rem 0 0;
 }
+
+header {
+	padding: 4rem 0;
+}
+#grid-system [class^="column-"] {
+	border-radius: 3px;
+	border: solid #ccc 1px;
+	text-align: center;
+	font-size: 1.2rem;
+	color: #999;
+	padding: .5rem 0;
+	background: #eee;
+}
+
 </style>
 
 </head>
 <body>
 
+<header>
+	<h1>armazon.css</h1>
+	<p>
+		Built on LESS, <strong>armazon.css</strong> is a simple and lightweight CSS3 Boilerplate based on normalize.css and Skeleton.
+		It only styles the standard HTML tags and includes a responsive grid system semantically named using classes as : 'one third',
+		'one fourth', 'two thirds'...
+	</p>
+	<nav>
+		<ul>
+			<li><a href="#text-typography">Typography and Text</a></li>
+			<li><a href="#grid-system">Grid and Offset</a></li>
+			<li><a href="#form-elements">Form Elements</a></li>
+			<li><a href="#tables">tables</a></li>
+			<li><a href="#code">Code Blocks</a></li>
+			<li><a href="#lists">Lists</a></li>
+		</ul>
+	</nav>
+	<hr />
+</header>
 
+<main>
 
-<div class="container">
+	<section id="text-typography">
 
-	<div class="row">
-		<div class="twelve columns" style="margin-top: 3rem">
-			<h1>armazon.css</h1>
-			<p>
-				Built on LESS, <strong>armazon.css</strong> is a simple and lightweight CSS3 Boilerplate based on normalize.css and Skeleton.
-				It only styles the standard HTML tags and includes a responsive grid system semantically named using classes as : 'one third',
-				'one fourth', 'two thirds'...
-			</p>
-			<nav>
-				<ul>
-					<li><a href="#basic">Typography and Text</a></li>
-					<li><a href="#grid-system">Grid and Offset</a></li>
-					<li><a href="#form-elements">Form Elements</a></li>
-					<li><a href="#tables">tables</a></li>
-					<li><a href="#Code">Code Blocks</a></li>
-					<li><a href="#Lists">Lists</a></li>
-				</ul>
-			</nav>
-			<hr />
-			
-			<h4>Typography &amp; Text Elements</h4>
-	
-			<div class="row">
-				<div class="six columns">
-					<h1>Header Level 1</h1>
-					<h2>Header Level 2</h2>
-					<h3>Header Level 3</h3>
-					<h4>Header Level 4</h4>
-					<h5>Header Level 5</h5>
-					<h6>Header Level 6</h6>
-				</div>
-
-				<div class="six columns">
-					<p>
-						This index.html page is a placeholder with the CSS and WebFont. 
-						It's just waiting for you to add some content! If you need some help 
-						hit up the <a href="http://git.io/armazon">armazon.css documentation</a>.
-					</p>
-					<p>
-						Sample text with formatted elements :
-						<br />
-						<abbr title="Too Long; Didn't Read">TLDR</abbr> : Sample nonsense lipsum text, 
-						Lorem ipsum dolor sit amet, consectetur<sub>2</sub> adipiscing elit. Ut eget massa commodo, 
-						venenatis<sup>3</sup> nisl in, <b>vestibulum turpis</b>. Ut ut tristique lorem, eget suscipit ante. 
-						Nam faucibus nisl ut dui faucibus volutpat. In hac <dfn>habitasse</dfn> platea dictumst. 
-						<mark>Duis vel ipsum scelerisque</mark>, venenatis nulla ac, venenatis magna. Suspendisse 
-						vulputate placerat lorem in tristique. 
-						<br />
-							<small>Small text : Donec eget dictum nisl, non gravida turpis. Etiam pharetra lorem a lobortis dapibus.</small>
-						<br />
-						<strong>Sed dapibus orci eu dictum consectetur</strong>. 
-						Sed consequat ligula vitae metus finibus, at pulvinar quam feugiat. 
-						<a href="about://" target="_blank">Aliquam quis sagittis velit</a>.
-					</p>
-				</div>
+		<h4>Typography &amp; Text Elements</h4>
+		<div class="row">
+			<div class="column-one-half">
+				<h1>Header Level 1</h1>
+				<h2>Header Level 2</h2>
+				<h3>Header Level 3</h3>
+				<h4>Header Level 4</h4>
+				<h5>Header Level 5</h5>
+				<h6>Header Level 6</h6>
 			</div>
 
-			<hr />
-
-
-
-			<div id="grid-system">
-				<h4>Grid</h4>
-				<div class="row">
-					<div class="column-one-sixth">one-sixth</div>
-					<div class="column-one-sixth">one-sixth</div>
-					<div class="column-one-sixth">one-sixth</div>
-					<div class="column-one-sixth">one-sixth</div>
-					<div class="column-one-sixth">one-sixth</div>
-					<div class="column-one-sixth">one-sixth</div>
-				</div>
-
-				<div class="row">
-					<div class="column-five-sixths">five-sixths</div>
-					<div class="column-one-sixth">one-sixth</div>
-				</div>
-
-				<div class="row">
-					<div class="column-one-fourth">one-fourth</div>
-					<div class="column-three-fourths">three fourths</div>
-				</div>
-
-				<div class="row">
-					<div class="column-one-third">one-third</div>
-					<div class="column-two-thirds">two-thirds</div>
-				</div>
-
-				<h4>Offsetting</h4>
-				<div class="row">
-					<div class="column-five-sixths offset-by-one-sixth">by 1/6</div>
-				</div>
-				<div class="row">
-					<div class="column-three-fourths offset-by-one-fourth">by 1/4</div>
-				</div>
-				<div class="row">
-					<div class="column-two-thirds offset-by-one-third">by 1/3</div>
-				</div>
-				<div class="row">
-					<div class="column-one-half offset-by-one-half">by 1/2</div>
-				</div>
-				<div class="row">
-					<div class="column-one-third offset-by-two-thirds">by 2/3</div>
-				</div>
-				<div class="row">
-					<div class="column-one-fourth offset-by-three-fourths">by 3/4</div>
-				</div>
-				<div class="row">
-					<div class="column-one-sixth offset-by-five-sixths">by 5/6</div>
-				</div>
+			<div class="column-one-half">
+				<p>
+					This index.html page is a placeholder with the CSS and WebFont. 
+					It's just waiting for you to add some content! If you need some help 
+					hit up the <a href="http://git.io/armazon">armazon.css documentation</a>.
+				</p>
+				<p>
+					Sample text with formatted elements :
+					<br />
+					<abbr title="Too Long; Didn't Read">TLDR</abbr> : Sample nonsense lipsum text, 
+					Lorem ipsum dolor sit amet, consectetur<sub>2</sub> adipiscing elit. Ut eget massa commodo, 
+					venenatis<sup>3</sup> nisl in, <b>vestibulum turpis</b>. Ut ut tristique lorem, eget suscipit ante. 
+					Nam faucibus nisl ut dui faucibus volutpat. In hac <dfn>habitasse</dfn> platea dictumst. 
+					<mark>Duis vel ipsum scelerisque</mark>, venenatis nulla ac, venenatis magna. Suspendisse 
+					vulputate placerat lorem in tristique. 
+					<br />
+						<small>Small text : Donec eget dictum nisl, non gravida turpis. Etiam pharetra lorem a lobortis dapibus.</small>
+					<br />
+					<strong>Sed dapibus orci eu dictum consectetur</strong>. 
+					Sed consequat ligula vitae metus finibus, at pulvinar quam feugiat. 
+					<a href="about://" target="_blank">Aliquam quis sagittis velit</a>.
+				</p>
 			</div>
-
-			<hr />
-
-
-			<h4>Form Elements</h4>
-			<fieldset class="row">
-				<p class="four columns">
-					<a href="#" class="button">button link</a> 	
-					<br />	<span class="button">span w/button class</span>
-					<br />	<button>Sample button</button>
-					<br />	<input type="button" value="Button Input Element" />
-				</p>
-				<p class="four columns">
-					<input type="reset" value="Reset Input Element" />
-					<br />	<input type="submit" value="Submit Input Element" />
-					<br />	<a href="#" class="button button-main">button link</a> 	
-					<br />	<span class="button button-main">span w/button class</span>
-				</p>
-				<p class="four columns">
-					<button class="button-main">Sample button</button>
-					<br />	<input class="button-main" type="button" value="Button Input Element" />
-					<br />	<input class="button-main" type="reset" value="Reset Input Element" />
-					<br />	<input class="button-main" type="submit" value="Submit Input Element" />
-				</p>
-			</fieldset>
-
-			<hr />
-			<h4>Tables</h4>
-			<table>
-				<thead>
-					<tr>
-						<th>Table Header #1</th>
-						<th>Table Header #2</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Sample text ... Donec eget dictum nisl</td>
-						<td>Sample text ... Etiam pharetra lorem a lobortis dapibus</td>
-					</tr>
-					<tr>
-						<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-						<td>Ut eget massa commodo, venenatis nisl in, vestibulum turpis.</td>
-					</tr>
-				</tbody>
-			</table>
-
-
-			<h4>Code</h4>
-			<p>
-				This is an example of a paragraph with some inline <code>code</code>, it also has  
-				a <kbd>kbd</kbd> tag element and of course a <samp>samp</samp> text aswell ...
-			</p>
-			<pre>This is a pre code block</pre>
-			<pre><code>This is a code string contained within a pre element</code></pre>
-
-
-			<h4>Lists</h4>
-			<div class="row">
-				<div class="four columns">
-					<h5>unordered list</h5>
-					<ul>
-						<li>list item #01</li>
-						<li>list item #02</li>
-						<li>list item #03</li>
-						<li>list item #04</li>
-					</ul>
-				</div>
-				<div class="four columns">
-					<h5>ordered list</h5>
-					<ol>
-						<li>list item #01</li>
-						<li>list item #02</li>
-						<li>list item #03</li>
-						<li>list item #04</li>
-					</ol>
-				</div>
-				<div class="four columns">
-					<h5>definition list</h5>
-					<dl>
-						<dt>Definition term</dt>
-						<dd>Term definition</dd>
-						<dt>Definition term</dt>
-						<dd>Term definition</dd>
-					</dl>
-				</div>
-			</div>
-
-
 		</div>
-	</div>
-</div>
+		<hr />
+
+	</section>
+
+	<section id="grid-system">
+
+		<h4>Grid</h4>
+		<div class="row">
+			<div class="column-one-sixth">one-sixth</div>
+			<div class="column-one-sixth">one-sixth</div>
+			<div class="column-one-sixth">one-sixth</div>
+			<div class="column-one-sixth">one-sixth</div>
+			<div class="column-one-sixth">one-sixth</div>
+			<div class="column-one-sixth">one-sixth</div>
+		</div>
+		<div class="row">
+			<div class="column-five-sixths">five-sixths</div>
+			<div class="column-one-sixth">one-sixth</div>
+		</div>
+		<div class="row">
+			<div class="column-one-fourth">one-fourth</div>
+			<div class="column-three-fourths">three fourths</div>
+		</div>
+		<div class="row">
+			<div class="column-one-third">one-third</div>
+			<div class="column-two-thirds">two-thirds</div>
+		</div>
+
+		<h4>Offsetting</h4>
+		<div class="row">
+			<div class="column-five-sixths offset-by-one-sixth">by 1/6</div>
+		</div>
+		<div class="row">
+			<div class="column-three-fourths offset-by-one-fourth">by 1/4</div>
+		</div>
+		<div class="row">
+			<div class="column-two-thirds offset-by-one-third">by 1/3</div>
+		</div>
+		<div class="row">
+			<div class="column-one-half offset-by-one-half">by 1/2</div>
+		</div>
+		<div class="row">
+			<div class="column-one-third offset-by-two-thirds">by 2/3</div>
+		</div>
+		<div class="row">
+			<div class="column-one-fourth offset-by-three-fourths">by 3/4</div>
+		</div>
+		<div class="row">
+			<div class="column-one-sixth offset-by-five-sixths">by 5/6</div>
+		</div>
+
+		<hr />
+	</section>
+
+	<section id="form-elements">
+
+		<h4>Form Elements</h4>
+		<h5>Buttons</h5>
+		<div class="row">
+			<p class="column-one-third">
+				<a href="#" class="button">button link</a> 	
+				<br />	<span class="button">span w/button class</span>
+				<br />	<button>Sample button</button>
+				<br />	<input type="button" value="Button Input Element" />
+			</p>
+			<p class="column-one-third">
+				<input type="reset" value="Reset Input Element" />
+				<br />	<input type="submit" value="Submit Input Element" />
+				<br />	<a href="#" class="button button-main">button link</a> 	
+				<br />	<span class="button button-main">span w/button class</span>
+			</p>
+			<p class="column-one-third">
+				<button class="button-main">Sample button</button>
+				<br />	<input class="button-main" type="button" value="Button Input Element" />
+				<br />	<input class="button-main" type="reset" value="Reset Input Element" />
+				<br />	<input class="button-main" type="submit" value="Submit Input Element" />
+			</p>
+		</div>
+
+		<h5>Inputs</h5>
+		<div class="row">
+			<div class="column-one-third">
+				<label>date input <input type="date" /></label>
+				<label>time input <input type="time" /></label>
+				<label>email input <input type="email" /></label>
+				<label>number input <input type="number" /></label>
+				<label>search input <input type="search" /></label>	
+			</div>
+			<div class="column-one-third">
+				<label>text input <input type="text" /></label>
+				<label>tel input <input type="tel" /></label>
+				<label>url input <input type="url" /></label>
+				<label>password input <input type="password" /></label>
+				<label>Textarea Label</label>
+				<textarea>some textarea value...</textarea>
+			</div>
+			<div class="column-one-third">
+				<label>Select Label</label>
+				<select>
+					<option>Select Option</option>
+				</select>
+
+				<label><input type="checkbox" /> Checkbox Input label</label>
+				<label><input type="radio" /> Radio Input label</label>
+			</div>
+		</div>
+		<hr />
+	</section>
+
+	<section id="tables">
+		<h4>Tables</h4>
+		<table>
+			<thead>
+				<tr>
+					<th>Table Header #1</th>
+					<th>Table Header #2</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Sample text ... Donec eget dictum nisl</td>
+					<td>Sample text ... Etiam pharetra lorem a lobortis dapibus</td>
+				</tr>
+				<tr>
+					<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+					<td>Ut eget massa commodo, venenatis nisl in, vestibulum turpis.</td>
+				</tr>
+			</tbody>
+		</table>			
+	</section>
+
+	<section id="code">
+		<h4>Code</h4>
+		<p>
+			This is an example of a paragraph with some inline <code>code</code>, it also has  
+			a <kbd>kbd</kbd> tag element and of course a <samp>samp</samp> text aswell ...
+		</p>
+		<pre>This is a pre code block</pre>
+		<pre><code>This is a code string contained within a pre element</code></pre>
+		<hr />
+	</section>
+
+	<section id="lists">
+		<h4>Lists</h4>
+		<div class="row">
+			<div class="column-one-third">
+				<h5>unordered list</h5>
+				<ul>
+					<li>list item #01</li>
+					<li>list item #02</li>
+					<li>list item #03</li>
+					<li>list item #04</li>
+				</ul>
+			</div>
+			<div class="column-one-third">
+				<h5>ordered list</h5>
+				<ol>
+					<li>list item #01</li>
+					<li>list item #02</li>
+					<li>list item #03</li>
+					<li>list item #04</li>
+				</ol>
+			</div>
+			<div class="column-one-third">
+				<h5>definition list</h5>
+				<dl>
+					<dt>Definition term</dt>
+					<dd>Term definition</dd>
+					<dt>Definition term</dt>
+					<dd>Term definition</dd>
+				</dl>
+			</div>
+		</div>
+	</section>
+</main>
 
 </body>
 </html>
