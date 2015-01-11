@@ -12,27 +12,29 @@
 
 ## armazon.css - Plantilla CSS3 basada en [normalize.css](http://necolas.github.io/normalize.css/) y [Skeleton](http://getskeleton.com)
 
-armazon.css es un modelo de plantilla CSS3 supersimple que te ayudara a empezar cualquier proyecto web que requiera de un desarrollo adaptable en dispositivos móviles (Responsive Web Design).
+**armazon.css** es un modelo de plantilla CSS3 supersimple que te ayudara a empezar cualquier proyecto web que requiera de un desarrollo adaptable en dispositivos móviles (Responsive Web Design).
 
-armazon.css esta basado en Skeleton y aún está en progreso, puedes visitar la página del proyecto padre para ver más detalles y documentación <http://getskeleton.com>.
+**armazon.css** esta basado en Skeleton y aún es un trabajo en progreso, puedes visitar la página del proyecto padre para ver más detalles y documentación <http://getskeleton.com>.
 
 ## Primeros pasos
 
-Puedes descargar armazon.css de dos formas:
+Puedes usar armazon.css de las siguientes formas:
 
-- Descargando el zip (TODO: link al archivo zip)
+- Descargando el [archivo CSS minificado](https://raw.githubusercontent.com/alterebro/armazon.css/master/styles/armazon.min.css).
 - Clonando el repositorio: `git clone https://github.com/alterebro/armazon.css.git`
-(Nota: El repositorio aún se encuentra bajo desarrollo activo por lo que si buscas una versión estable y segura, usa la descarga del archivo zip)
+
+(Nota: El repositorio aún se encuentra bajo desarrollo activono existe una versión estable y segura todavía)
 
 
 ### ¿Que hay en la descarga?
 
-La descarga incluye los CSS de armazon.css y una página index.html como punto de partida.
+La descarga incluye los archivos LESS, CSS y CSS minificado de armazon.css y una página index.html como punto de partida.
 
 ```
-// Temp structure
-armazon/
+armazon.css/
 ├── index.html
+├── README.md
+├── LICENSE.md
 └── styles/
     ├── armazon.min.css
     ├── armazon.css
@@ -43,7 +45,7 @@ armazon/
 ### ¿Porque es tan molón?
 
 armazon.css es simple y pesa poco. Estiliza solo elementos básicos HTML (con unas pocas exceciones) y proporciona una cuadricula adaptable. Nada más.
-- Alrededor de 400 lineas de código CSS sin comprimir/minificar y con comentarios.
+- Alrededor de 600 lineas de código LESS sin comprimir/minificar y con comentarios explicativos.
 - Es un punto de partida, no un UI framework.
 - No necesita compilar ni instalar nada... simple y llano CSS
 
