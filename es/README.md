@@ -1,7 +1,5 @@
 # armazon.css
 
----
-
 Enlace corto: **[git.io/armazon](http://git.io/armazon)**
 
 **armazon.css** es un modelo de plantilla CSS3 reusable, supersimple y ligero, que te servira como punto de partida para empezar cualquier proyecto web que requiera de un diseño adaptable (Responsive Web Design). Estiliza los elementos básicos de HTML y proporciona una cuadricula adaptable basada en columnas. **armazon.css** no es un UI Framework, es un punto de partida que te ayudara en tus proyectos que requieren un desarrollo adaptativo en dispositivos móviles.
