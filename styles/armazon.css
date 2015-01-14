@@ -508,25 +508,25 @@ form {
   .column-five-sixths {
     width: 83%;
   }
-  .offset-by-one-sixth {
+  .shift-one-sixth {
     margin-left: 17%;
   }
-  .offset-by-one-fourth {
+  .shift-one-fourth {
     margin-left: 25.5%;
   }
-  .offset-by-one-third {
+  .shift-one-third {
     margin-left: 34%;
   }
-  .offset-by-one-half {
+  .shift-one-half {
     margin-left: 51%;
   }
-  .offset-by-two-thirds {
+  .shift-two-thirds {
     margin-left: 68%;
   }
-  .offset-by-three-fourths {
+  .shift-three-fourths {
     margin-left: 76.5%;
   }
-  .offset-by-five-sixths {
+  .shift-five-sixths {
     margin-left: 85%;
   }
   .row:after {

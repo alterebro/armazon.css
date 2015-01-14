@@ -7,6 +7,7 @@
 	<meta name="description" content="armazon.css - lightweight and simple CSS3 Boilerplate" />
 	<meta name="author" content="Jorge Moreno @alterebro" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="styles/armazon.min.css" />
 
 <style type="text/css">
@@ -54,22 +55,52 @@ header {
 	background: #eee;
 }
 
+
+#armazon-logo i {
+	display: block;
+	color: #008dff;
+	text-align: center;
+	font-size: 12rem;
+	padding: 1.5rem 0 0 0;
+	text-shadow: 0 2px 0 #fff, 0 4px 0 rgba(0, 0, 0, .1);
+}
+
+h4 i {
+	margin: 0 1rem 0 0;
+	color: #008dff;
+	font-size: 80% !important;
+}
 </style>
 
 </head>
 <body>
 
 <header>
-	<h1>armazon.css</h1>
-	<p>
-		Built on LESS, <strong>armazon.css</strong> is a simple and lightweight CSS3 Boilerplate based on normalize.css and Skeleton.
-		It only styles the standard HTML tags and includes a responsive grid system semantically named using classes as : 'one third',
-		'one fourth', 'two thirds'...
-	</p>
-	<nav>
-		<ul>
-			<li><a href="#text-typography">Typography and Text</a></li>
+	<div class="row">
+
+		<div class="column-one-sixth" id="armazon-logo">
+			<i class="fa fa-shield"></i>
+		</div>
+
+		<div class="column-five-sixths">
+			<h1>armazon.css</h1>
+
+			<p>
+				armazon.css is a lightweight (It only weights about 6Kb) and supersimple CSS3 Boilerplate built 
+				on LESS that will make easier the development of your responsive web project. It styles the basic 
+				and standard HTML elements and provides an adaptive grid system. armazon.css is a starting point 
+				to create a responsive design that will work on mobile devices
+				<br />
+				armazon.css uses a customized version of normalize.css and it is based on Skeleton. 
+			</p>
+		</div>
+
+	</div>
+	<hr />
+	<nav class="row">
+		<ul class="column-five-sixths shift-one-sixth">
 			<li><a href="#grid-system">Grid and Offset</a></li>
+			<li><a href="#text-typography">Typography and Text</a></li>
 			<li><a href="#form-elements">Form Elements</a></li>
 			<li><a href="#tables">tables</a></li>
 			<li><a href="#code">Code Blocks</a></li>
@@ -81,9 +112,85 @@ header {
 
 <main>
 
+	<section id="grid-system">
+
+		<h4><i class="fa fa-th-list"></i> Grid</h4>
+
+		<div class="row">
+			<p>
+				The grid works by simply creating a container with a .row class
+				and putting within it columns with the desired width. The class names for the columns
+				are intuitive and easy to remember, they are called: .one-fourth,
+				.one-sixth, .two-thirds ...
+			</p>
+		</div>
+
+		<div class="row">
+			<div class="column-one-fourth">one-fourth</div>
+			<div class="column-one-sixth">one-sixth</div>
+			<div class="column-one-third">one-third</div>
+			<div class="column-one-fourth">one-fourth</div>
+		</div>
+
+		<div class="row">
+			<div class="column-one-sixth">one-sixth</div>
+			<div class="column-one-sixth">one-sixth</div>
+			<div class="column-one-sixth">one-sixth</div>
+			<div class="column-one-sixth">one-sixth</div>
+			<div class="column-one-sixth">one-sixth</div>
+			<div class="column-one-sixth">one-sixth</div>
+		</div>
+		<div class="row">
+			<div class="column-five-sixths">five-sixths</div>
+			<div class="column-one-sixth">one-sixth</div>
+		</div>
+		<div class="row">
+			<div class="column-one-fourth">one-fourth</div>
+			<div class="column-three-fourths">three fourths</div>
+		</div>
+		<div class="row">
+			<div class="column-one-third">one-third</div>
+			<div class="column-two-thirds">two-thirds</div>
+		</div>
+
+		<h4><i class="fa fa-step-forward"></i> Offsetting</h4>
+		<div class="row">
+			<p>
+				Columns inside the row grid may have a displacement or offset that can be set by adding 
+				another class name following the form: shift-SIZE. For instance, some offsetting classnames would be:
+				.shift-one-sixth, .shift-one-fourth, .shift-one-third...
+			</p>
+		</div>
+		
+		<div class="row">
+			<div class="column-five-sixths shift-one-sixth">by 1/6</div>
+		</div>
+		<div class="row">
+			<div class="column-three-fourths shift-one-fourth">by 1/4</div>
+		</div>
+		<div class="row">
+			<div class="column-two-thirds shift-one-third">by 1/3</div>
+		</div>
+		<div class="row">
+			<div class="column-one-half shift-one-half">by 1/2</div>
+		</div>
+		<div class="row">
+			<div class="column-one-third shift-two-thirds">by 2/3</div>
+		</div>
+		<div class="row">
+			<div class="column-one-fourth shift-three-fourths">by 3/4</div>
+		</div>
+		<div class="row">
+			<div class="column-one-sixth shift-five-sixths">by 5/6</div>
+		</div>
+
+		<hr />
+	</section>
+
+
 	<section id="text-typography">
 
-		<h4>Typography &amp; Text Elements</h4>
+		<h4><i class="fa fa-font"></i> Typography &amp; Text Elements</h4>
 		<div class="row">
 			<div class="column-one-half">
 				<h1>Header Level 1</h1>
@@ -122,59 +229,11 @@ header {
 
 	</section>
 
-	<section id="grid-system">
 
-		<h4>Grid</h4>
-		<div class="row">
-			<div class="column-one-sixth">one-sixth</div>
-			<div class="column-one-sixth">one-sixth</div>
-			<div class="column-one-sixth">one-sixth</div>
-			<div class="column-one-sixth">one-sixth</div>
-			<div class="column-one-sixth">one-sixth</div>
-			<div class="column-one-sixth">one-sixth</div>
-		</div>
-		<div class="row">
-			<div class="column-five-sixths">five-sixths</div>
-			<div class="column-one-sixth">one-sixth</div>
-		</div>
-		<div class="row">
-			<div class="column-one-fourth">one-fourth</div>
-			<div class="column-three-fourths">three fourths</div>
-		</div>
-		<div class="row">
-			<div class="column-one-third">one-third</div>
-			<div class="column-two-thirds">two-thirds</div>
-		</div>
-
-		<h4>Offsetting</h4>
-		<div class="row">
-			<div class="column-five-sixths offset-by-one-sixth">by 1/6</div>
-		</div>
-		<div class="row">
-			<div class="column-three-fourths offset-by-one-fourth">by 1/4</div>
-		</div>
-		<div class="row">
-			<div class="column-two-thirds offset-by-one-third">by 1/3</div>
-		</div>
-		<div class="row">
-			<div class="column-one-half offset-by-one-half">by 1/2</div>
-		</div>
-		<div class="row">
-			<div class="column-one-third offset-by-two-thirds">by 2/3</div>
-		</div>
-		<div class="row">
-			<div class="column-one-fourth offset-by-three-fourths">by 3/4</div>
-		</div>
-		<div class="row">
-			<div class="column-one-sixth offset-by-five-sixths">by 5/6</div>
-		</div>
-
-		<hr />
-	</section>
 
 	<section id="form-elements">
 
-		<h4>Form Elements</h4>
+		<h4><i class="fa fa-check-square-o"></i> Form Elements</h4>
 		<h5>Buttons</h5>
 		<div class="row">
 			<p class="column-one-third">
@@ -228,7 +287,7 @@ header {
 	</section>
 
 	<section id="tables">
-		<h4>Tables</h4>
+		<h4><i class="fa fa-table"></i> Tables</h4>
 		<table>
 			<thead>
 				<tr>
@@ -250,7 +309,7 @@ header {
 	</section>
 
 	<section id="code">
-		<h4>Code</h4>
+		<h4><i class="fa fa-code"></i> Code</h4>
 		<p>
 			This is an example of a paragraph with some inline <code>code</code>, it also has  
 			a <kbd>kbd</kbd> tag element and of course a <samp>samp</samp> text aswell ...
@@ -261,7 +320,7 @@ header {
 	</section>
 
 	<section id="lists">
-		<h4>Lists</h4>
+		<h4><i class="fa fa-list-ol"></i> Lists</h4>
 		<div class="row">
 			<div class="column-one-third">
 				<h5>unordered list</h5>
