@@ -480,31 +480,24 @@ form {
   [class^="column-"]:last-child {
     margin-right: 0;
   }
-  .column-2-12,
   .column-one-sixth {
     width: 15%;
   }
-  .column-3-12,
   .column-one-fourth {
     width: 23.5%;
   }
-  .column-4-12,
   .column-one-third {
     width: 32%;
   }
-  .column-6-12,
   .column-one-half {
     width: 49%;
   }
-  .column-8-12,
   .column-two-thirds {
     width: 66%;
   }
-  .column-9-12,
   .column-three-fourths {
     width: 74.5%;
   }
-  .column-10-12,
   .column-five-sixths {
     width: 83%;
   }
@@ -537,11 +530,9 @@ form {
 }
 .full-width {
   width: 100%;
-  box-sizing: border-box;
 }
 .max-full-width {
   max-width: 100%;
-  box-sizing: border-box;
 }
 .pull-right {
   float: right;
