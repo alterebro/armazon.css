@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:200,300,400,600,700,900|Inconsolata:400,700);
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
 /*!
 
  armazon.css v2.0.0 - CSS3 Lightweight Boilerplate Micro Framework based on normalize.css and Skeleton.
@@ -596,4 +598,189 @@ form {
 }
 .pull-left {
   float: left;
+}
+nav.horizontal-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  width: auto;
+}
+nav.horizontal-nav ul li {
+  display: inline-block;
+}
+nav.horizontal-nav ul li a {
+  display: inline-block;
+  margin: 0 5px;
+}
+nav.horizontal-nav ul li:first-child a {
+  margin: 0 5px 0 0;
+}
+nav.horizontal-nav ul li:first-child:before {
+  content: none;
+}
+nav.horizontal-nav ul li:last-child a {
+  margin: 0 0 0 5px;
+}
+blockquote {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+blockquote:before {
+  color: #a0a0a0;
+  font-size: 4rem;
+  line-height: 0.1em;
+  padding: 0 .25rem;
+}
+blockquote:before {
+  content: open-quote;
+  vertical-align: -1rem;
+}
+blockquote p {
+  display: inline;
+}
+body {
+  font-family: 'Titillium Web', sans-serif;
+}
+header[role="banner"] {
+  text-align: center;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  margin: 0 0 3rem 0;
+  padding: 6rem 3rem 3rem 3rem;
+  background-color: #229def;
+  background-image: -moz-linear-gradient(-45deg, transparent 0%, #0d73b7 75%);
+  background-image: -webkit-linear-gradient(-45deg, transparent 0%, #0d73b7 75%);
+  background-image: linear-gradient(135deg, transparent 0%, #0d73b7 75%);
+  color: #fff;
+}
+header[role="banner"] a {
+  color: #b1dcf9;
+}
+header[role="banner"] hr {
+  display: none;
+}
+header[role="banner"] h1 {
+  padding-top: 16rem;
+  background-image: url(../images/armazon.png);
+  background-repeat: no-repeat;
+  background-size: auto 160px;
+  background-position: center 0;
+}
+main,
+footer,
+#inner-header {
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+section {
+  padding: 0 0 3rem 0;
+  margin: 0 0 3rem 0;
+  border-bottom: dotted #d3d3d3 1px;
+}
+h2 i,
+h3 i,
+h4 i {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 42px !important;
+  font-size: 2rem !important;
+  text-align: center;
+  padding: 0;
+  border-radius: 3px;
+}
+h2 i {
+  color: #fafbfc;
+  background: #229def;
+  vertical-align: top;
+  margin: 0 .5rem 0 0;
+  text-shadow: 1px 1px 0 #229def, 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+h3 i,
+h4 i {
+  color: #a0a0a0;
+  background: #fafbfc;
+  border: solid #a0a0a0 1px;
+  vertical-align: middle;
+  margin: 0 .8rem 0 0;
+  text-shadow: none;
+}
+.grid {
+  padding: 3rem 0;
+}
+.grid [class^="column-"] {
+  border: solid #d3d3d3 1px;
+  background: #ededed;
+  border-radius: 3px;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: .5rem 0;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: 'Inconsolata', monospace;
+}
+b,
+strong {
+  font-weight: 600;
+}
+h2,
+h3,
+h4 {
+  margin: 0 0 3rem 0;
+}
+pre.prettyprint {
+  border: solid #d3d3d3 1px !important;
+  border-radius: 3px;
+}
+pre.prettyprint code {
+  background: #fafbfc;
+}
+pre.prettyprint .pln {
+  color: #6d6d6d;
+}
+pre.prettyprint .str {
+  color: #a0a0a0;
+}
+pre.prettyprint .com {
+  color: #bababa;
+}
+pre.prettyprint .tag {
+  color: #0f82cf;
+}
+pre.prettyprint .atn {
+  color: #229def;
+  font-weight: bold;
+}
+pre.prettyprint .atv {
+  color: #22bfef;
+}
+pre.prettyprint .dec {
+  color: #878787;
+}
+pre.prettyprint .kwd {
+  color: #527cf2;
+  font-weight: bold;
+}
+pre.prettyprint .lit {
+  color: #81c7f6;
+  font-weight: bold;
+}
+pre.prettyprint .pun {
+  color: #0c649f;
+}
+pre.prettyprint .typ {
+  color: #81c7f6;
+  font-weight: bold;
+}
+pre.prettyprint .opn {
+  color: #262524;
+}
+pre.prettyprint .clo {
+  color: #262524;
+}
+pre.prettyprint ol.linenums {
+  margin: 0;
 }

@@ -13,9 +13,9 @@
 @armazon-mobile-breakpoint 		: 580;		// width to filter mobile devices
 @armazon-desktop-breakpoint 	: 960; 		// width to fire desktop layout filtering
 
-@armazon-margin 				: 2rem; 	// Global margin
-@armazon-columns-margin 		: 2.4; 		// Amount of percent margin on Grid Columns ( Percentual Value )
-@armazon-columns-tablet-margin 	: 1.5; 		// Percent margin when breaking into Tablet Mode
+@armazon-margin 				: 3rem; 	// Global margin
+@armazon-columns-margin 		: 3.6; 		// Amount of percent margin on Grid Columns ( Percentual Value )
+@armazon-columns-tablet-margin 	: 2; 		// Percent margin when breaking into Tablet Mode
 
 @armazon-color-background 		: #fafbfc;	// Global Background Color
 @armazon-color-foreground 		: #262524; 	// Global Foreground & Text Color
@@ -152,21 +152,24 @@ pre {
 	overflow: auto;
 }
 code {
-	padding: .5rem .5rem;
 	white-space: nowrap;
-	background: lighten(@armazon-color-neutral, 30%);
-	color: darken(@armazon-color-neutral, 30%);
 	border-radius: 3px;
+	padding: .3rem .5rem;
+	background: lighten(@armazon-color-neutral, 30%);
+	color: darken(@armazon-color-neutral, 10%);
 }
 pre > code {
 	display: block;
-	padding: @armazon-margin;
+	padding: (@armazon-margin / 2);
 	white-space: pre;
 	line-height: 1.5;
+	background: lighten(@armazon-color-foreground, 10%);
+	color: darken(@armazon-color-background, 10%);
 }
 code, kbd, pre, samp {
 	font-family: monospace;
-	font-size: 1em;
+	font-size: 95%;
+	text-shadow: none;
 }
 
 // --------------------------------------------
@@ -227,6 +230,7 @@ input[type="submit"]:hover, input[type="submit"]:focus {
 	text-decoration: none;
 	background: @armazon-color-foreground;
 	color: @armazon-color-background;
+	border: none;
 	outline: 0;
 }
 button[disabled], button[disabled]:hover, button[disabled]:focus,
@@ -590,41 +594,11 @@ blockquote, figure, table, dl, form {
 .pull-left { float: left; }
 
 
-
-
-
-// --------------------------------------------
-// Extras
-nav.horizontal-nav {
-	ul {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		display: inline-block;
-		width: auto;
-		li {
-			display: inline-block;
-			a {
-				display: inline-block;
-				margin: 0 10px;
-			}
-			&:before { content: '\2022'; }
-		}
-		li:first-child {
-			a { margin: 0 10px 0 0; }
-			&:before { content: none; }
-		}
-		li:last-child {
-			a { margin: 0 0 0 10px; }
-		}
-	}
-}
-
-
-
 // ARMAZON.CSS END
 // --------------------------------------------
+//
 // --------------------------------------------
-// YOUR CODE STARTS HERE : ...
-
+// YOUR CODE STARTS HERE :
 // ...
+// ..
+// .

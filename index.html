@@ -1,360 +1,576 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<title>armazon.css</title>
 	<meta name="description" content="armazon.css - lightweight and simple CSS3 Boilerplate" />
 	<meta name="author" content="Jorge Moreno @alterebro" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
-	<link rel="stylesheet" href="armazon/armazon.min.css" />
-
-<style type="text/css">
-
-@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Inconsolata:400,700);
-body {
-	font-family: 'Lato';
-	font-weight: 300;
-	font-size: 1.6rem;
-	width: 80%;
-	max-width: 980px;
-	margin: 5rem auto;
-}
-code, kbd, pre, samp {
-	font-family: 'Inconsolata';
-}
-
-nav ul {
-	overflow: auto;
-	padding: 0;
-}
-nav ul li {
-	display: block;
-	float: left;
-}
-nav ul li a {
-	display: block;
-	text-transform: uppercase;
-	font-size: 1.1rem;
-	font-weight: 700;
-	letter-spacing: .2rem;
-	padding: 0 3rem 0 0;
-}
-
-header {
-	padding: 4rem 0;
-}
-#grid-system [class^="column-"] {
-	border-radius: 3px;
-	border: solid #ccc 1px;
-	text-align: center;
-	font-size: 1.2rem;
-	color: #999;
-	padding: .5rem 0;
-	background: #eee;
-}
-
-
-#armazon-logo i {
-	display: block;
-	color: #008dff;
-	text-align: center;
-	font-size: 12rem;
-	padding: 1.5rem 0 0 0;
-	text-shadow: 0 2px 0 #fff, 0 4px 0 rgba(0, 0, 0, .1);
-}
-
-h4 i {
-	margin: 0 1rem 0 0;
-	color: #008dff;
-	font-size: 80% !important;
-}
-</style>
-
+	<link rel="stylesheet" type="text/css" href="www/styles/app.css" />
 </head>
+
 <body>
 
-<header>
-	<div class="row">
+	<header role="banner">
+		<div id="inner-header" class="row">
+			<div class="column-two-thirds shift-one-sixth">
+				<h1><strong>armazon</strong>.css</h1>
+				<p>
+					Lightweight and minimalistic CSS3 Boilerplate Micro Framework built on LESS that provides an
+					adaptive grid system, styles for the standard &amp; basic HTML elements, and some basic CSS classes
+					which can be used as a starting point to help you speed up your responsive web app development
+					<br />&mdash;
+				</p>
+				<p><a href="#" class="button">Download armazon.css v0.2.0</a></p>
 
-		<div class="column-one-sixth" id="armazon-logo">
-			<i class="fa fa-shield"></i>
+				<nav class="horizontal-nav">
+					<ul>
+						<li><a href="#quick-start"> 		<i class="fa fa-bolt"></i> 				Quick Start</a></li>
+						<li><a href="#the-grid">			<i class="fa fa-th-large"></i> 				The Grid</a></li>
+						<li><a href="#text-and-typography">	<i class="fa fa-font"></i> 				Text Elements</a></li>
+						<li><a href="#lists">				<i class="fa fa-list"></i> 				Lists</a></li>
+						<li><a href="#tables">				<i class="fa fa-table"></i> 			Tables</a></li>
+						<li><a href="#forms">				<i class="fa fa-check-square-o"></i> 	Forms</a></li>
+					</ul>
+				</nav>
+				<hr />
+			</div>
 		</div>
 
-		<div class="column-five-sixths">
-			<h1>armazon.css</h1>
+	</header>
 
+	<main role="main">
+
+        <section id="quick-start">
+            <h2><i class="fa fa-bolt"></i> Quick Start</h2>
 			<p>
-				armazon.css is a lightweight (It only weights about 6Kb) and supersimple CSS3 Boilerplate built
-				on LESS that will make easier the development of your responsive web project. It styles the basic
-				and standard HTML elements and provides an adaptive grid system. armazon.css is a starting point
-				to create a responsive design that will work on mobile devices
+				armazon.css is a lightweight and supersimple CSS3 Boilerplate built on LESS
+				that will make a lot easier to start your Web application.
 				<br />
-				armazon.css uses a customized version of normalize.css and it is based on Skeleton.
+				It provides a proper cross-browser consistency on all the common HTML elements display,
+				overrides the default browsers ugly looking styling and with the adaptive grid system classes given,
+				armazon.css is the perfect starting point tool to create and develop your responsive web app design.
+				<br />
+				In order to have armazon.css up and running on your site, just follow these simple steps:
 			</p>
-		</div>
-
-	</div>
-	<hr />
-	<nav class="row">
-		<ul class="column-five-sixths shift-one-sixth">
-			<li><a href="#grid-system">Grid and Offset</a></li>
-			<li><a href="#text-typography">Typography and Text</a></li>
-			<li><a href="#form-elements">Form Elements</a></li>
-			<li><a href="#tables">tables</a></li>
-			<li><a href="#code">Code Blocks</a></li>
-			<li><a href="#lists">Lists</a></li>
-		</ul>
-	</nav>
-	<hr />
-</header>
-
-<main>
-
-	<section id="grid-system">
-
-		<h4><i class="fa fa-th-list"></i> Grid</h4>
-
-		<div class="row">
-			<p>
-				The grid works by simply creating a container with a .row class
-				and putting within it columns with the desired width. The class names for the columns
-				are intuitive and easy to remember, they are called: .one-fourth,
-				.one-sixth, .two-thirds ...
-			</p>
-		</div>
-
-		<div class="row">
-			<div class="column-one-fourth">one-fourth</div>
-			<div class="column-one-sixth">one-sixth</div>
-			<div class="column-one-third">one-third</div>
-			<div class="column-one-fourth">one-fourth</div>
-		</div>
-
-		<div class="row">
-			<div class="column-one-sixth">one-sixth</div>
-			<div class="column-one-sixth">one-sixth</div>
-			<div class="column-one-sixth">one-sixth</div>
-			<div class="column-one-sixth">one-sixth</div>
-			<div class="column-one-sixth">one-sixth</div>
-			<div class="column-one-sixth">one-sixth</div>
-		</div>
-		<div class="row">
-			<div class="column-five-sixths">five-sixths</div>
-			<div class="column-one-sixth">one-sixth</div>
-		</div>
-		<div class="row">
-			<div class="column-one-fourth">one-fourth</div>
-			<div class="column-three-fourths">three fourths</div>
-		</div>
-		<div class="row">
-			<div class="column-one-third">one-third</div>
-			<div class="column-two-thirds">two-thirds</div>
-		</div>
-
-		<h4><i class="fa fa-step-forward"></i> Offsetting</h4>
-		<div class="row">
-			<p>
-				Columns inside the row grid may have a displacement or offset that can be set by adding
-				another class name following the form: shift-SIZE. For instance, some offsetting classnames would be:
-				.shift-one-sixth, .shift-one-fourth, .shift-one-third...
-			</p>
-		</div>
-
-		<div class="row">
-			<div class="column-five-sixths shift-one-sixth">by 1/6</div>
-		</div>
-		<div class="row">
-			<div class="column-three-fourths shift-one-fourth">by 1/4</div>
-		</div>
-		<div class="row">
-			<div class="column-two-thirds shift-one-third">by 1/3</div>
-		</div>
-		<div class="row">
-			<div class="column-one-half shift-one-half">by 1/2</div>
-		</div>
-		<div class="row">
-			<div class="column-one-third shift-two-thirds">by 2/3</div>
-		</div>
-		<div class="row">
-			<div class="column-one-fourth shift-three-fourths">by 3/4</div>
-		</div>
-		<div class="row">
-			<div class="column-one-sixth shift-five-sixths">by 5/6</div>
-		</div>
-
-		<hr />
-	</section>
+			<ol>
+				<li>
+					<p><strong>Include the armazon file</strong> onto your web document.</p>
+					<ul>
+						<li>
+							By using a copy of armazon.css, you can download the file from the armazon.css project main repository :
+							<a href="https://raw.githubusercontent.com/alterebro/armazon.css/v0.1.0/styles/armazon.min.css">armazon.min.css</a>
+						</li>
+						<li>
+							Or using the hosted file using the CDN kindly provided by rawgit.com
+						</li>
+					</ul>
+<pre class="prettyprint"><code>&lt;!-- Using a downloaded copy: --&gt;
+&lt;link rel="stylesheet" type="text/css" href="path/to/your/armazon.min.css" /&gt;
+&lt;!-- Using CDN's hosted file: --&gt;
+&lt;link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/alterebro/armazon.css/v0.1.0/styles/armazon.min.css" /&gt;
+</code></pre>
+				</li>
+				<li>
+					<p><strong>Set the viewport meta tag</strong> inside the head of your document.</p>
+					<pre class="prettyprint"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;</code></pre>
+				</li>
+				<li>
+					<p>That's all. Now, you can <strong>start your development</strong>, here's a simple template to get you started : </p>
+<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+	&lt;title&gt;...&lt;/title&gt;
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+	&lt;link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/alterebro/armazon.css/v0.1.0/styles/armazon.min.css" /&gt;
+	&lt;style type="text/css"&gt;
+	/* Start your CSS stylying here... */
+		body {
+			width: 90%;
+			max-width: 980px;
+			margin: 30px auto;
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;h1&gt; Title of the Website &lt;/h1&gt;
+	&lt;p&gt; Text Paragraph ... &lt;br /&gt; Lorem ipsum dolor sit amet... &lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				</li>
+			</ol>
+        </section>
 
 
-	<section id="text-typography">
+        <section id="the-grid">
 
-		<h4><i class="fa fa-font"></i> Typography &amp; Text Elements</h4>
-		<div class="row">
-			<div class="column-one-half">
-				<h1>Header Level 1</h1>
-				<h2>Header Level 2</h2>
-				<h3>Header Level 3</h3>
-				<h4>Header Level 4</h4>
-				<h5>Header Level 5</h5>
-				<h6>Header Level 6</h6>
+			<h2><i class="fa fa-th-large"></i> The Grid</h2>
+
+			<h3><i class="fa fa-th"></i> Adaptive Grid System</h3>
+			<div class="row">
+				<div class="column-one-half">
+					<p>
+						The grid works by simply creating a container with a <code><strong>.row</strong></code> class and putting within it columns
+						with the desired width.
+						The class names for the columns are intuitive and easy to remember, they are named:
+						<br />
+						<code>.one-fourth</code>, <code>.one-sixth</code>, <code>.two-thirds</code> ...
+					</p>
+				</div>
+				<div class="column-one-half">
+<pre class="prettyprint"><code>&lt;!-- Two columns, each one is half wide  --&gt;
+&lt;div class="row"&gt;
+	&lt;div class="column-one-half"&gt;one-half&lt;/div&gt;
+	&lt;div class="column-one-half"&gt;one-half&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+				</div>
 			</div>
 
-			<div class="column-one-half">
-				<p>
-					This index.html page is a placeholder with the CSS and WebFont.
-					It's just waiting for you to add some content! If you need some help
-					hit up the <a href="http://git.io/armazon">armazon.css documentation</a>.
-				</p>
-				<p>
-					Sample text with formatted elements :
-					<br />
-					<abbr title="Too Long; Didn't Read">TLDR</abbr> : Sample nonsense lipsum text,
-					Lorem ipsum dolor sit amet, consectetur<sub>2</sub> adipiscing elit. Ut eget massa commodo,
-					venenatis<sup>3</sup> nisl in, <b>vestibulum turpis</b>. Ut ut tristique lorem, eget suscipit ante.
-					Nam faucibus nisl ut dui faucibus volutpat. In hac <dfn>habitasse</dfn> platea dictumst.
-					<mark>Duis vel ipsum scelerisque</mark>, venenatis nulla ac, venenatis magna. Suspendisse
-					vulputate placerat lorem in tristique.
-					<br />
+			<div class="grid">
+				<div class="row">
+					<div class="column-one-fourth">one-fourth</div>
+					<div class="column-one-sixth">one-sixth</div>
+					<div class="column-one-third">one-third</div>
+					<div class="column-one-fourth">one-fourth</div>
+				</div>
+
+				<div class="row">
+					<div class="column-one-sixth">one-sixth</div>
+					<div class="column-one-sixth">one-sixth</div>
+					<div class="column-one-sixth">one-sixth</div>
+					<div class="column-one-sixth">one-sixth</div>
+					<div class="column-one-sixth">one-sixth</div>
+					<div class="column-one-sixth">one-sixth</div>
+				</div>
+
+				<div class="row">
+					<div class="column-one-sixth">one-sixth</div>
+					<div class="column-one-sixth">one-sixth</div>
+					<div class="column-one-sixth">one-sixth</div>
+					<div class="column-one-sixth">one-sixth</div>
+					<div class="column-one-third">one-third</div>
+				</div>
+
+				<div class="row">
+					<div class="column-five-sixths">five-sixths</div>
+					<div class="column-one-sixth">one-sixth</div>
+				</div>
+				<div class="row">
+					<div class="column-one-fourth">one-fourth</div>
+					<div class="column-three-fourths">three fourths</div>
+				</div>
+				<div class="row">
+					<div class="column-one-third">one-third</div>
+					<div class="column-two-thirds">two-thirds</div>
+				</div>
+			</div>
+
+			<h3><i class="fa fa-step-forward"></i> Offsetting</h3>
+
+			<div class="row">
+				<div class="column-one-half">
+					<p>
+						Columns inside the row grid may have a displacement or offset that can be set by adding another
+						class name following the form: shift-SIZE. For instance, some offsetting classnames would be:
+						<br />
+						<code>.shift-one-sixth</code>, <code>.shift-one-fourth</code>, <code>.shift-one-third</code>...
+					</p>
+				</div>
+				<div class="column-one-half">
+<pre class="prettyprint"><code>&lt;!-- A half-sized column with left displacement by 1/2 --&gt;
+&lt;div class="row"&gt;
+	&lt;div class="column-one-half shift-one-half"&gt;by 1/2&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+				</div>
+			</div>
+
+			<div class="grid">
+				<div class="row">
+					<div class="column-five-sixths shift-one-sixth">by 1/6</div>
+				</div>
+				<div class="row">
+					<div class="column-three-fourths shift-one-fourth">by 1/4</div>
+				</div>
+				<div class="row">
+					<div class="column-two-thirds shift-one-third">by 1/3</div>
+				</div>
+				<div class="row">
+					<div class="column-one-half shift-one-half">by 1/2</div>
+				</div>
+				<div class="row">
+					<div class="column-one-third shift-two-thirds">by 2/3</div>
+				</div>
+				<div class="row">
+					<div class="column-one-fourth shift-three-fourths">by 3/4</div>
+				</div>
+				<div class="row">
+					<div class="column-one-sixth shift-five-sixths">by 5/6</div>
+				</div>
+			</div>
+
+		</section>
+
+
+
+		<section id="text-and-typography">
+			<h2><i class="fa fa-font"></i> Typography &amp; Text Elements</h2>
+
+			<div class="row">
+
+				<h3><i class="fa fa-header"></i> Headings</h3>
+				<div class="column-one-half">
+<pre class="prettyprint"><code>&lt;!-- Headings --&gt;
+&lt;h1&gt;Header level 1 &lt;strong&gt;Strong&lt;/strong&gt;&lt;/h1&gt;
+&lt;h2&gt;Header level 2. &lt;strong&gt;Strong Text&lt;/strong&gt;&lt;/h2&gt;
+&lt;h3&gt;Header level 3 &mdash; &lt;strong&gt;level 3&lt;/strong&gt;&lt;/h3&gt;
+&lt;h4&gt;Header level 4 : &lt;strong&gt;header level 4&lt;/strong&gt;&lt;/h4&gt;
+&lt;h5&gt;Header level 5 &mdash; &lt;strong&gt;Header level 5&lt;/strong&gt;&lt;/h5&gt;
+&lt;h6&gt;Header level 6 / &lt;strong&gt;Lorem ipsum dolor&lt;/strong&gt;&lt;/h6&gt;</code></pre>
+				</div>
+				<div class="column-one-half">
+					<h1>Header level 1 <strong>Strong</strong></h1>
+					<h2>Header level 2. <strong>Strong Text</strong></h2>
+					<h3>Header level 3 &mdash; <strong>level 3</strong></h3>
+					<h4>Header level 4 : <strong>header level 4</strong></h4>
+					<h5>Header level 5 &mdash; <strong>Header level 5</strong></h5>
+					<h6>Header level 6 / <strong>Lorem ipsum dolor</strong></h6>
+				</div>
+			</div>
+
+			<div class="row">
+				<h3><i class="fa fa-paragraph"></i> Text Elements Semantics</h3>
+				<div class="column-one-third">
+					<p>
+						Lorem ipsum dolor sit amet <dfn id="def-lorem">Lorem ipsum dolor</dfn> sit amet, <a href="http://git.io/armazon">this is a link :
+						consectetur adipiscing elit</a>. Duis rhoncus nulla ac lacus scelerisque, at ultrices
+						quam convallis. <abbr title="abbr tag with title">Praesent sollicitudin</abbr>, purus in lacinia
+						molestie, sapien augue congue ligula, ac sollicitudin augue nisi sed nunc. Curabitur
+						iaculis libero augue, vel pellentesque neque dignissim eu.
+						<acronym title="acronym tag with title">Fusce feugiat</acronym> vulputate accumsan.
+					</p>
+					<p>
+						Ut sollicitudin fringilla nisl, <mark>marked text at aliquet dui viverra at</mark>. Etiam quis consequat nisl.
+						Donec sed est fermentum, <a href="#def-lorem">consequat elit at</a>, sodales ante.
+					</p>
+				</div>
+				<div class="column-one-third">
+					<p>
+						Maecenas mattis laoreet ante quis fringilla. <small>Small text Ut dictum ante a nisl mollis</small>, ut vulputate
+						lectus convallis. In quis ullamcorper ipsum, ut <sup>sup : pretium lacus</sup>. Aenean erat nibh, ultrices nec elit sit
+						amet, consectetur semper urna. Nunc orci <sub>sub : tellus</sub>, mattis eu accumsan eget, vulputate vel ante.
+						Mauris ac orci faucibus, convallis velit a, vulputate ipsum.
+						<code>$_has_query = (!empty($_GET['q']));</code> Aenean vulputate efficitur diam at cursus. Vestibulum quis
+						interdum massa, eget pretium enim. Donec at elit sollicitudin, sollicitudin leo nec, finibus ex. Nunc a sapien suscipit,
+						ultricies mauris eu, luctus leo. Suspendisse quis massa enim.
+					</p>
+				</div>
+				<div class="column-one-third">
+					<p>
+						<abbr title="Too Long; Didn't Read">TLDR</abbr> : Sample nonsense lipsum text,
+						Lorem ipsum dolor sit amet, consectetur<sub>2</sub> adipiscing elit. Ut eget massa commodo,
+						venenatis<sup>3</sup> nisl in, <b>vestibulum turpis</b>. Ut ut tristique lorem, eget suscipit ante.
+						Nam faucibus nisl ut dui faucibus volutpat. In hac <dfn>habitasse</dfn> platea dictumst.
+						<mark>Duis vel ipsum scelerisque</mark>, venenatis nulla ac, venenatis magna. Suspendisse
+						vulputate placerat lorem in tristique.
+					</p>
+					<p>
 						<small>Small text : Donec eget dictum nisl, non gravida turpis. Etiam pharetra lorem a lobortis dapibus.</small>
-					<br />
-					<strong>Sed dapibus orci eu dictum consectetur</strong>.
-					Sed consequat ligula vitae metus finibus, at pulvinar quam feugiat.
-					<a href="about://" target="_blank">Aliquam quis sagittis velit</a>.
-				</p>
+						<br />
+						<strong>Sed dapibus orci eu dictum consectetur</strong>.
+						Sed consequat ligula vitae metus finibus, at pulvinar quam feugiat.
+						<a href="about://" target="_blank">Aliquam quis sagittis velit</a>.
+
+					</p>
+				</div>
 			</div>
-		</div>
-		<hr />
 
-	</section>
+			<hr />
 
+			<div class="row">
+				<div class="column-one-third">
+					<h4><i class="fa fa-picture-o"></i> Image &amp; Caption</h4>
+					<figure>
+						<img src="http://placehold.it/400x200/229def/ffffff?text=armazon.css" />
+						<figcation>
+							Placeholder image caption on a figcation tag
+						</figcation>
+					</figure>
+				</div>
 
+				<div class="column-one-third">
+					<h4><i class="fa fa-quote-right"></i> Blockquote</h4>
+					<blockquote>
+						<p>
+							The Earth provides enough to satisfy every man's need but not for every man's greed.
+						</p>
+						<footer>
+							&mdash; <cite><a href="https://en.wikipedia.org/wiki/Mahatma_Gandhi">Mahatma Gandhi</a></cite>
+						</footer>
+					</blockquote>
+				</div>
 
-	<section id="form-elements">
-
-		<h4><i class="fa fa-check-square-o"></i> Form Elements</h4>
-		<h5>Buttons</h5>
-		<div class="row">
-			<p class="column-one-third">
-				<a href="#" class="button">button link</a>
-				<br />	<span class="button">span w/button class</span>
-				<br />	<button>Sample button</button>
-				<br />	<input type="button" value="Button Input Element" />
-			</p>
-			<p class="column-one-third">
-				<input type="reset" value="Reset Input Element" />
-				<br />	<input type="submit" value="Submit Input Element" />
-				<br />	<a href="#" class="button button-main">button link</a>
-				<br />	<span class="button button-main">span w/button class</span>
-			</p>
-			<p class="column-one-third">
-				<button class="button-main">Sample button</button>
-				<br />	<input class="button-main" type="button" value="Button Input Element" />
-				<br />	<input class="button-main" type="reset" value="Reset Input Element" />
-				<br />	<input class="button-main" type="submit" value="Submit Input Element" />
-			</p>
-		</div>
-
-		<h5>Inputs</h5>
-		<div class="row">
-			<div class="column-one-third">
-				<label>date input <input type="date" /></label>
-				<label>time input <input type="time" /></label>
-				<label>email input <input type="email" /></label>
-				<label>number input <input type="number" /></label>
-				<label>search input <input type="search" /></label>
+				<div class="column-one-third">
+					<h4><i class="fa fa-code"></i> Code</h4>
+					<p>
+						Inline <code>code</code>, <kbd>kbd</kbd> tag elements and
+						<samp>samp</samp> text.
+					</p>
+					<pre><code>This is a code string contained within a pre element
+$_ROOT = realpath(dirname(__FILE__)) . '/';
+$_QUERY = trim( $_QUERY, '/' );</code></pre>
+					<pre>pre code block with plain text within it.</pre>
+				</div>
 			</div>
-			<div class="column-one-third">
-				<label>text input <input type="text" /></label>
-				<label>tel input <input type="tel" /></label>
-				<label>url input <input type="url" /></label>
-				<label>password input <input type="password" /></label>
-				<label>Textarea Label</label>
-				<textarea>some textarea value...</textarea>
+
+		</section>
+
+
+		<section id="lists">
+
+			<h2><i class="fa fa-list"></i> Lists</h2>
+			<div class="row">
+				<div class="column-one-third">
+					<h3><i class="fa fa-list-alt"></i> Definition list</h3>
+					<dl>
+						<dt>Authors:</dt>
+						<dd>Remy Sharp</dd>
+						<dd>Rich Clark</dd>
+
+						<dt>Editor:</dt>
+						<dd>Brandan Lennox</dd>
+
+						<dt>Category:</dt>
+						<dd>Comment</dd>
+					</dl>
+					<dl>
+						<dt lang="en-GB"><dfn>colour</dfn></dt>
+						<dt lang="en-US"><dfn>color</dfn></dt>
+						<dd>The visual result of light in their emission, transmission and/or reflection. This perception is determined by the hue, brightness and saturation of the light at a specific point. </dd>
+					</dl>
+				</div>
+
+				<div class="column-one-third">
+					<h3><i class="fa fa-list-ul"></i> Unordered List</h3>
+					<ul>
+						<li>List item 01</li>
+						<li>List item 02</li>
+						<li>List item 03
+							<ul>
+								<li>Nested list item 01</li>
+								<li>Nested list item 02</li>
+							</ul>
+						</li>
+						<li>List item 04</li>
+						<li>
+							<ul>
+								<li>Nested list item 01</li>
+								<li>Nested list item 02</li>
+								<li>Nested list item 03</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+				<div class="column-one-third">
+					<h3><i class="fa fa-list-ol"></i> Ordered List</h3>
+					<ol>
+						<li>List item 01</li>
+						<li>List item 02</li>
+						<li>List item 03
+							<ol>
+								<li>Nested list item 01</li>
+								<li>Nested list item 02</li>
+							</ol>
+						</li>
+						<li>List item 04</li>
+						<li>
+							<ol>
+								<li>Nested list item 01</li>
+								<li>Nested list item 02</li>
+								<li>Nested list item 03
+									<ol>
+										<li>Nested list item 01</li>
+										<li>Nested list item 02</li>
+										<li>Nested list item 03</li>
+									</ol>
+								</li>
+							</ol>
+						</li>
+					</ol>
+				</div>
 			</div>
-			<div class="column-one-third">
-				<label>Select Label</label>
-				<select>
-					<option>Select Option</option>
-				</select>
+		</section>
 
-				<label><input type="checkbox" /> Checkbox Input label</label>
-				<label><input type="radio" /> Radio Input label</label>
+		<section id="tables">
+			<h2><i class="fa fa-table"></i> Tables</h2>
+
+			<div class="row">
+				<div class="column-one-half">
+					<table>
+						<thead>
+							<tr>
+								<th>thead : tr : th : 01</th>
+								<th>thead : tr : th : 02</th>
+								<th>thead : tr : th : 03</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>tbody : tr : td : 01</td>
+								<td>tbody : tr : td : 02</td>
+								<td>tbody : tr : td : 03</td>
+							</tr>
+							<tr>
+								<td>tbody : tr : td : 01</td>
+								<td>tbody : tr : td : 02</td>
+								<td>tbody : tr : td : 03</td>
+							</tr>
+							<tr>
+								<th>tbody : tr : th : 01</th>
+								<td>tbody : tr : td : 02</td>
+								<td>tbody : tr : td : 03</td>
+							</tr>
+							<tr>
+								<td>tbody : tr : td : 01</td>
+								<td>tbody : tr : td : 02</td>
+								<td>tbody : tr : td : 03</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td>tfoot : tr : td : 01</td>
+								<td>tfoot : tr : td : 02</td>
+								<td>tfoot : tr : td : 03</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+				<div class="column-one-half">
+					<table>
+						<thead>
+							<tr>
+								<th>Table Header #1</th>
+								<th>Table Header #2</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Sample text ... Donec eget dictum nisl</td>
+								<td>Sample text ... Etiam pharetra lorem a lobortis dapibus</td>
+							</tr>
+							<tr>
+								<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+								<td>Ut eget massa commodo, venenatis nisl in, vestibulum turpis.</td>
+							</tr>
+							<tr>
+								<td>Donec eget dictum nisl</td>
+								<td>Etiam pharetra lorem a lobortis dapibus</td>
+							</tr>
+							<tr>
+								<td>Etiam pharetra lorem a lobortis dapibus</td>
+								<td>Donec eget dictum nisl</td>
+							</tr>
+						</tbody>
+					</table>
+
+				</div>
 			</div>
-		</div>
-		<hr />
-	</section>
 
-	<section id="tables">
-		<h4><i class="fa fa-table"></i> Tables</h4>
-		<table>
-			<thead>
-				<tr>
-					<th>Table Header #1</th>
-					<th>Table Header #2</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Sample text ... Donec eget dictum nisl</td>
-					<td>Sample text ... Etiam pharetra lorem a lobortis dapibus</td>
-				</tr>
-				<tr>
-					<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-					<td>Ut eget massa commodo, venenatis nisl in, vestibulum turpis.</td>
-				</tr>
-			</tbody>
-		</table>
-	</section>
+		</section>
 
-	<section id="code">
-		<h4><i class="fa fa-code"></i> Code</h4>
+
+		<section id="forms">
+
+			<h2><i class="fa fa-check-square-o"></i> Form Elements</h2>
+			<form method="POST" action="#" class="row">
+
+				<div class="column-one-third">
+					<button>This is a button</button>
+					<!-- <input type="text" placeholder="input:type:text" autofocus />-->
+					<input type="text" placeholder="input:type:text" />
+					<input type="button" value="input:type:button" />
+					<input type="reset" value="input:type:reset" />
+					<input type="submit" value="input:type:submit" />
+
+					<fieldset>
+						<legend>This is a legend</legend>
+						<div>
+							<button disabled="disabled">A disabled button</button>
+							<input type="button" disabled="disabled" value="input:button:disable" />
+							<input type="submit" disabled="disabled" value="input:submit:disable" />
+						</div>
+					</fieldset>
+
+				</div>
+
+				<div class="column-one-third">
+
+					<p>
+						<a href="#" class="button">Link with a .button class</a>
+						<a href="#" class="button">Link with a .button class</a>
+					</p>
+
+					<label><input type="checkbox" /> &nbsp; This is a checkbox label</label>
+
+					<fieldset>
+						<label><input type="radio" name="radio-input" /> &nbsp; This is a radio input label</label>
+						<label><input type="radio" name="radio-input" /> &nbsp; Another radio input label</label>
+					</fieldset>
+
+					<select>
+						<optgroup label="Group select : optgroup">
+							<option>Select : Option</option>
+							<option>Option 1.1</option>
+						</optgroup>
+						<optgroup label="Group 2">
+							<option>Option 2.1</option>
+							<option>Option 2.2</option>
+						</optgroup>
+						<optgroup label="Group 3" disabled>
+							<option>Option 3.1</option>
+							<option>Option 3.2</option>
+							<option>Option 3.3</option>
+						</optgroup>
+					</select>
+
+					<label for="pass-input">Password Label</label>
+					<input type="password" id="pass-input" placeholder="input:password" />
+
+					<label for="textarea-input">Textarea Label</label>
+					<textarea id="textarea-input" placeholder="textarea placeholder text"></textarea>
+				</div>
+
+				<div class="column-one-third">
+
+					<input type="date" placeholder="input:date" />
+					<input type="time" placeholder="input:time" />
+					<input type="email" placeholder="input:email" />
+					<input type="number" placeholder="input:number" />
+					<input type="search" placeholder="input:search" />
+					<input type="text" placeholder="input:text" />
+					<input type="tel" placeholder="input:tel" />
+					<input type="url" placeholder="input:url" />
+
+				</div>
+			</form>
+		</section>
+	</main>
+
+	<footer role="contentinfo">
 		<p>
-			This is an example of a paragraph with some inline <code>code</code>, it also has
-			a <kbd>kbd</kbd> tag element and of course a <samp>samp</samp> text aswell ...
+			<strong>armazon.css</strong> &mdash; CSS3 Lightweight Boilerplate Micro Framework based on normalize.css and Skeleton.
+			<br />2016 &copy; Jorge Moreno <small>AKA</small> <strong><a href="http://moro.es">moro</a></strong>
+			( <a href="https://twitter.com/alterebro">@alterebro</a> )
 		</p>
-		<pre>This is a pre code block</pre>
-		<pre><code>This is a code string contained within a pre element</code></pre>
-		<hr />
-	</section>
+	</footer>
 
-	<section id="lists">
-		<h4><i class="fa fa-list-ol"></i> Lists</h4>
-		<div class="row">
-			<div class="column-one-third">
-				<h5>unordered list</h5>
-				<ul>
-					<li>list item #01</li>
-					<li>list item #02</li>
-					<li>list item #03</li>
-					<li>list item #04</li>
-				</ul>
-			</div>
-			<div class="column-one-third">
-				<h5>ordered list</h5>
-				<ol>
-					<li>list item #01</li>
-					<li>list item #02</li>
-					<li>list item #03</li>
-					<li>list item #04</li>
-				</ol>
-			</div>
-			<div class="column-one-third">
-				<h5>definition list</h5>
-				<dl>
-					<dt>Definition term</dt>
-					<dd>Term definition</dd>
-					<dt>Definition term</dt>
-					<dd>Term definition</dd>
-				</dl>
-			</div>
-		</div>
-	</section>
-</main>
 
-<script type="text/javascript">
-// none
-</script>
+<script src="www/scripts/app.js"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
 </body>
 </html>

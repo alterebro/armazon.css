@@ -1,0 +1,185 @@
+@import '../../armazon/armazon.less';
+
+// --------------------------------------------
+// Extras
+nav.horizontal-nav {
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: inline-block;
+		width: auto;
+		li {
+			display: inline-block;
+			a {
+				display: inline-block;
+				margin: 0 5px;
+				// padding: 10px;
+				// border: solid #eee 1px;
+			}
+			// &:before { content: '\2022'; }
+		}
+		li:first-child {
+			a { margin: 0 5px 0 0; }
+			&:before { content: none; }
+		}
+		li:last-child {
+			a { margin: 0 0 0 5px; }
+		}
+	}
+}
+
+
+blockquote {
+	quotes: "\201C""\201D""\2018""\2019";
+	&:before {
+		color: @armazon-color-neutral;
+		font-size: 4rem;
+		line-height: 0.1em;
+		padding: 0 .25rem;
+	}
+	&:before {
+		content: open-quote;
+		vertical-align: -1rem;
+	}
+	p { display: inline; }
+}
+
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:200,300,400,600,700,900|Inconsolata:400,700);
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+
+
+body {
+	font-family: 'Titillium Web', sans-serif;
+}
+header[role="banner"] {
+
+	text-align: center;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
+	margin: 0 0 @armazon-margin 0;
+	padding: @armazon-margin*2 @armazon-margin @armazon-margin @armazon-margin;
+	background-color: @armazon-color-primary;
+	background-image: -moz-linear-gradient(-45deg, transparent 0%, darken(@armazon-color-primary, 15%) 75%);
+	background-image: -webkit-linear-gradient(-45deg, transparent 0%, darken(@armazon-color-primary, 15%) 75%);
+	background-image: linear-gradient(135deg, transparent 0%, darken(@armazon-color-primary, 15%) 75%);
+	color: #fff;
+
+	a {
+		color: lighten(@armazon-color-primary, 30%);
+	}
+
+	hr {
+		display: none;
+	}
+
+	h1 {
+		padding-top: 16rem;
+		background-image: url(../images/armazon.png);
+		background-repeat: no-repeat;
+		background-size: auto 160px;
+		background-position: center 0;
+	}
+}
+
+main, footer, #inner-header {
+	width: 90%;
+	max-width: 1080px;
+	margin: 0 auto;
+}
+
+
+
+
+section {
+	padding: 0 0 @armazon-margin 0;
+	margin: 0 0 @armazon-margin 0;
+	border-bottom: dotted lighten(@armazon-color-neutral, 20%) 1px;
+}
+
+
+
+h2 i, h3 i, h4 i {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	line-height: 42px !important;
+	font-size: 2rem !important;
+	text-align: center;
+	padding: 0;
+	border-radius: 3px;
+}
+h2 i {
+	color: @armazon-color-background;
+	background: @armazon-color-primary;
+	vertical-align: top;
+	margin: 0 .5rem 0 0;
+	text-shadow: 1px 1px 0 @armazon-color-primary, 2px 2px 0 rgba(0, 0, 0, .2);
+}
+h3 i, h4 i {
+	color: lighten(@armazon-color-neutral, 0%);
+	background: @armazon-color-background;
+	border: solid lighten(@armazon-color-neutral, 0%) 1px;
+	vertical-align: middle;
+	margin: 0 .8rem 0 0;
+	text-shadow: none;
+}
+
+
+.grid {
+	padding: @armazon-margin 0;
+
+	[class^="column-"] {
+		border: solid lighten(@armazon-color-neutral, 20%) 1px;
+		background: lighten(@armazon-color-neutral, 30%);
+		border-radius: 3px;
+		font-size: 1.2rem;
+		text-align: center;
+		padding: .5rem 0;
+	}
+}
+
+
+// Overriding
+code, kbd, pre, samp {
+	font-family: 'Inconsolata', monospace;
+}
+b, strong {
+	font-weight: 600;
+}
+h2, h3, h4 {
+	margin: 0 0 @armazon-margin 0;
+}
+
+
+
+pre.prettyprint {
+//	border: none !important;
+	border: solid lighten(@armazon-color-neutral, 20%) 1px !important;
+	border-radius: 3px;
+
+	code {
+		background: @armazon-color-background;
+//		padding: 0;
+	}
+	.pln { color: darken(@armazon-color-neutral, 20%); } 	// plaintext
+	.str { color: @armazon-color-neutral; } 				// string
+	.com { color: darken(@armazon-color-neutral, -10%); } 	// comment
+	.tag { color: darken(@armazon-color-primary, 10%); } 	// html / xml tag
+	.atn { color: @armazon-color-primary; font-weight: bold; } // attribute name
+	.atv { color: spin(@armazon-color-primary, -10); } 		// attribute value
+	.dec { color: darken(@armazon-color-neutral, 10%); } 	// decimal
+	.kwd { color: lighten(spin(@armazon-color-primary, 20), 10%); font-weight: bold; }
+	.lit { color: lighten(@armazon-color-primary, 20%); font-weight: bold; } // literal
+	.pun { color: darken(@armazon-color-primary, 20%); }	// punctuation
+	.typ { color: lighten(@armazon-color-primary, 20%); font-weight: bold; } // type
+
+	.opn { color: @armazon-color-foreground; }
+	.clo { color: @armazon-color-foreground; }
+//	.var { color: teal; }
+//	.fun { color: #990000; }
+	ol.linenums { margin: 0; }
+}
