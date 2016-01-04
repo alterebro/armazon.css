@@ -66,14 +66,17 @@ a {
   text-decoration: none;
   color: #229def;
   border-bottom: solid transparent 1px;
-  -webkit-transition: all 0.25s ease-out;
-  transition: all 0.25s ease-out;
 }
 a:active,
 a:hover {
   outline: 0;
   color: #262524;
   border-bottom: solid #229def 1px;
+}
+a,
+a * {
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
 }
 abbr[title],
 acronym[title] {
@@ -106,6 +109,22 @@ sup {
 }
 sub {
   bottom: -0.25em;
+}
+blockquote {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+blockquote:before {
+  color: #a0a0a0;
+  font-size: 4rem;
+  line-height: 0.1em;
+  padding: 0 .25rem;
+}
+blockquote:before {
+  content: open-quote;
+  vertical-align: -1rem;
+}
+blockquote p {
+  display: inline;
 }
 img {
   border: 0;
@@ -304,7 +323,7 @@ select {
   background-position: 96% 50%;
 }
 textarea {
-  min-height: 10rem;
+  min-height: 12rem;
 }
 input[type="date"]:focus,
 input[type="time"]:focus,
@@ -358,8 +377,8 @@ table tfoot td {
 }
 ol,
 ul {
-  padding: 0 0 0 3rem;
-  margin: 0 0 3rem 3rem;
+  padding: 0 0 0 1.5rem;
+  margin: 0 0 3rem 1.5rem;
 }
 ol li,
 ul li {
@@ -369,7 +388,7 @@ ul ul,
 ul ol,
 ol ol,
 ol ul {
-  margin: 0.5rem 1rem;
+  margin: 0.5rem 0.75rem;
 }
 dl dt dfn {
   font-style: normal;
@@ -495,52 +514,52 @@ form {
 }
 @media all and (min-width: 960px) {
   [class^="column-"] {
-    margin: 0 3.6% 0 0;
+    margin: 0 3.5% 0 0;
   }
   [class^="column-"]:last-child {
     margin-right: 0;
   }
   .column-one-sixth {
-    width: 13.66%;
+    width: 13.75%;
   }
   .column-one-fourth {
-    width: 22.3%;
+    width: 22.37%;
   }
   .column-one-third {
-    width: 30.93%;
+    width: 31%;
   }
   .column-one-half {
-    width: 48.2%;
+    width: 48.25%;
   }
   .column-two-thirds {
-    width: 65.46%;
+    width: 65.5%;
   }
   .column-three-fourths {
-    width: 74.1%;
+    width: 74.12%;
   }
   .column-five-sixths {
-    width: 82.73%;
+    width: 82.75%;
   }
   .shift-one-sixth {
-    margin-left: 17.26%;
+    margin-left: 17.25%;
   }
   .shift-one-fourth {
-    margin-left: 25.9%;
+    margin-left: 25.87%;
   }
   .shift-one-third {
-    margin-left: 34.53%;
+    margin-left: 34.5%;
   }
   .shift-one-half {
-    margin-left: 51.8%;
+    margin-left: 51.75%;
   }
   .shift-two-thirds {
-    margin-left: 69.06%;
+    margin-left: 69%;
   }
   .shift-three-fourths {
-    margin-left: 77.7%;
+    margin-left: 77.62%;
   }
   .shift-five-sixths {
-    margin-left: 86.33%;
+    margin-left: 86.25%;
   }
   .row:after {
     content: "";

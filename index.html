@@ -41,19 +41,20 @@
 				</p>
 				<p><a href="#" class="button">Download armazon.css v0.2.0</a></p>
 
-				<nav class="horizontal-nav">
-					<ul>
-						<li><a href="#quick-start"> 		<i class="fa fa-bolt"></i> 				Quick Start</a></li>
-						<li><a href="#the-grid">			<i class="fa fa-th-large"></i> 				The Grid</a></li>
-						<li><a href="#text-and-typography">	<i class="fa fa-font"></i> 				Text Elements</a></li>
-						<li><a href="#lists">				<i class="fa fa-list"></i> 				Lists</a></li>
-						<li><a href="#tables">				<i class="fa fa-table"></i> 			Tables</a></li>
-						<li><a href="#forms">				<i class="fa fa-check-square-o"></i> 	Forms</a></li>
-					</ul>
-				</nav>
-				<hr />
 			</div>
 		</div>
+
+		<nav class="horizontal-nav">
+			<ul>
+				<li><a href="#quick-start" title="Quick Start"> 			<i class="fa fa-bolt"></i> 				<span>Quick Start</span></a></li><li>
+					<a href="#the-grid" title="The Grid">					<i class="fa fa-th-large"></i> 			<span>The Grid</span></a></li><li>
+					<a href="#text-and-typography" title="Text Elements">	<i class="fa fa-font"></i> 				<span>Text Elements</span></a></li><li>
+					<a href="#lists" title="Lists">							<i class="fa fa-list"></i> 				<span>Lists</span></a></li><li>
+					<a href="#tables" title="Tables">						<i class="fa fa-table"></i> 			<span>Tables</span></a></li><li>
+					<a href="#forms" title="Forms">							<i class="fa fa-check-square-o"></i> 	<span>Forms</span></a></li>
+			</ul>
+		</nav>
+		<hr />
 
 	</header>
 
@@ -125,8 +126,8 @@
 
 			<h2><i class="fa fa-th-large"></i> The Grid</h2>
 
-			<h3><i class="fa fa-th"></i> Adaptive Grid System</h3>
 			<div class="row">
+				<h3><i class="fa fa-th"></i> Adaptive Grid System</h3>
 				<div class="column-one-half">
 					<p>
 						The grid works by simply creating a container with a <code><strong>.row</strong></code> class and putting within it columns
@@ -185,9 +186,10 @@
 				</div>
 			</div>
 
-			<h3><i class="fa fa-step-forward"></i> Offsetting</h3>
 
 			<div class="row">
+				<h3><i class="fa fa-step-forward"></i> Offsetting</h3>
+
 				<div class="column-one-half">
 					<p>
 						Columns inside the row grid may have a displacement or offset that can be set by adding another
@@ -351,7 +353,7 @@ $_QUERY = trim( $_QUERY, '/' );</code></pre>
 			<h2><i class="fa fa-list"></i> Lists</h2>
 			<div class="row">
 				<div class="column-one-third">
-					<h3><i class="fa fa-list-alt"></i> Definition list</h3>
+					<h4><i class="fa fa-list-alt"></i> Definition list</h4>
 					<dl>
 						<dt>Authors:</dt>
 						<dd>Remy Sharp</dd>
@@ -371,7 +373,7 @@ $_QUERY = trim( $_QUERY, '/' );</code></pre>
 				</div>
 
 				<div class="column-one-third">
-					<h3><i class="fa fa-list-ul"></i> Unordered List</h3>
+					<h4><i class="fa fa-list-ul"></i> Unordered List</h4>
 					<ul>
 						<li>List item 01</li>
 						<li>List item 02</li>
@@ -393,7 +395,7 @@ $_QUERY = trim( $_QUERY, '/' );</code></pre>
 				</div>
 
 				<div class="column-one-third">
-					<h3><i class="fa fa-list-ol"></i> Ordered List</h3>
+					<h4><i class="fa fa-list-ol"></i> Ordered List</h4>
 					<ol>
 						<li>List item 01</li>
 						<li>List item 02</li>
@@ -503,42 +505,55 @@ $_QUERY = trim( $_QUERY, '/' );</code></pre>
 		<section id="forms">
 
 			<h2><i class="fa fa-check-square-o"></i> Form Elements</h2>
-			<form method="POST" action="#" class="row">
+
+			<form method="POST" action="#forms" class="row">
 
 				<div class="column-one-third">
+					<h4>Buttons</h4>
+
 					<button>This is a button</button>
-					<!-- <input type="text" placeholder="input:type:text" autofocus />-->
-					<input type="text" placeholder="input:type:text" />
 					<input type="button" value="input:type:button" />
 					<input type="reset" value="input:type:reset" />
 					<input type="submit" value="input:type:submit" />
-
+					<p><a href="#" class="button">Link with a .button class</a></p>
 					<fieldset>
-						<legend>This is a legend</legend>
+						<legend>Inside a fieldset</legend>
 						<div>
 							<button disabled="disabled">A disabled button</button>
 							<input type="button" disabled="disabled" value="input:button:disable" />
 							<input type="submit" disabled="disabled" value="input:submit:disable" />
 						</div>
 					</fieldset>
-
 				</div>
 
 				<div class="column-one-third">
+					<h4>Input Elements</h4>
 
-					<p>
-						<a href="#" class="button">Link with a .button class</a>
-						<a href="#" class="button">Link with a .button class</a>
-					</p>
+					<input type="text" placeholder="input:type:text" />
+					<input type="date" placeholder="input:date" />
+					<input type="time" placeholder="input:time" />
+					<input type="email" placeholder="input:email" />
+					<input type="number" placeholder="input:number" />
+					<input type="search" placeholder="input:search" />
+					<input type="text" placeholder="input:text" />
+					<input type="tel" placeholder="input:tel" />
+					<input type="url" placeholder="input:url" />
+					<input type="password" placeholder="input:password" />
+				</div>
+
+				<div class="column-one-third">
+					<h4>More Elements</h4>
 
 					<label><input type="checkbox" /> &nbsp; This is a checkbox label</label>
-
 					<fieldset>
-						<label><input type="radio" name="radio-input" /> &nbsp; This is a radio input label</label>
+						<legend>Sample legend</legend>
+						<label><input type="radio" name="radio-input" /> &nbsp; A radio input label</label>
 						<label><input type="radio" name="radio-input" /> &nbsp; Another radio input label</label>
+						<label><input type="radio" name="radio-input" /> &nbsp; Extra radio input label</label>
 					</fieldset>
 
-					<select>
+					<label for="select-input">Select Element</label>
+					<select id="select-input">
 						<optgroup label="Group select : optgroup">
 							<option>Select : Option</option>
 							<option>Option 1.1</option>
@@ -554,25 +569,52 @@ $_QUERY = trim( $_QUERY, '/' );</code></pre>
 						</optgroup>
 					</select>
 
-					<label for="pass-input">Password Label</label>
-					<input type="password" id="pass-input" placeholder="input:password" />
-
 					<label for="textarea-input">Textarea Label</label>
 					<textarea id="textarea-input" placeholder="textarea placeholder text"></textarea>
 				</div>
+			</form>
 
-				<div class="column-one-third">
+			<form class="row" action="#Forms" method="post">
+				<h3>Sample Form</h3>
+				<fieldset>
+					<legend>Example Legend</legend>
+					<h4>Sample Form Title</h4>
 
-					<input type="date" placeholder="input:date" />
-					<input type="time" placeholder="input:time" />
-					<input type="email" placeholder="input:email" />
-					<input type="number" placeholder="input:number" />
-					<input type="search" placeholder="input:search" />
-					<input type="text" placeholder="input:text" />
-					<input type="tel" placeholder="input:tel" />
-					<input type="url" placeholder="input:url" />
+					<div class="column-one-third">
+						<label for="form-name">Your Name</label>
+						<input type="text" id="form-name" placeholder="Your Name Placeholder" />
 
-				</div>
+						<label for="form-email">Your Email</label>
+						<input type="email" id="form-email" placeholder="Your Email Placeholder" />
+
+						<label for="form-pass">Password</label>
+						<input type="password" id="form-pass" placeholder="Password Placeholder" />
+					</div>
+					<div class="column-one-third">
+						<label for="form-select">Select Gender</label>
+						<select id="form-select">
+							<option>Male</option>
+							<option>Female</option>
+						</select>
+
+						<label for="form-comments">Write your Comments</label>
+						<textarea id="form-comments" class="full-width max-full-width" rows="8" cols="40" placeholder="Your Cooments Placeholder"></textarea>
+					</div>
+					<div class="column-one-third">
+						<p>
+							<label><input type="checkbox" /> &nbsp; Mark this checkbox input</label>
+						</p>
+						<p>
+							<label><input type="radio" name="radio-input" /> &nbsp; This is one option</label>
+							<label><input type="radio" name="radio-input" /> &nbsp; Another option</label>
+							<label><input type="radio" name="radio-input" /> &nbsp; Extra option</label>
+							<label><input type="radio" name="radio-input" /> &nbsp; Different Option</label>
+						</p>
+						<p>
+							<input type="submit" name="form-submit" value="Send Form Data" class="full-width max-full-width" />
+						</p>
+					</div>
+				</fieldset>
 			</form>
 		</section>
 	</main>

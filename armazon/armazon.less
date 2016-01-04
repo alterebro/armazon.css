@@ -14,7 +14,7 @@
 @armazon-desktop-breakpoint 	: 960; 		// width to fire desktop layout filtering
 
 @armazon-margin 				: 3rem; 	// Global margin
-@armazon-columns-margin 		: 3.6; 		// Amount of percent margin on Grid Columns ( Percentual Value )
+@armazon-columns-margin 		: 3.5; 		// Amount of percent margin on Grid Columns ( Percentual Value )
 @armazon-columns-tablet-margin 	: 2; 		// Percent margin when breaking into Tablet Mode
 
 @armazon-color-background 		: #fafbfc;	// Global Background Color
@@ -83,14 +83,15 @@ a {
 	text-decoration: none;
 	color: @armazon-color-primary;
 	border-bottom: solid transparent 1px;
-	.transition();
 }
 a:active, a:hover {
 	outline: 0;
 	color: @armazon-color-foreground;
 	border-bottom: solid @armazon-color-primary 1px;
 }
-
+a, a * {
+	.transition();
+}
 // --------------------------------------------
 // Text-level semantics
 abbr[title], acronym[title] {
@@ -118,6 +119,21 @@ sub, sup {
 }
 sup { top: -0.5em; }
 sub { bottom: -0.25em; }
+
+blockquote {
+	quotes: "\201C""\201D""\2018""\2019";
+	&:before {
+		color: @armazon-color-neutral;
+		font-size: 4rem;
+		line-height: 0.1em;
+		padding: 0 .25rem;
+	}
+	&:before {
+		content: open-quote;
+		vertical-align: -1rem;
+	}
+	p { display: inline; }
+}
 
 // --------------------------------------------
 // Embedded content
@@ -327,7 +343,7 @@ select {
 	//	appearance: menulist;
 }
 textarea {
-	min-height: 10rem;
+	min-height: 12rem;
 }
 
 input[type="date"]:focus,
@@ -392,15 +408,15 @@ table {
 // --------------------------------------------
 // Lists
 ol, ul {
-	padding: 0 0 0 @armazon-margin;
-	margin: 0 0 @armazon-margin @armazon-margin;
+	padding: 0 0 0 @armazon-margin/2;
+	margin: 0 0 @armazon-margin @armazon-margin/2;
 
 	li {
 		padding: .1rem 0;
 	}
 }
 ul ul, ul ol, ol ol, ol ul {
-	margin: .5rem @armazon-margin/3;
+	margin: .5rem @armazon-margin/4;
 }
 dl {
 	dt dfn {

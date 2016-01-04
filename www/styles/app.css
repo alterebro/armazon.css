@@ -68,14 +68,17 @@ a {
   text-decoration: none;
   color: #229def;
   border-bottom: solid transparent 1px;
-  -webkit-transition: all 0.25s ease-out;
-  transition: all 0.25s ease-out;
 }
 a:active,
 a:hover {
   outline: 0;
   color: #262524;
   border-bottom: solid #229def 1px;
+}
+a,
+a * {
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
 }
 abbr[title],
 acronym[title] {
@@ -108,6 +111,22 @@ sup {
 }
 sub {
   bottom: -0.25em;
+}
+blockquote {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+blockquote:before {
+  color: #a0a0a0;
+  font-size: 4rem;
+  line-height: 0.1em;
+  padding: 0 .25rem;
+}
+blockquote:before {
+  content: open-quote;
+  vertical-align: -1rem;
+}
+blockquote p {
+  display: inline;
 }
 img {
   border: 0;
@@ -306,7 +325,7 @@ select {
   background-position: 96% 50%;
 }
 textarea {
-  min-height: 10rem;
+  min-height: 12rem;
 }
 input[type="date"]:focus,
 input[type="time"]:focus,
@@ -360,8 +379,8 @@ table tfoot td {
 }
 ol,
 ul {
-  padding: 0 0 0 3rem;
-  margin: 0 0 3rem 3rem;
+  padding: 0 0 0 1.5rem;
+  margin: 0 0 3rem 1.5rem;
 }
 ol li,
 ul li {
@@ -371,7 +390,7 @@ ul ul,
 ul ol,
 ol ol,
 ol ul {
-  margin: 0.5rem 1rem;
+  margin: 0.5rem 0.75rem;
 }
 dl dt dfn {
   font-style: normal;
@@ -599,45 +618,6 @@ form {
 .pull-left {
   float: left;
 }
-nav.horizontal-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: inline-block;
-  width: auto;
-}
-nav.horizontal-nav ul li {
-  display: inline-block;
-}
-nav.horizontal-nav ul li a {
-  display: inline-block;
-  margin: 0 5px;
-}
-nav.horizontal-nav ul li:first-child a {
-  margin: 0 5px 0 0;
-}
-nav.horizontal-nav ul li:first-child:before {
-  content: none;
-}
-nav.horizontal-nav ul li:last-child a {
-  margin: 0 0 0 5px;
-}
-blockquote {
-  quotes: "\201C" "\201D" "\2018" "\2019";
-}
-blockquote:before {
-  color: #a0a0a0;
-  font-size: 4rem;
-  line-height: 0.1em;
-  padding: 0 .25rem;
-}
-blockquote:before {
-  content: open-quote;
-  vertical-align: -1rem;
-}
-blockquote p {
-  display: inline;
-}
 body {
   font-family: 'Titillium Web', sans-serif;
 }
@@ -645,15 +625,13 @@ header[role="banner"] {
   text-align: center;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   margin: 0 0 3rem 0;
-  padding: 6rem 3rem 3rem 3rem;
+  padding: 6rem 3rem 0 3rem;
   background-color: #229def;
   background-image: -moz-linear-gradient(-45deg, transparent 0%, #0d73b7 75%);
   background-image: -webkit-linear-gradient(-45deg, transparent 0%, #0d73b7 75%);
   background-image: linear-gradient(135deg, transparent 0%, #0d73b7 75%);
   color: #fff;
-}
-header[role="banner"] a {
-  color: #b1dcf9;
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.4), inset 0 -3px 0 0 rgba(255, 255, 255, 0.2), inset 0 -5px 2px 0 rgba(0, 0, 0, 0.05);
 }
 header[role="banner"] hr {
   display: none;
@@ -665,6 +643,65 @@ header[role="banner"] h1 {
   background-size: auto 160px;
   background-position: center 0;
 }
+header[role="banner"] nav.horizontal-nav {
+  border-top: dotted rgba(255, 255, 255, 0.25) 1px;
+  width: 100%;
+}
+header[role="banner"] nav.horizontal-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  width: auto;
+}
+header[role="banner"] nav.horizontal-nav ul li {
+  display: inline-block;
+}
+header[role="banner"] nav.horizontal-nav ul li a {
+  display: inline-block;
+  color: #b1dcf9;
+  padding: 20px 10px;
+  border-bottom: solid transparent 2px;
+}
+header[role="banner"] nav.horizontal-nav ul li a i {
+  background: #229def;
+  color: #fafbfc;
+  display: inline-block;
+  line-height: 26px;
+  height: 26px;
+  width: 26px;
+  margin: 0 5px 0 0;
+  border-radius: 3px;
+  font-size: 1.2rem;
+}
+header[role="banner"] nav.horizontal-nav ul li a span {
+  display: none;
+}
+header[role="banner"] nav.horizontal-nav ul li a:hover {
+  color: #fff;
+}
+header[role="banner"] nav.horizontal-nav ul li a:hover i {
+  background: #084670;
+}
+header[role="banner"] nav.horizontal-nav ul li a.active {
+  color: #fff;
+  cursor: default;
+  border-bottom: solid rgba(255, 255, 255, 0.5) 2px;
+}
+header[role="banner"] nav.horizontal-nav ul li a.active i {
+  background: #084670;
+}
+@media all and (min-width: 960px) {
+  header[role="banner"] nav.horizontal-nav ul li a {
+    padding: 20px 15px;
+  }
+  header[role="banner"] nav.horizontal-nav ul li a span {
+    display: inline;
+  }
+  header[role="banner"] nav.horizontal-nav ul li a.active i {
+    background: #229def;
+  }
+}
 main,
 footer,
 #inner-header {
@@ -672,14 +709,16 @@ footer,
   max-width: 1080px;
   margin: 0 auto;
 }
-section {
+footer[role="contentinfo"] {
   padding: 0 0 3rem 0;
+}
+section {
   margin: 0 0 3rem 0;
   border-bottom: dotted #d3d3d3 1px;
 }
-h2 i,
-h3 i,
-h4 i {
+section h2 i,
+section h3 i,
+section h4 i {
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -689,15 +728,15 @@ h4 i {
   padding: 0;
   border-radius: 3px;
 }
-h2 i {
+section h2 i {
   color: #fafbfc;
   background: #229def;
   vertical-align: top;
   margin: 0 .5rem 0 0;
   text-shadow: 1px 1px 0 #229def, 2px 2px 0 rgba(0, 0, 0, 0.2);
 }
-h3 i,
-h4 i {
+section h3 i,
+section h4 i {
   color: #a0a0a0;
   background: #fafbfc;
   border: solid #a0a0a0 1px;
@@ -726,10 +765,11 @@ b,
 strong {
   font-weight: 600;
 }
-h2,
-h3,
-h4 {
+section > h2,
+section > .row > h3,
+section > .row > [class^="column-"] > h4:nth-child(1) {
   margin: 0 0 3rem 0;
+  color: #333;
 }
 pre.prettyprint {
   border: solid #d3d3d3 1px !important;
