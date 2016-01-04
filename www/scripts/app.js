@@ -36,10 +36,12 @@ window.onload = function() {
 	});
 
 	function open_section(section) {
-		window.location.hash = section;
-		window.setTimeout(function(){
-			document.body.scrollTop = document.documentElement.scrollTop = 0;
-		}, 1);
+
+		if(history.pushState) {
+		    history.pushState(null, null, '#'+section);
+		} else {
+		    window.location.hash = '#'+section;
+		}
 
 		foreach('section', function(el, i) {
 			el.style.display = 'none';
@@ -67,7 +69,9 @@ window.onload = function() {
 		el.onclick = function(e) {
 			e.preventDefault();
 			open_section( this.href.substring(this.href.indexOf('#')+1) );
+			return false;
 		}
 	});
 
+	window.setTimeout(function(){ document.body.scrollTop = document.documentElement.scrollTop = 0; }, 1);
 }
