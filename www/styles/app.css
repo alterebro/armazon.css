@@ -2,7 +2,7 @@
 @import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
 /*!
 
- armazon.css v2.0.0 - CSS3 Lightweight Boilerplate Micro Framework based on normalize.css and Skeleton.
+ armazon.css v0.2.1 - CSS3 Lightweight Boilerplate Micro Framework based on normalize.css and Skeleton.
  Copyright (c) 2016, Jorge Moreno ( @alterebro )
  MIT License ( https://opensource.org/licenses/MIT )
 
@@ -636,7 +636,13 @@ header[role="banner"] {
 header[role="banner"] hr {
   display: none;
 }
-header[role="banner"] h1 {
+header[role="banner"] h1 a {
+  color: #fff;
+  bordeR: none;
+  display: block;
+  width: auto;
+  max-width: 240px;
+  margin: 0 auto;
   padding-top: 16rem;
   background-image: url(../images/armazon.png);
   background-repeat: no-repeat;
@@ -670,7 +676,7 @@ header[role="banner"] nav.horizontal-nav ul li a i {
   line-height: 26px;
   height: 26px;
   width: 26px;
-  margin: 0 5px 0 0;
+  margin: 0;
   border-radius: 3px;
   font-size: 1.2rem;
 }
@@ -694,6 +700,9 @@ header[role="banner"] nav.horizontal-nav ul li a.active i {
 @media all and (min-width: 960px) {
   header[role="banner"] nav.horizontal-nav ul li a {
     padding: 20px 15px;
+  }
+  header[role="banner"] nav.horizontal-nav ul li a i {
+    margin: 0 5px 0 0;
   }
   header[role="banner"] nav.horizontal-nav ul li a span {
     display: inline;
@@ -770,6 +779,21 @@ section > .row > h3,
 section > .row > [class^="column-"] > h4:nth-child(1) {
   margin: 0 0 3rem 0;
   color: #333;
+}
+div#github-ribbon {
+  z-index: 1;
+}
+div#github-ribbon a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  border: none;
+}
+div#github-ribbon a img {
+  border: none;
+  box-shadow: none;
+  padding: 0;
 }
 pre.prettyprint {
   border: solid #d3d3d3 1px !important;
