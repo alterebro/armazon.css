@@ -61,7 +61,6 @@
 					Lightweight and minimalistic CSS3 Boilerplate Micro Framework built on LESS that provides an
 					adaptive grid system, styles for the standard &amp; basic HTML elements, and some basic CSS classes
 					which can be used as a starting point to help you speed up your responsive web app development
-					<br />&mdash;
 				</p>
 				<p><a href="https://raw.githubusercontent.com/alterebro/armazon.css/master/armazon/armazon.min.css" target="_blank" class="button">Download armazon.css v0.2.0</a></p>
 			</div>
@@ -70,7 +69,8 @@
 		<nav class="horizontal-nav">
 			<ul>
 				<li><a href="#quick-start" title="Quick Start"> 			<i class="fa fa-bolt"></i> 				<span>Quick Start</span></a></li><li>
-					<a href="#the-grid" title="The Grid">					<i class="fa fa-th-large"></i> 			<span>The Grid</span></a></li><li>
+                    <a href="#settings" title="Settings">					<i class="fa fa-wrench"></i> 			<span>Settings</span></a></li><li>
+                    <a href="#the-grid" title="The Grid">					<i class="fa fa-th-large"></i> 			<span>The Grid</span></a></li><li>
 					<a href="#text-and-typography" title="Text Elements">	<i class="fa fa-font"></i> 				<span>Text Elements</span></a></li><li>
 					<a href="#lists" title="Lists">							<i class="fa fa-list"></i> 				<span>Lists</span></a></li><li>
 					<a href="#tables" title="Tables">						<i class="fa fa-table"></i> 			<span>Tables</span></a></li><li>
@@ -86,7 +86,7 @@
 
             <h2><i class="fa fa-bolt"></i> Quick Start</h2>
 			<p>
-				armazon.css is a lightweight and supersimple CSS3 Boilerplate built on LESS
+				<strong>armazon.css</strong> is a lightweight and supersimple CSS3 Boilerplate built on LESS
 				that will make a lot easier to start your Web application.
 				<br />
 				It provides a proper cross-browser consistency on all the common HTML elements display,
@@ -101,13 +101,13 @@
 					<ul>
 						<li>
 							By using a copy of armazon.css, you can download the file from the armazon.css project main repository :
-							<a href="https://raw.githubusercontent.com/alterebro/armazon.css/master/armazon/armazon.min.css">armazon.min.css</a>
+							<strong><a href="https://raw.githubusercontent.com/alterebro/armazon.css/master/armazon/armazon.min.css" title="armazon.css - Lightweight and minimalistic CSS3 Boilerplate Micro Framework built on LESS">armazon.min.css</a></strong>
 						</li>
 						<li>
 							Or using the hosted file using the CDN kindly provided by rawgit.com
 						</li>
 					</ul>
-<pre class="prettyprint"><code>&lt;!-- Using a downloaded copy: --&gt;
+<pre class="prettyprint lang-html"><code>&lt;!-- Using a downloaded copy: --&gt;
 &lt;link rel="stylesheet" type="text/css" href="path/to/your/armazon.min.css" /&gt;
 &lt;!-- Using CDN's hosted file: --&gt;
 &lt;link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/alterebro/armazon.css/v0.2.0/armazon/armazon.min.css" /&gt;
@@ -118,30 +118,36 @@
 					<pre class="prettyprint"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;</code></pre>
 				</li>
 				<li>
-					<p>That's all. Now, you can <strong>start your development</strong>, here's a simple template to get you started : </p>
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset="utf-8" /&gt;
-	&lt;title&gt;...&lt;/title&gt;
-	&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
-	&lt;link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/alterebro/armazon.css/v0.2.0/armazon/armazon.min.css" /&gt;
-	&lt;style type="text/css"&gt;
-	/* Start your CSS stylying here... */
-		body {
-			width: 90%;
-			max-width: 980px;
-			margin: 30px auto;
-		}
-	&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-	&lt;h1&gt; Title of the Website &lt;/h1&gt;
-	&lt;p&gt; Text Paragraph ... &lt;br /&gt; Lorem ipsum dolor sit amet... &lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+					<p>
+                        That's all. Now, you can <strong>start your development</strong>, here's a simple
+                        <strong><a href="https://raw.githubusercontent.com/alterebro/armazon.css/master/www/template.html" title="HTML Template">HTML template</a></strong>
+                        to help you get started.
+                    </p>
 				</li>
 			</ol>
+        </section>
+
+        <section id="settings">
+            <h2><i class="fa fa-wrench"></i> Settings</h2>
+            <p>
+                You can assign different values to the following
+                variables that reside on the <code>armazon.less</code> file :
+            </p>
+<pre class="prettyprint lang-css"><code>/* --------------------------------------------
+// Variables @less
+// ----------------------------------------- */
+@armazon-mobile-breakpoint  : 580; /* width to filter mobile devices */
+@armazon-desktop-breakpoint : 960; /* width to fire desktop layout filtering */
+
+@armazon-margin                 : 3rem;     /* Global margin */
+@armazon-columns-margin         : 3.5;      /* Amount of percent margin on Grid Columns ( Percentual Value ) */
+@armazon-columns-tablet-margin  : 2;        /* Percent margin when breaking into Tablet Mode */
+
+@armazon-color-background : #fafbfc; /* Global Background Color */
+@armazon-color-foreground : #262524; /* Global Foreground &amp; Text Color */
+@armazon-color-primary    : #229def; /* Links and Buttons Color */
+@armazon-color-neutral    : #a0a0a0; /* Neutral Grey */
+</code></pre>
         </section>
 
         <section id="the-grid">
@@ -243,17 +249,9 @@
 		<section id="text-and-typography">
 
 			<h2><i class="fa fa-font"></i> Typography &amp; Text Elements</h2>
+
 			<div class="row">
 				<h3><i class="fa fa-header"></i> Headings</h3>
-				<div class="column-one-half">
-<pre class="prettyprint"><code>&lt;!-- Headings --&gt;
-&lt;h1&gt;Header level 1 &lt;strong&gt;Strong&lt;/strong&gt;&lt;/h1&gt;
-&lt;h2&gt;Header level 2. &lt;strong&gt;Strong Text&lt;/strong&gt;&lt;/h2&gt;
-&lt;h3&gt;Header level 3 &mdash; &lt;strong&gt;level 3&lt;/strong&gt;&lt;/h3&gt;
-&lt;h4&gt;Header level 4 : &lt;strong&gt;header level 4&lt;/strong&gt;&lt;/h4&gt;
-&lt;h5&gt;Header level 5 &mdash; &lt;strong&gt;Header level 5&lt;/strong&gt;&lt;/h5&gt;
-&lt;h6&gt;Header level 6 / &lt;strong&gt;Lorem ipsum dolor&lt;/strong&gt;&lt;/h6&gt;</code></pre>
-				</div>
 				<div class="column-one-half">
 					<h1>Header level 1 <strong>Strong</strong></h1>
 					<h2>Header level 2. <strong>Strong Text</strong></h2>
@@ -261,6 +259,20 @@
 					<h4>Header level 4 : <strong>header level 4</strong></h4>
 					<h5>Header level 5 &mdash; <strong>Header level 5</strong></h5>
 					<h6>Header level 6 / <strong>Lorem ipsum dolor</strong></h6>
+				</div>
+                <div class="column-one-half">
+                    <p>
+                        You don't have to follow any specific pattern when using
+                        text semantics elements. <strong>armazon.css</strong>
+                        overrides all the common HTML tags default browser styles.
+                    </p>
+<pre class="prettyprint"><code>&lt;!-- Headings --&gt;
+&lt;h1&gt;Header level 1 &lt;strong&gt;Strong&lt;/strong&gt;&lt;/h1&gt;
+&lt;h2&gt;Header level 2. &lt;strong&gt;Strong Text&lt;/strong&gt;&lt;/h2&gt;
+&lt;h3&gt;Header level 3 &mdash; &lt;strong&gt;level 3&lt;/strong&gt;&lt;/h3&gt;
+&lt;h4&gt;Header level 4 : &lt;strong&gt;header level 4&lt;/strong&gt;&lt;/h4&gt;
+&lt;h5&gt;Header level 5 &mdash; &lt;strong&gt;Header level 5&lt;/strong&gt;&lt;/h5&gt;
+&lt;h6&gt;Header level 6 / &lt;strong&gt;Lorem ipsum dolor&lt;/strong&gt;&lt;/h6&gt;</code></pre>
 				</div>
 			</div>
 
@@ -356,6 +368,20 @@ $_QUERY = trim( $_QUERY, '/' );</code></pre>
 			<div class="row">
 				<div class="column-one-third">
 					<h4><i class="fa fa-list-alt"></i> Definition list</h4>
+
+<pre class="prettyprint"><code>&lt;!-- Sample Definition List HTML --&gt;
+&lt;dl&gt;
+    &lt;dt&gt;Definition Term 01&lt;/dt&gt;
+    &lt;dd&gt;dd - Definition 01 - a&lt;/dd&gt;
+    &lt;dd&gt;dd - Definition 01 - b&lt;/dd&gt;
+
+    &lt;dt&gt;Definition Term 02&lt;/dt&gt;
+    &lt;dd&gt;dd - Definition 02&lt;/dd&gt;
+
+    &lt;dt&gt;Definition Term 03&lt;/dt&gt;
+    &lt;dd&gt;dd - Definition 03&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+
 					<dl>
 						<dt>Authors:</dt>
 						<dd>Remy Sharp</dd>
@@ -376,6 +402,20 @@ $_QUERY = trim( $_QUERY, '/' );</code></pre>
 
 				<div class="column-one-third">
 					<h4><i class="fa fa-list-ul"></i> Unordered List</h4>
+
+<pre class="prettyprint"><code>&lt;!-- Sample Unordered List HTML --&gt;
+&lt;ul&gt;
+    &lt;li&gt;List item 01&lt;/li&gt;
+    &lt;li&gt;List item 02&lt;/li&gt;
+    &lt;li&gt;List item 03
+        &lt;ul&gt;
+            &lt;li&gt;Nested list item 01&lt;/li&gt;
+            &lt;li&gt;Nested list item 02&lt;/li&gt;
+            &lt;li&gt;Nested list item 03&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
 					<ul>
 						<li>List item 01</li>
 						<li>List item 02</li>
@@ -398,6 +438,20 @@ $_QUERY = trim( $_QUERY, '/' );</code></pre>
 
 				<div class="column-one-third">
 					<h4><i class="fa fa-list-ol"></i> Ordered List</h4>
+
+<pre class="prettyprint"><code>&lt;!-- Sample Ordered List HTML --&gt;
+&lt;ol&gt;
+    &lt;li&gt;List item 01&lt;/li&gt;
+    &lt;li&gt;List item 02
+        &lt;ol&gt;
+            &lt;li&gt;Nested list item 01&lt;/li&gt;
+            &lt;li&gt;Nested list item 02&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;List item 03&lt;/li&gt;
+    &lt;li&gt;List item 04&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
 					<ol>
 						<li>List item 01</li>
 						<li>List item 02</li>
@@ -429,48 +483,78 @@ $_QUERY = trim( $_QUERY, '/' );</code></pre>
 		<section id="tables">
 			<h2><i class="fa fa-table"></i> Tables</h2>
 
-			<div class="row">
-				<div class="column-one-half">
-					<table>
-						<thead>
-							<tr>
-								<th>thead : tr : th : 01</th>
-								<th>thead : tr : th : 02</th>
-								<th>thead : tr : th : 03</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>tbody : tr : td : 01</td>
-								<td>tbody : tr : td : 02</td>
-								<td>tbody : tr : td : 03</td>
-							</tr>
-							<tr>
-								<td>tbody : tr : td : 01</td>
-								<td>tbody : tr : td : 02</td>
-								<td>tbody : tr : td : 03</td>
-							</tr>
-							<tr>
-								<th>tbody : tr : th : 01</th>
-								<td>tbody : tr : td : 02</td>
-								<td>tbody : tr : td : 03</td>
-							</tr>
-							<tr>
-								<td>tbody : tr : td : 01</td>
-								<td>tbody : tr : td : 02</td>
-								<td>tbody : tr : td : 03</td>
-							</tr>
-						</tbody>
-						<tfoot>
-							<tr>
-								<td>tfoot : tr : td : 01</td>
-								<td>tfoot : tr : td : 02</td>
-								<td>tfoot : tr : td : 03</td>
-							</tr>
-						</tfoot>
-					</table>
-				</div>
-				<div class="column-one-half">
+			<table>
+				<thead>
+					<tr>
+						<th>thead : tr : th : 01</th>
+						<th>thead : tr : th : 02</th>
+						<th>thead : tr : th : 03</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>tbody : tr : td : 01</td>
+						<td>tbody : tr : td : 02</td>
+						<td>tbody : tr : td : 03</td>
+					</tr>
+					<tr>
+						<td>tbody : tr : td : 01</td>
+						<td>tbody : tr : td : 02</td>
+						<td>tbody : tr : td : 03</td>
+					</tr>
+					<tr>
+						<th>tbody : tr : th : 01</th>
+						<td>tbody : tr : td : 02</td>
+						<td>tbody : tr : td : 03</td>
+					</tr>
+					<tr>
+						<td>tbody : tr : td : 01</td>
+						<td>tbody : tr : td : 02</td>
+						<td>tbody : tr : td : 03</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td>tfoot : tr : td : 01</td>
+						<td>tfoot : tr : td : 02</td>
+						<td>tfoot : tr : td : 03</td>
+					</tr>
+				</tfoot>
+			</table>
+
+            <h3><i class="fa fa-code"></i> Sample HTML Table Code </h3>
+<pre class="prettyprint"><code>&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Table Header #1&lt;/th&gt;
+            &lt;th&gt;Table Header #2&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Sample text ... Donec eget dictum nisl&lt;/td&gt;
+            &lt;td&gt;Sample text ... Etiam pharetra lorem a lobortis dapibus&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/td&gt;
+            &lt;td&gt;Ut eget massa commodo, venenatis nisl in, vestibulum turpis.&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Donec eget dictum nisl&lt;/td&gt;
+            &lt;td&gt;Etiam pharetra lorem a lobortis dapibus&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Etiam pharetra lorem a lobortis dapibus&lt;/td&gt;
+            &lt;td&gt;Donec eget dictum nisl&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td colspan="2"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+
 					<table>
 						<thead>
 							<tr>
@@ -496,10 +580,13 @@ $_QUERY = trim( $_QUERY, '/' );</code></pre>
 								<td>Donec eget dictum nisl</td>
 							</tr>
 						</tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                            </tr>
+                        </tfoot>
 					</table>
 
-				</div>
-			</div>
 
 		</section>
 
@@ -639,7 +726,10 @@ $_QUERY = trim( $_QUERY, '/' );</code></pre>
 
 
 <script src="www/scripts/app.js"></script>
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+<!-- script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/lang-css.min.js"></script>
 
 </body>
 </html>

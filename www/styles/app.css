@@ -649,6 +649,9 @@ header[role="banner"] h1 a {
   background-size: auto 160px;
   background-position: center 0;
 }
+header[role="banner"] p:last-child {
+  padding: 1.5rem 0 1rem 0;
+}
 header[role="banner"] nav.horizontal-nav {
   border-top: dotted rgba(255, 255, 255, 0.25) 1px;
   width: 100%;
@@ -796,26 +799,23 @@ div#github-ribbon a img {
   padding: 0;
 }
 pre.prettyprint {
-  border: solid #d3d3d3 1px !important;
-  border-radius: 3px;
-}
-pre.prettyprint code {
-  background: #fafbfc;
+  padding: 0 !important;
+  border: none !important;
 }
 pre.prettyprint .pln {
-  color: #6d6d6d;
+  color: #fafbfc;
 }
 pre.prettyprint .str {
   color: #a0a0a0;
 }
 pre.prettyprint .com {
-  color: #bababa;
+  color: #878787;
 }
 pre.prettyprint .tag {
-  color: #0f82cf;
+  color: #81c7f6;
 }
 pre.prettyprint .atn {
-  color: #229def;
+  color: #81c7f6;
   font-weight: bold;
 }
 pre.prettyprint .atv {
@@ -825,15 +825,15 @@ pre.prettyprint .dec {
   color: #878787;
 }
 pre.prettyprint .kwd {
-  color: #527cf2;
-  font-weight: bold;
+  color: #52cdf2;
 }
 pre.prettyprint .lit {
-  color: #81c7f6;
-  font-weight: bold;
+  color: #fff;
 }
 pre.prettyprint .pun {
-  color: #0c649f;
+  color: #99d2f8;
+  font-weight: bold;
+  padding: 0 .2rem;
 }
 pre.prettyprint .typ {
   color: #81c7f6;
@@ -845,6 +845,9 @@ pre.prettyprint .opn {
 pre.prettyprint .clo {
   color: #262524;
 }
-pre.prettyprint ol.linenums {
-  margin: 0;
+pre.prettyprint .var {
+  color: teal;
+}
+pre.prettyprint .fun {
+  color: #990000;
 }

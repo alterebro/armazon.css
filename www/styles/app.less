@@ -36,6 +36,9 @@ header[role="banner"] {
 			background-position: center 0;
 		}
 	}
+	p:last-child {
+		padding: @armazon-margin/2 0 @armazon-margin/3 0;
+	}
 
 	nav.horizontal-nav {
 		border-top: dotted rgba(255, 255, 255, .25) 1px;
@@ -180,27 +183,25 @@ div#github-ribbon {
 	}
 }
 
+
 pre.prettyprint {
-	border: solid lighten(@armazon-color-neutral, 20%) 1px !important;
-	border-radius: 3px;
-	code {
-		background: @armazon-color-background;
-	}
-	.pln { color: darken(@armazon-color-neutral, 20%); } 	// plaintext
+	padding: 0 !important;
+	border: none !important;
+
+	code {}
+	.pln { color: @armazon-color-background; } 	// plaintext
 	.str { color: @armazon-color-neutral; } 				// string
-	.com { color: darken(@armazon-color-neutral, -10%); } 	// comment
-	.tag { color: darken(@armazon-color-primary, 10%); } 	// html / xml tag
-	.atn { color: @armazon-color-primary; font-weight: bold; } // attribute name
+	.com { color: darken(@armazon-color-neutral, 10%); } 	// comment
+	.tag { color: lighten(@armazon-color-primary, 20%); } 	// html / xml tag
+	.atn { color: lighten(@armazon-color-primary, 20%); font-weight: bold; } // attribute name
 	.atv { color: spin(@armazon-color-primary, -10); } 		// attribute value
 	.dec { color: darken(@armazon-color-neutral, 10%); } 	// decimal
-	.kwd { color: lighten(spin(@armazon-color-primary, 20), 10%); font-weight: bold; }
-	.lit { color: lighten(@armazon-color-primary, 20%); font-weight: bold; } // literal
-	.pun { color: darken(@armazon-color-primary, 20%); }	// punctuation
+	.kwd { color: lighten(spin(@armazon-color-primary, -10), 10%); }
+	.lit { color: #fff; } // literal
+	.pun { color: lighten(@armazon-color-primary, 25%); font-weight: bold; padding: 0 .2rem; }	// punctuation
 	.typ { color: lighten(@armazon-color-primary, 20%); font-weight: bold; } // type
-
 	.opn { color: @armazon-color-foreground; }
 	.clo { color: @armazon-color-foreground; }
-//	.var { color: teal; }
-//	.fun { color: #990000; }
-	ol.linenums { margin: 0; }
+	.var { color: teal; }
+	.fun { color: #990000; }
 }
