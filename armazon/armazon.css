@@ -1,12 +1,6 @@
-/*!
-
- armazon.css v0.2.1 - CSS3 Lightweight Boilerplate Micro Framework based on normalize.css and Skeleton.
- Copyright (c) 2016, Jorge Moreno ( @alterebro )
- MIT License ( https://opensource.org/licenses/MIT )
-
- - Docs : https://git.io/armazon
- - Code : https://github.com/alterebro/armazon.css
-
+/*! armazon.css v0.2.1 - CSS3 Lightweight Boilerplate Micro Framework based on normalize.css and Skeleton.
+ (c) 2016 Jorge Moreno ( @alterebro ) - MIT License
+ https://github.com/alterebro/armazon.css
 */
 html,
 body {
@@ -158,6 +152,7 @@ code {
   color: #878787;
 }
 pre > code {
+  overflow: auto;
   display: block;
   padding: 1.5rem;
   white-space: pre;
