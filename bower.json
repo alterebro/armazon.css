@@ -1,16 +1,16 @@
 {
   "name": "armazon.css",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "homepage": "http://git.io/armazon",
   "repository": {
     "type": "git",
     "url": "https://github.com/alterebro/armazon.css"
   },
   "authors": [
-    "Jorge Moreno <alterebro@gmail.com> (http://moro.es)"
+    "Jorge Moreno <alterebro@gmail.com> ( @alterebro , http://moro.es )"
   ],
   "description": "armazon.css is a lightweight and simple responsive CSS3 Boilerplate based on normalize.css and Skeleton.",
-  "main": "styles/armazon.min.css",
+  "main": "armazon/armazon.min.css",
   "keywords": [
     "css",
     "css3",
@@ -18,7 +18,9 @@
     "skeleton",
     "responsive",
     "boilerplate",
-    "normalize"
+    "normalize",
+    "lightweight",
+    "simple"
   ],
   "license": "MIT"
 }
