@@ -1,6 +1,5 @@
-/*! armazon.css v0.2.1 - CSS3 Lightweight Boilerplate Micro Framework based on normalize.css and Skeleton.
- (c) 2016 Jorge Moreno ( @alterebro ) - MIT License
- https://github.com/alterebro/armazon.css
+/*!	armazon.css v0.2.3 - Lightweight and Supersimple CSS3 Boilerplate Micro Framework built on LESS
+ 	(c) 2016 Jorge Moreno ( @alterebro ) - MIT License - https://github.com/alterebro/armazon.css
 */
 
 // --------------------------------------------
@@ -8,8 +7,8 @@
 @armazon-mobile-breakpoint 		: 580;		// width to filter mobile devices
 @armazon-desktop-breakpoint 	: 960; 		// width to fire desktop layout filtering
 
-@armazon-margin 				: 3rem; 	// Global margin
-@armazon-columns-margin 		: 3.5; 		// Amount of percent margin on Grid Columns ( Percentual Value )
+@armazon-margin 				: 3.6rem; 	// Global margin
+@armazon-columns-margin 		: 3.6; 		// Amount of percent margin on Grid Columns ( Percentual Value )
 @armazon-columns-tablet-margin 	: 2; 		// Percent margin when breaking into Tablet Mode
 
 @armazon-color-background 		: #fafbfc;	// Global Background Color
@@ -204,7 +203,7 @@ button,
 select {
 	text-transform: none;
 }
-.button,
+.button, .boton,
 button,
 html input[type="button"],
 input[type="button"],
@@ -233,7 +232,7 @@ input[type="submit"] {
 	line-height: 4rem;
 	.transition();
 }
-.button:hover, .button:focus,
+.button:hover, .button:focus, .boton:hover, .boton:focus,
 button:hover, button:focus,
 html input[type="button"]:hover, html input[type="button"]:focus,
 input[type="button"]:hover, input[type="button"]:focus,
@@ -480,14 +479,25 @@ blockquote, figure, table, dl, form {
 }
 
 // --------------------------------------------
+// Pseudo-elements
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+// --------------------------------------------
 // Grid
-.row {
+.row, .bloque {
 	clear: both;
 	overflow: auto;
 	margin: 0 auto @armazon-margin/2 auto;
 	width: 100%;
 }
-[class^="column-"] {
+[class^="column-"], [class^="columna-"] {
 	float: left;
 	width: 100%;
 	margin: 0 0 @armazon-margin/2 0;
@@ -508,90 +518,105 @@ blockquote, figure, table, dl, form {
 
 @media @desktop {
 
-	[class^="column-"] {
+	[class^="column-"], [class^="columna-"] {
 		margin: 0 ~'@{armazon-columns-margin}%' 0 0;
 	}
-	[class^="column-"]:first-child {}
-	[class^="column-"]:last-child { margin-right: 0; }
+	[class^="column-"]:last-child,
+	[class^="columna-"]:last-child { margin-right: 0; }
 
-	.column-one-sixth 		{ .calculate-width(6, @armazon-columns-margin, 1); }
-	.column-one-fourth 		{ .calculate-width(4, @armazon-columns-margin, 1); }
-	.column-one-third 		{ .calculate-width(3, @armazon-columns-margin, 1); }
-	.column-one-half 		{ .calculate-width(2, @armazon-columns-margin, 1); }
-	.column-two-thirds 		{ .calculate-width(3, @armazon-columns-margin, 2); }
-	.column-three-fourths 	{ .calculate-width(4, @armazon-columns-margin, 3); }
-	.column-five-sixths 	{ .calculate-width(6, @armazon-columns-margin, 5); }
+	.column-one-sixth,
+	.column-un-sexto 		{ .calculate-width(6, @armazon-columns-margin, 1); }
+	.column-one-fourth,
+	.column-un-cuarto 		{ .calculate-width(4, @armazon-columns-margin, 1); }
+	.column-one-third,
+	.column-un-tercio 		{ .calculate-width(3, @armazon-columns-margin, 1); }
+	.column-one-half,
+	.column-una-mitad 		{ .calculate-width(2, @armazon-columns-margin, 1); }
+	.column-two-thirds,
+	.column-dos-tercios 	{ .calculate-width(3, @armazon-columns-margin, 2); }
+	.column-three-fourths,
+	.column-tres-cuartos 	{ .calculate-width(4, @armazon-columns-margin, 3); }
+	.column-five-sixths,
+	.column-cinco-sextos 	{ .calculate-width(6, @armazon-columns-margin, 5); }
 
-	.shift-one-sixth 		{ .calculate-offset(6, @armazon-columns-margin, 1); }
-	.shift-one-fourth 		{ .calculate-offset(4, @armazon-columns-margin, 1); }
-	.shift-one-third	 	{ .calculate-offset(3, @armazon-columns-margin, 1); }
-	.shift-one-half 		{ .calculate-offset(2, @armazon-columns-margin, 1); }
-	.shift-two-thirds 		{ .calculate-offset(3, @armazon-columns-margin, 2); }
-	.shift-three-fourths 	{ .calculate-offset(4, @armazon-columns-margin, 3); }
-	.shift-five-sixths 		{ .calculate-offset(6, @armazon-columns-margin, 5); }
-
-	// Self Clearing Goodness
-	.row:after {
-		content: "";
-		display: table;
-		clear: both;
-	}
+	.shift-one-sixth,
+	.desplaza-un-sexto 		{ .calculate-offset(6, @armazon-columns-margin, 1); }
+	.shift-one-fourth,
+	.desplaza-un-cuarto 	{ .calculate-offset(4, @armazon-columns-margin, 1); }
+	.shift-one-third,
+	.desplaza-un-tercio	 	{ .calculate-offset(3, @armazon-columns-margin, 1); }
+	.shift-one-half,
+	.desplaza-una-mitad 	{ .calculate-offset(2, @armazon-columns-margin, 1); }
+	.shift-two-thirds,
+	.desplaza-dos-tercios 	{ .calculate-offset(3, @armazon-columns-margin, 2); }
+	.shift-three-fourths,
+	.desplaza-tres-cuartos 	{ .calculate-offset(4, @armazon-columns-margin, 3); }
+	.shift-five-sixths,
+	.desplaza-cinco-sextos 	{ .calculate-offset(6, @armazon-columns-margin, 5); }
 }
 
 
 @media @tablet {
 
-	[class^="column-"] {
+	[class^="column-"], [class^="columna-"] {
 		margin: 0 ~'@{armazon-columns-tablet-margin}%' ~'@{armazon-columns-tablet-margin}%' 0;
 	}
-	[class^="column-"]:first-child {}
 
 	// http://lea.verou.me/2011/01/styling-children-based-on-their-number-with-css3/
 	// -------------------
 	// 6 - six items
 	.row [class^="column-"]:first-child:nth-last-child(6),
-	.row [class^="column-"]:first-child:nth-last-child(6) ~ [class^="column-"] {
+	.row [class^="column-"]:first-child:nth-last-child(6) ~ [class^="column-"],
+	.row [class^="columna-"]:first-child:nth-last-child(6),
+	.row [class^="columna-"]:first-child:nth-last-child(6) ~ [class^="columna-"] {
 		.calculate-width(3, @armazon-columns-tablet-margin, 1);
 		margin-bottom: @armazon-margin/2;
 	}
-	.row [class^="column-"]:first-child:nth-last-child(6) ~ [class^="column-"]:nth-child(3n) {
+	.row [class^="column-"]:first-child:nth-last-child(6) ~ [class^="column-"]:nth-child(3n),
+	.row [class^="columna-"]:first-child:nth-last-child(6) ~ [class^="columna-"]:nth-child(3n) {
 		margin-right: 0;
 	}
-	.row [class^="column-"]:first-child:nth-last-child(6) ~ [class^="column-"]:nth-child(6) {}
 
 	// -------------------
 	// 5 - five items
 	.row [class^="column-"]:first-child:nth-last-child(5),
-	.row [class^="column-"]:first-child:nth-last-child(5) ~ [class^="column-"] {
+	.row [class^="column-"]:first-child:nth-last-child(5) ~ [class^="column-"],
+	.row [class^="columna-"]:first-child:nth-last-child(5),
+	.row [class^="columna-"]:first-child:nth-last-child(5) ~ [class^="columna-"] {
 		.calculate-width(2, @armazon-columns-tablet-margin, 1);
 		margin-bottom: @armazon-margin/2;
 	}
-	.row [class^="column-"]:first-child:nth-last-child(5) ~ [class^="column-"]:nth-child(2n) {
+	.row [class^="column-"]:first-child:nth-last-child(5) ~ [class^="column-"]:nth-child(2n),
+	.row [class^="columna-"]:first-child:nth-last-child(5) ~ [class^="columna-"]:nth-child(2n) {
 		margin-right: 0;
 	}
 	// last element will be 100%
-	.row [class^="column-"]:first-child:nth-last-child(5) ~ [class^="column-"]:nth-child(5) {
+	.row [class^="column-"]:first-child:nth-last-child(5) ~ [class^="column-"]:nth-child(5),
+	.row [class^="columna-"]:first-child:nth-last-child(5) ~ [class^="columna-"]:nth-child(5) {
 		width: 100%;
 	}
 
 	// -------------------
 	// 4 - four items
 	.row [class^="column-"]:first-child:nth-last-child(4),
-	.row [class^="column-"]:first-child:nth-last-child(4) ~ [class^="column-"] {
+	.row [class^="column-"]:first-child:nth-last-child(4) ~ [class^="column-"],
+	.row [class^="columna-"]:first-child:nth-last-child(4),
+	.row [class^="columna-"]:first-child:nth-last-child(4) ~ [class^="columna-"] {
 		.calculate-width(2, @armazon-columns-tablet-margin, 1);
 		margin-bottom: @armazon-margin/2;
 	}
-	.row [class^="column-"]:first-child:nth-last-child(4) ~ [class^="column-"]:nth-child(2n) {
+	.row [class^="column-"]:first-child:nth-last-child(4) ~ [class^="column-"]:nth-child(2n),
+	.row [class^="columna-"]:first-child:nth-last-child(4) ~ [class^="columna-"]:nth-child(2n) {
 		margin-right: 0;
 	}
-	.row [class^="column-"]:first-child:nth-last-child(4) ~ [class^="column-"]:nth-child(4) {}
 
 	// -------------------
 	// 3 or less : 100%
 	// -------------------
+}
 
-	// Self Clearing Goodness
-	.row:after {
+@media @non-mobile {
+	.row:after, .bloque:after {
 		content: "";
 		display: table;
 		clear: both;
@@ -610,11 +635,7 @@ blockquote, figure, table, dl, form {
 	&:after{ clear: both; }
 }
 
-// ARMAZON.CSS END
+// armazon.css eof
 // --------------------------------------------
-//
 // --------------------------------------------
-// YOUR CODE STARTS HERE :
-// ...
-// ..
-// .
+// Author's custom styles :

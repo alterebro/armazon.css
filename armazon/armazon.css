@@ -1,6 +1,5 @@
-/*! armazon.css v0.2.1 - CSS3 Lightweight Boilerplate Micro Framework based on normalize.css and Skeleton.
- (c) 2016 Jorge Moreno ( @alterebro ) - MIT License
- https://github.com/alterebro/armazon.css
+/*!	armazon.css v0.2.3 - Lightweight and Supersimple CSS3 Boilerplate Micro Framework built on LESS
+ 	(c) 2016 Jorge Moreno ( @alterebro ) - MIT License - https://github.com/alterebro/armazon.css
 */
 html,
 body {
@@ -123,7 +122,7 @@ blockquote p {
 img {
   border: 0;
   display: block;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 1.8rem 0;
   padding: .5rem;
   border: solid #d3d3d3 1px;
   box-shadow: 0 2px 0 #ededed;
@@ -137,7 +136,7 @@ figure {
 }
 hr {
   height: 0;
-  margin: 3rem 0;
+  margin: 3.6rem 0;
   border: none;
   border-top: dotted #d3d3d3 1px;
 }
@@ -154,7 +153,7 @@ code {
 pre > code {
   overflow: auto;
   display: block;
-  padding: 1.5rem;
+  padding: 1.8rem;
   white-space: pre;
   line-height: 1.5;
   background: #403f3d;
@@ -185,6 +184,7 @@ select {
   text-transform: none;
 }
 .button,
+.boton,
 button,
 html input[type="button"],
 input[type="button"],
@@ -214,6 +214,8 @@ input[type="submit"] {
 }
 .button:hover,
 .button:focus,
+.boton:hover,
+.boton:focus,
 button:hover,
 button:focus,
 html input[type="button"]:hover,
@@ -266,7 +268,7 @@ input[type="search"]::-webkit-search-decoration {
 fieldset {
   border: solid #d3d3d3 1px;
   margin: 0 1px;
-  padding: 1.5rem 3rem;
+  padding: 1.8rem 3.6rem;
 }
 legend {
   border: 0;
@@ -348,7 +350,7 @@ table {
 }
 table th,
 table td {
-  padding: 1rem 1.5rem;
+  padding: 1.2rem 1.8rem;
   text-align: left;
   vertical-align: baseline;
 }
@@ -372,8 +374,8 @@ table tfoot td {
 }
 ol,
 ul {
-  padding: 0 0 0 1.5rem;
-  margin: 0 0 3rem 1.5rem;
+  padding: 0 0 0 1.8rem;
+  margin: 0 0 3.6rem 1.8rem;
 }
 ol li,
 ul li {
@@ -383,7 +385,7 @@ ul ul,
 ul ol,
 ol ol,
 ol ul {
-  margin: 0.5rem 0.75rem;
+  margin: 0.5rem 0.9rem;
 }
 dl dt dfn {
   font-style: normal;
@@ -485,115 +487,150 @@ h5,
 h6,
 p,
 pre {
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 1.8rem 0;
 }
 blockquote,
 figure,
 table,
 dl,
 form {
-  margin: 0 0 3rem 0;
+  margin: 0 0 3.6rem 0;
 }
-.row {
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+.row,
+.bloque {
   clear: both;
   overflow: auto;
-  margin: 0 auto 1.5rem auto;
+  margin: 0 auto 1.8rem auto;
   width: 100%;
 }
-[class^="column-"] {
+[class^="column-"],
+[class^="columna-"] {
   float: left;
   width: 100%;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 1.8rem 0;
   -webkit-transition: all 0.25s ease-out;
   transition: all 0.25s ease-out;
 }
 @media all and (min-width: 960px) {
-  [class^="column-"] {
-    margin: 0 3.5% 0 0;
+  [class^="column-"],
+  [class^="columna-"] {
+    margin: 0 3.6% 0 0;
   }
-  [class^="column-"]:last-child {
+  [class^="column-"]:last-child,
+  [class^="columna-"]:last-child {
     margin-right: 0;
   }
-  .column-one-sixth {
-    width: 13.75%;
+  .column-one-sixth,
+  .column-un-sexto {
+    width: 13.66%;
   }
-  .column-one-fourth {
-    width: 22.37%;
+  .column-one-fourth,
+  .column-un-cuarto {
+    width: 22.3%;
   }
-  .column-one-third {
-    width: 31%;
+  .column-one-third,
+  .column-un-tercio {
+    width: 30.93%;
   }
-  .column-one-half {
-    width: 48.25%;
+  .column-one-half,
+  .column-una-mitad {
+    width: 48.2%;
   }
-  .column-two-thirds {
-    width: 65.5%;
+  .column-two-thirds,
+  .column-dos-tercios {
+    width: 65.46%;
   }
-  .column-three-fourths {
-    width: 74.12%;
+  .column-three-fourths,
+  .column-tres-cuartos {
+    width: 74.1%;
   }
-  .column-five-sixths {
-    width: 82.75%;
+  .column-five-sixths,
+  .column-cinco-sextos {
+    width: 82.73%;
   }
-  .shift-one-sixth {
-    margin-left: 17.25%;
+  .shift-one-sixth,
+  .desplaza-un-sexto {
+    margin-left: 17.26%;
   }
-  .shift-one-fourth {
-    margin-left: 25.87%;
+  .shift-one-fourth,
+  .desplaza-un-cuarto {
+    margin-left: 25.9%;
   }
-  .shift-one-third {
-    margin-left: 34.5%;
+  .shift-one-third,
+  .desplaza-un-tercio {
+    margin-left: 34.53%;
   }
-  .shift-one-half {
-    margin-left: 51.75%;
+  .shift-one-half,
+  .desplaza-una-mitad {
+    margin-left: 51.8%;
   }
-  .shift-two-thirds {
-    margin-left: 69%;
+  .shift-two-thirds,
+  .desplaza-dos-tercios {
+    margin-left: 69.06%;
   }
-  .shift-three-fourths {
-    margin-left: 77.62%;
+  .shift-three-fourths,
+  .desplaza-tres-cuartos {
+    margin-left: 77.7%;
   }
-  .shift-five-sixths {
-    margin-left: 86.25%;
-  }
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
+  .shift-five-sixths,
+  .desplaza-cinco-sextos {
+    margin-left: 86.33%;
   }
 }
 @media all and (min-width: 580px) and (max-width: 960px) {
-  [class^="column-"] {
+  [class^="column-"],
+  [class^="columna-"] {
     margin: 0 2% 2% 0;
   }
   .row [class^="column-"]:first-child:nth-last-child(6),
-  .row [class^="column-"]:first-child:nth-last-child(6) ~ [class^="column-"] {
+  .row [class^="column-"]:first-child:nth-last-child(6) ~ [class^="column-"],
+  .row [class^="columna-"]:first-child:nth-last-child(6),
+  .row [class^="columna-"]:first-child:nth-last-child(6) ~ [class^="columna-"] {
     width: 32%;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.8rem;
   }
-  .row [class^="column-"]:first-child:nth-last-child(6) ~ [class^="column-"]:nth-child(3n) {
+  .row [class^="column-"]:first-child:nth-last-child(6) ~ [class^="column-"]:nth-child(3n),
+  .row [class^="columna-"]:first-child:nth-last-child(6) ~ [class^="columna-"]:nth-child(3n) {
     margin-right: 0;
   }
   .row [class^="column-"]:first-child:nth-last-child(5),
-  .row [class^="column-"]:first-child:nth-last-child(5) ~ [class^="column-"] {
+  .row [class^="column-"]:first-child:nth-last-child(5) ~ [class^="column-"],
+  .row [class^="columna-"]:first-child:nth-last-child(5),
+  .row [class^="columna-"]:first-child:nth-last-child(5) ~ [class^="columna-"] {
     width: 49%;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.8rem;
   }
-  .row [class^="column-"]:first-child:nth-last-child(5) ~ [class^="column-"]:nth-child(2n) {
+  .row [class^="column-"]:first-child:nth-last-child(5) ~ [class^="column-"]:nth-child(2n),
+  .row [class^="columna-"]:first-child:nth-last-child(5) ~ [class^="columna-"]:nth-child(2n) {
     margin-right: 0;
   }
-  .row [class^="column-"]:first-child:nth-last-child(5) ~ [class^="column-"]:nth-child(5) {
+  .row [class^="column-"]:first-child:nth-last-child(5) ~ [class^="column-"]:nth-child(5),
+  .row [class^="columna-"]:first-child:nth-last-child(5) ~ [class^="columna-"]:nth-child(5) {
     width: 100%;
   }
   .row [class^="column-"]:first-child:nth-last-child(4),
-  .row [class^="column-"]:first-child:nth-last-child(4) ~ [class^="column-"] {
+  .row [class^="column-"]:first-child:nth-last-child(4) ~ [class^="column-"],
+  .row [class^="columna-"]:first-child:nth-last-child(4),
+  .row [class^="columna-"]:first-child:nth-last-child(4) ~ [class^="columna-"] {
     width: 49%;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.8rem;
   }
-  .row [class^="column-"]:first-child:nth-last-child(4) ~ [class^="column-"]:nth-child(2n) {
+  .row [class^="column-"]:first-child:nth-last-child(4) ~ [class^="column-"]:nth-child(2n),
+  .row [class^="columna-"]:first-child:nth-last-child(4) ~ [class^="columna-"]:nth-child(2n) {
     margin-right: 0;
   }
-  .row:after {
+}
+@media all and (min-width: 580px) {
+  .row:after,
+  .bloque:after {
     content: "";
     display: table;
     clear: both;

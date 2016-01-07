@@ -69,16 +69,17 @@ Once you have a *less-ready* environment, you can start to play around with the 
 You can create your styles on the same `armazon.les` file including them just at the bottom of the code, where the following code is located at the end of the file :
 
 ```less
-// ARMAZON.CSS END
+// armazon.css eof
 // --------------------------------------------
-
 // --------------------------------------------
-// YOUR CODE STARTS HERE :
-// ...
-// ..
-// .
+// Author's custom styles :
 
-here you can include your css / less rules...
+// here you can start writing your css / less rules...
+.rule {
+	property : value;
+	bla-bla : ...;
+	...
+}
 ```
 
 ### 2. Working outside the armazon.less file : 
