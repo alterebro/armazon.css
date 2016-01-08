@@ -102,7 +102,7 @@ header[role="banner"] {
 
 main, footer, #inner-header {
 	width: 90%;
-	max-width: 1080px;
+	max-width: 960px;
 	margin: 0 auto;
 }
 
@@ -144,7 +144,7 @@ section {
 }
 
 .grid {
-	padding: @armazon-margin 0;
+	padding: @armazon-margin/4 0;
 
 	[class^="column-"] {
 		border: solid lighten(@armazon-color-neutral, 20%) 1px;
@@ -163,13 +163,26 @@ code, kbd, pre, samp {
 b, strong {
 	font-weight: 600;
 }
+
+/*
 section > h2,
 section > .row > h3,
 section > .row > [class^="column-"] > h4:nth-child(1) {
 	margin: 0 0 @armazon-margin 0;
 	color: #333;
 }
+*/
 
+
+caption {
+	text-align: left;
+	padding: @armazon-margin/4 @armazon-margin/2;
+	font-weight: bold;
+	font-size: 1.3rem;
+	letter-spacing: .05rem;
+	text-transform: uppercase;
+
+}
 
 pre.prettyprint {
 	padding: 0 !important;

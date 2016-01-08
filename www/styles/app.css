@@ -764,7 +764,7 @@ main,
 footer,
 #inner-header {
   width: 90%;
-  max-width: 1080px;
+  max-width: 960px;
   margin: 0 auto;
 }
 footer[role="contentinfo"] {
@@ -805,7 +805,7 @@ section h4 i {
   text-shadow: none;
 }
 .grid {
-  padding: 3.6rem 0;
+  padding: 0.9rem 0;
 }
 .grid [class^="column-"] {
   border: solid #d3d3d3 1px;
@@ -825,11 +825,21 @@ b,
 strong {
   font-weight: 600;
 }
+/*
 section > h2,
 section > .row > h3,
 section > .row > [class^="column-"] > h4:nth-child(1) {
-  margin: 0 0 3.6rem 0;
-  color: #333;
+	margin: 0 0 @armazon-margin 0;
+	color: #333;
+}
+*/
+caption {
+  text-align: left;
+  padding: 0.9rem 1.8rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+  letter-spacing: .05rem;
+  text-transform: uppercase;
 }
 pre.prettyprint {
   padding: 0 !important;

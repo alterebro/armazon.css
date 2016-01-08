@@ -28,33 +28,35 @@ function removeclass(el, classname) {
 	}
 }
 
+
+function open_section(section) {
+
+	if(history.pushState) {
+		history.pushState(null, null, '#'+section);
+	} else {
+		window.location.hash = '#'+section;
+	}
+
+	foreach('section', function(el, i) {
+		el.style.display = 'none';
+	});
+	document.getElementById(section).style.display = 'block';
+
+	// active menu item class
+	foreach('header[role="banner"] nav ul a', function(el, i) {
+		removeclass(el, 'active');
+	});
+	addclass(document.querySelector('a[href="#'+section+'"]'), 'active');
+}
+
+var sections = [];
+
 window.onload = function() {
 
-	var sections = [];
+	//var sections = [];
 	foreach('section', function(el, i) {
 		sections.push( el.getAttribute('id') );
 	});
-
-	function open_section(section) {
-
-		if(history.pushState) {
-		    history.pushState(null, null, '#'+section);
-		} else {
-		    window.location.hash = '#'+section;
-		}
-
-		foreach('section', function(el, i) {
-			el.style.display = 'none';
-		});
-		document.getElementById(section).style.display = 'block';
-
-		// active menu item class
-		foreach('header[role="banner"] nav ul a', function(el, i) {
-			removeclass(el, 'active');
-		});
-		addclass(document.querySelector('a[href="#'+section+'"]'), 'active');
-
-	}
 
 	var hash = window.location.hash.substring(1);
 	var init_value = ( !!hash && contains(sections, hash) ) ? hash : sections[0];
@@ -72,6 +74,11 @@ window.onload = function() {
 			return false;
 		}
 	});
+	// window.setTimeout(function(){ document.body.scrollTop = document.documentElement.scrollTop = 0; }, 1);
+}
 
-	window.setTimeout(function(){ document.body.scrollTop = document.documentElement.scrollTop = 0; }, 1);
+window.onhashchange = function(e) {
+	var hash = window.location.hash.substring(1);
+	var init_value = ( !!hash && contains(sections, hash) ) ? hash : sections[0];
+	open_section( init_value );
 }

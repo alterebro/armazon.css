@@ -68,13 +68,12 @@
 
 		<nav class="horizontal-nav">
 			<ul>
-				<li><a href="#quick-start" title="Quick Start"> 			<i class="fa fa-bolt"></i> 				<span>Quick Start</span></a></li><li>
-                    <a href="#settings" title="Settings">					<i class="fa fa-wrench"></i> 			<span>Settings</span></a></li><li>
+				<li><a href="#about-armazon" title="About armazon.css"> 	<i class="fa fa-info"></i>              <span>About armazon</span></a></li><li>
+                    <a href="#quick-start" title="Quick Start"> 			<i class="fa fa-bolt"></i>				<span>Quick Start</span></a></li><li>
+                    <a href="#less-development" title="LESS development">	<i class="fa fa-wrench"></i> 			<span>.LESS Development</span></a></li><li>
                     <a href="#the-grid" title="The Grid">					<i class="fa fa-th-large"></i> 			<span>The Grid</span></a></li><li>
-					<a href="#text-and-typography" title="Text Elements">	<i class="fa fa-font"></i> 				<span>Text Elements</span></a></li><li>
-					<a href="#lists" title="Lists">							<i class="fa fa-list"></i> 				<span>Lists</span></a></li><li>
-					<a href="#tables" title="Tables">						<i class="fa fa-table"></i> 			<span>Tables</span></a></li><li>
-					<a href="#forms" title="Forms">							<i class="fa fa-check-square-o"></i> 	<span>Forms</span></a></li>
+                    <a href="#helper-classes" title="Helper Classes">		<i class="fa fa-medkit"></i> 			<span>Helper Classes</span></a></li><li>
+                    <a href="#html-elements" title="HTML Elements">	        <i class="fa fa-code"></i> 				<span>HTML Elements</span></a></li><li>
 			</ul>
 		</nav>
 		<hr />
@@ -82,57 +81,221 @@
 
 	<main role="main">
 
-        <section id="quick-start">
+        <section id="about-armazon">
+            <h2><i class="fa fa-info"></i> About <strong>armazon</strong>.css</h2>
+            <p>
+                <strong>armazon</strong>.css is a lightweight and super simple CSS3 Boilerplate
+                Micro Framework built using the <a href="http://lesscss.org" title="Less. CSS Pre-processor" target="_blank">LESS</a>
+                CSS Preprocessor that will fit your needs if you consider any of the HTML5
+                Reset Stylesheets are not enough as they require a lot of tedious 'after-reset' work
+                to restyle every HTML element, and you think CSS Frameworks are too much for
+                your project as they come with a big time consuming documentation and a lot of bloating
+                components that you are probably never going to use.
+            </p>
+            <p>
+                The basic principle of <strong>armazon</strong>.css is simplicity, easy to learn with a
+                minimal learning curve and also easy to extend. Its main purpose
+                is to provide an improved CSS basis starting point with a much nicer default
+                CSS style sheet in order to help you speed up the responsive development
+                and design of your web application.
+            </p>
 
+            <h3><i class="fa fa-list-ul"></i> The primary <strong>armazon</strong>.css features are :</h3>
+            <ul>
+                <li>An adaptive and <strong><a href="#the-grid">responsive grid system</a></strong> with customizable margins and space between columns.</li>
+                <li>New look and proper <strong>cross-browser consistency</strong> for the standard <strong><a href="#html-elements">HTML elements display</a></strong>
+                    by overwriting the default ugly looking browser style sheets.</li>
+                <li>An easy to remember small group of <strong><a href="#helper-classes">useful classes</a></strong>.</li>
+                <li>A little set of <strong>LESS variables</strong>, so you can fully <strong><a href="#less-development">customize the CSS output</a></strong> of <strong>armazon</strong>.css.</li>
+                <li>It's <strong>bilingual</strong>, armazon speaks both English and Spanish through the use of alias classes.</li>
+            </ul>
+
+            <div class="row">
+                <div class="column-one-half shift-one-fourth">
+                    <a href="#quick-start" class="button full-width">Next Step : Installation and Getting Started <i class="fa fa-chevron-right"></i></a>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="quick-start">
             <h2><i class="fa fa-bolt"></i> Quick Start</h2>
+            <h3><i class="fa fa-download"></i> Installation &amp; Getting Started</h3>
 			<p>
-				<strong>armazon.css</strong> is a lightweight and supersimple CSS3 Boilerplate built on LESS
-				that will make a lot easier to start your Web application.
-				<br />
-				It provides a proper cross-browser consistency on all the common HTML elements display,
-				overrides the default browsers ugly looking styling and with the adaptive grid system classes given,
-				armazon.css is the perfect starting point tool to create and develop your responsive web app design.
-				<br />
-				In order to have armazon.css up and running on your site, just follow these simple steps:
+                <strong>armazon</strong>.css will make a lot easier to kick start your responsive web application and
+                the fastest way to have it up and running on your site is by using the armazon precompiled and minified version,
+                to do so, just follow these simple steps:
 			</p>
 			<ol>
 				<li>
-					<p><strong>Include the armazon file</strong> onto your web document.</p>
+					<strong>Include the armazon.min.css file onto your web document</strong>. You have two different options :
 					<ul>
-						<li>
-							By using a copy of armazon.css, you can download the file from the armazon.css project main repository :
-							<strong><a href="https://raw.githubusercontent.com/alterebro/armazon.css/master/armazon/armazon.min.css" title="armazon.css - Lightweight and minimalistic CSS3 Boilerplate Micro Framework built on LESS">armazon.min.css</a></strong>
-						</li>
-						<li>
-							Or using the hosted file using the CDN kindly provided by rawgit.com
-						</li>
+                        <li>
+                            Using a downloaded copy of <strong>armazon</strong>.css, you can get the precompiled and minified file from
+                            the <strong>armazon</strong>.css project main repository on GitHub :
+                            <a href="https://raw.githubusercontent.com/alterebro/armazon.css/master/armazon/armazon.min.css" target="_blank">
+                                <strong>armazon.min.css</strong> @GitHub</a>
+                        </li>
+                    	<li>
+                            Or by consuming the hosted file on the CDN kindly provided by rawgit.com :
+                            <a href="https://cdn.rawgit.com/alterebro/armazon.css/v0.2.3/armazon/armazon.min.css"><strong>armazon.min.css</strong> @RawGit CDN</a>
+                        </li>
 					</ul>
+                    <p>
 <pre class="prettyprint lang-html"><code>&lt;!-- Using a downloaded copy: --&gt;
 &lt;link rel="stylesheet" type="text/css" href="path/to/your/armazon.min.css" /&gt;
 &lt;!-- Using CDN's hosted file: --&gt;
 &lt;link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/alterebro/armazon.css/v0.2.3/armazon/armazon.min.css" /&gt;
 </code></pre>
-				</li>
-				<li>
-					<p><strong>Set the viewport meta tag</strong> inside the head of your document.</p>
-					<pre class="prettyprint"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;</code></pre>
+                    </p>
 				</li>
 				<li>
 					<p>
-                        That's all. Now, you can <strong>start your development</strong>, here's a simple
+                        <strong>Set the viewport meta tag inside the head of your document</strong>
+                        so you can control how your web app is displayed on mobile devices:
+                    </p>
+<pre class="prettyprint"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+
+&lt;!-- You can also add these two optional metatags below --&gt;
+&lt;meta name="HandheldFriendly" content="True" /&gt;
+&lt;meta name="MobileOptimized" content="320" /&gt;
+</code></pre>
+				</li>
+				<li>
+                        <strong>Done</strong>, that's all. Now, you can <strong>start your development</strong>, here's a simple
                         <strong><a href="http://codepen.io/alterebro/pen/PqYQMY" title="HTML Template" target="_blank">HTML template</a></strong>
                         to help you get started.
-                    </p>
 				</li>
 			</ol>
+            <p>
+                To work directly with the armazon source, you may want to use all the
+                development files which are located on the main project repository at GitHub:
+                <a href="https://github.com/alterebro/armazon.css" target="_blank" title="armazon.css at github">armazon.css repository @github</a>
+                and probably know more about how to hack and develop with the source files on the next section:
+            </p>
+            <div class="row">
+                <div class="column-one-half shift-one-fourth">
+                    <a href="#less-development" class="button full-width">Next Step : LESS Development <i class="fa fa-chevron-right"></i></a>
+                </div>
+            </div>
+
         </section>
 
-        <section id="settings">
-            <h2><i class="fa fa-wrench"></i> Settings</h2>
+        <section id="less-development">
+            <h2><i class="fa fa-wrench"></i> Working with the .less file &amp; Output Customization</h2>
+
+            <h3><i class="fa fa-css3"></i> Working with the <strong>armazon</strong>.less file</h3>
+            <p>
+                If you prefer to work with the non compiled .less version of <strong>armazon</strong> so you can fully
+                customize the CSS output of your styles here's a little guide to help you about how to do it.
+                <br />
+                Basically you need to have the lessc compiler installed on your computer and include somehow the
+                <code>armazon.less</code> file onto your workflow. ( More info about how to make less work on your
+                machine is available on the <a href="http://lesscss.org/" target="_blank">lesscss.org</a> website )
+                Once you have a <em>less-ready</em> environment, you can start to play around with the armazon code :
+            </p>
+
+            <ol>
+                <li>
+                    <p>
+                        <strong>Working inside the armazon.less file :</strong><br />
+                        You can create your styles on the same <code>armazon.less</code> file including them just at the bottom
+                        of the code, where the following code is located at the end of the file :
+                    </p>
+                    <pre class="prettyprint lang-less"><code>// armazon.css eof
+// --------------------------------------------
+// --------------------------------------------
+// Author's custom styles :
+
+// here you can start writing your css / less rules...
+.rule {
+    property : value;
+    ...
+}</code></pre>
+                </li>
+                <li>
+                    <p>
+                        <strong>Working outside the armazon.less file :</strong><br />
+                        You may also create your own .less style sheet, in that case you'll have to include the armazon less file as follows
+                    </p>
+                    <pre class="prettyprint lang-less"><code>@import 'path/to/your/file/armazon.less';</code></pre>
+                </li>
+            </ol>
+
+            <h3><i class="fa fa-paint-brush"></i> Output Customization. Setting Up the armazon variables</h3>
+            <p>
+                Either way described above, you'll have access to the armazon defined variables that reside on armazon.less and are
+                located at the top of the file. You can change them and assign them the desired values to fit your needs.
+                <br />
+                These are the set of available less variables :
+            </p>
+
+            <table>
+            	<thead>
+            		<tr>
+            			<th>Group</th>
+            			<th>Variable Name</th>
+            			<th>Default Value</th>
+            			<th>Definition</th>
+            		</tr>
+            	</thead>
+            	<tbody>
+            		<tr>
+            			<th rowspan="2">Media Queries</th>
+            			<td><code>@armazon-mobile-breakpoint</code></td>
+            			<td>580</td>
+            			<td>width to filter mobile devices</td>
+            		</tr>
+            		<tr>
+            			<td><code>@armazon-desktop-breakpoint</code></td>
+            			<td>960</td>
+            			<td>width to fire desktop layout filtering</td>
+            		</tr>
+            		<tr>
+            			<th rowspan="3">Margins</th>
+            			<td><code>@armazon-margin</code></td>
+            			<td>3rem</td>
+            			<td> </td>
+            		</tr>
+            		<tr>
+            			<td><code>@armazon-columns-margin</code></td>
+            			<td>3.5</td>
+            			<td>Amount of percent margin on Grid Columns ( Percentual Value )</td>
+            		</tr>
+            		<tr>
+            			<td><code>@armazon-columns-tablet-margin</code></td>
+            			<td>2</td>
+            			<td>Percent margin when breaking into Tablet Mode</td>
+            		</tr>
+            		<tr>
+            			<th rowspan="4">Colors</th>
+            			<td><code>@armazon-color-background</code></td>
+            			<td>#fafbfc</td>
+            			<td>Global Background Color</td>
+            		</tr>
+            		<tr>
+            			<td><code>@armazon-color-foreground</code></td>
+            			<td>#262524</td>
+            			<td>Global Foreground & Text Color</td>
+            		</tr>
+            		<tr>
+            			<td><code>@armazon-color-primary</code></td>
+            			<td>#229def</td>
+            			<td>Links and Buttons Color</td>
+            		</tr>
+            		<tr>
+            			<td><code>@armazon-color-neutral</code></td>
+            			<td>#a0a0a0</td>
+            			<td>Neutral Grey</td>
+            		</tr>
+            	</tbody>
+            </table>
+
             <p>
                 You can assign different values to the following
                 variables that reside on the <code>armazon.less</code> file :
             </p>
+            <p>
 <pre class="prettyprint lang-css"><code>/* --------------------------------------------
 // Variables @less
 // ----------------------------------------- */
@@ -148,91 +311,221 @@
 @armazon-color-primary    : #229def; /* Links and Buttons Color */
 @armazon-color-neutral    : #a0a0a0; /* Neutral Grey */
 </code></pre>
+            </p>
+            <div class="row">
+                <div class="column-one-half shift-one-fourth">
+                    <a href="#the-grid" class="button full-width">Next Step : The Grid <i class="fa fa-chevron-right"></i></a>
+                </div>
+            </div>
+
         </section>
 
         <section id="the-grid">
 
-			<h2><i class="fa fa-th-large"></i> The Grid</h2>
-			<div class="row">
-				<h3><i class="fa fa-th"></i> Adaptive Grid System</h3>
-				<div class="column-one-half">
-					<p>
-						The grid works by simply creating a container with a <code><strong>.row</strong></code> class and putting within it columns
-						with the desired width.
-						The class names for the columns are intuitive and easy to remember, they are named:
-						<br />
-						<code>.one-fourth</code>, <code>.one-sixth</code>, <code>.two-thirds</code> ...
-					</p>
-				</div>
-				<div class="column-one-half">
-<pre class="prettyprint"><code>&lt;!-- Two columns, each one is half wide  --&gt;
+            <h2><i class="fa fa-th-large"></i> Understanding <strong>The Grid</strong></h2>
+            <p>
+                The armazon responsive fluid grid system is based on a <strong>6 columns layout</strong> that will shrink and resize itself as the browser
+                or device viewport size changes. The size of the margin between columns can be controled on the armazon.less as stated on
+                the previous section, the variable names called <code>@armazon-columns-margin</code> and <code>@armazon-columns-tablet-margin</code>
+                will set the percentage of the viewport assigned to the space between columns.
+            </p>
+
+            <h3><i class="fa fa-th"></i> Adaptive Grid System</h3>
+            <div class="row">
+                <div class="column-one-half">
+                    <p>
+                        The grid works by simply creating a container element with a <code>.row</code> class ( for example a div element:
+                        <code>&lt;div class="row"&gt;&lt;/div&gt;</code> ) and once you have the 'row container' in place, put inside it another
+                        element container ( column ) setting a class attribute using the naming convention used in armazon : <code>.column-COLUMN-SIZE</code>
+                    </p>
+                </div>
+                <div class="column-one-half">
+                    <pre class="prettyprint"><code>&lt;!-- Two columns, each one is half wide  --&gt;
 &lt;div class="row"&gt;
 	&lt;div class="column-one-half"&gt;one-half&lt;/div&gt;
 	&lt;div class="column-one-half"&gt;one-half&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-				</div>
-			</div>
+                </div>
+            </div>
+
+            <table>
+                <caption>Available column class names</caption>
+                <thead>
+                    <tr><th>Class Name</th><th>HTML Code</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>.column-one-sixth</strong></td><td><code>&lt;div class="column-one-sixth"&gt;...&lt;/div&gt;</code></td></tr>
+                    <tr><td><strong>.column-one-fourth</strong></td><td><code>&lt;div class="column-one-fourth"&gt;...&lt;/div&gt;</code></td></tr>
+                    <tr><td><strong>.column-one-third</strong></td><td><code>&lt;div class="column-one-third"&gt;...&lt;/div&gt;</code></td></tr>
+                    <tr><td><strong>.column-one-half</strong></td><td><code>&lt;div class="column-one-half"&gt;...&lt;/div&gt;</code></td></tr>
+                    <tr><td><strong>.column-two-thirds</strong></td><td><code>&lt;div class="column-two-thirds"&gt;...&lt;/div&gt;</code></td></tr>
+                    <tr><td><strong>.column-three-fourths</strong></td><td><code>&lt;div class="column-three-fourths"&gt;...&lt;/div&gt;</code></td></tr>
+                    <tr><td><strong>.column-five-sixths</strong></td><td><code>&lt;div class="column-five-sixths"&gt;...&lt;/div&gt;</code></td></tr>
+                </tbody>
+            </table>
+
+            <hr />
+
+            <h3><i class="fa fa-step-forward"></i> Offsetting</h3>
+            <div class="row">
+                <div class="column-one-half">
+                    <p>
+                        The columns within any 'row container' element inside the grid system may have a left displacement or offset that can be set by
+                        adding another class name following the form: <code>shift-SIZE</code>. For instance, if we want to offset a column by one third,
+                        we simply add the class name <code>.shift-one-third</code>
+                    </p>
+                </div>
+                <div class="column-one-half">
+                    <pre class="prettyprint lang-html"><code>&lt;!-- One column, with a 1/3 left offset.  --&gt;
+&lt;div class="row"&gt;
+    &lt;div class="column-one-third shift-one-third"&gt;
+        ...
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+
+            <table>
+                <caption>Available offset class names</caption>
+                <thead>
+                    <tr>
+                        <th>Class Name</th>
+                        <th>HTML Code</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>.shift-one-sixth</strong></td><td><code>&lt;div class="shift-one-sixth column-one-sixth"&gt;1/6 col w.1/6 shift&lt;/div&gt;</code></td></tr>
+                    <tr><td><strong>.shift-one-fourth</strong></td><td><code>&lt;div class="shift-one-fourth column-one-sixth"&gt;1/6 col w.1/4 shift&lt;/div&gt;</code></td></tr>
+                    <tr><td><strong>.shift-one-third</strong></td><td><code>&lt;div class="shift-one-third column-one-sixth"&gt;1/6 col w.1/3 shift&lt;/div&gt;</code></td></tr>
+                    <tr><td><strong>.shift-one-half</strong></td><td><code>&lt;div class="shift-one-half column-one-sixth"&gt;1/6 col w.1/2 shift&lt;/div&gt;</code></td></tr>
+                    <tr><td><strong>.shift-two-thirds</strong></td><td><code>&lt;div class="shift-two-thirds column-one-sixth"&gt;1/6 col w.2/3 shift&lt;/div&gt;</code></td></tr>
+                    <tr><td><strong>.shift-three-fourths</strong></td><td><code>&lt;div class="shift-three-fourths column-one-sixth"&gt;1/6 col w.3/4 shift&lt;/div&gt;</code></td></tr>
+                    <tr><td><strong>.shift-five-sixths</strong></td><td><code>&lt;div class="shift-five-sixths column-one-sixth"&gt;1/6 col w.5/6 shift&lt;/div&gt;</code></td></tr>
+                </tbody>
+            </table>
+
+            <hr />
+
+            <h2><i class="fa fa-code"></i> Code Examples</h2>
+            <h3>Grid Examples</h3>
+
+            <!--
+            <div class="row">
+                <div class="column-one-half">
+                    <pre class="prettyprint lang-html"><code>&lt;!-- Example: three columns view. --&gt;
+&lt;div class="row"&gt;
+&lt;div class="column-one-third"&gt;1st column content&lt;/div&gt;
+&lt;div class="column-one-third"&gt;2nd column content&lt;/div&gt;
+&lt;div class="column-one-third"&gt;3rd column content&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Example : main content with a sidebar layout. --&gt;
+&lt;main class="row"&gt;
+&lt;section class="column-three-fourths"&gt;Main Content&lt;/section&gt;
+&lt;aside class="column-one-fourth"&gt;Sidebar Content&lt;/aside&gt;
+&lt;/main&gt;
+</code></pre>
+                </div>
+                <div class="column-one-half">
+                    <div class="grid">
+
+                        <div class="row">
+                            <div class="column-one-third">1st column content</div>
+                            <div class="column-one-third">2nd column content</div>
+                            <div class="column-one-third">3rd column content</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="column-three-fourths">Main Content</div>
+                            <div class="column-one-fourth">Sidebar Content</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            -->
+
+
+            <div class="row">
+<pre class="prettyprint lang-html"><code><div class="column-one-half">&lt;!-- armazon grid code examples --&gt;
+&lt;div class="row"&gt;
+    &lt;div class="column-one-sixth"&gt;one-sixth&lt;/div&gt;
+    &lt;div class="column-one-sixth"&gt;one-sixth&lt;/div&gt;
+    &lt;div class="column-one-sixth"&gt;one-sixth&lt;/div&gt;
+    &lt;div class="column-one-sixth"&gt;one-sixth&lt;/div&gt;
+    &lt;div class="column-one-sixth"&gt;one-sixth&lt;/div&gt;
+    &lt;div class="column-one-sixth"&gt;one-sixth&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+    &lt;div class="column-one-third"&gt;one-third&lt;/div&gt;
+    &lt;div class="column-two-thirds"&gt;two-thirds&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+    &lt;div class="column-one-fourth"&gt;one-fourth&lt;/div&gt;
+    &lt;div class="column-three-fourths"&gt;three fourths&lt;/div&gt;
+&lt;/div&gt;</div><div class="column-one-half">&lt;div class="row"&gt;
+    &lt;div class="column-one-sixth"&gt;one-sixth&lt;/div&gt;
+    &lt;div class="column-one-sixth"&gt;one-sixth&lt;/div&gt;
+    &lt;div class="column-one-sixth"&gt;one-sixth&lt;/div&gt;
+    &lt;div class="column-one-sixth"&gt;one-sixth&lt;/div&gt;
+    &lt;div class="column-one-third"&gt;one-third&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+    &lt;div class="column-five-sixths"&gt;five-sixths&lt;/div&gt;
+    &lt;div class="column-one-sixth"&gt;one-sixth&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+    &lt;div class="column-one-fourth"&gt;one-fourth&lt;/div&gt;
+    &lt;div class="column-one-sixth"&gt;one-sixth&lt;/div&gt;
+    &lt;div class="column-one-third"&gt;one-third&lt;/div&gt;
+    &lt;div class="column-one-fourth"&gt;one-fourth&lt;/div&gt;
+&lt;/div&gt;</div></code></pre>
+            </div>
 
 			<div class="grid">
-				<div class="row">
-					<div class="column-one-fourth">one-fourth</div>
-					<div class="column-one-sixth">one-sixth</div>
-					<div class="column-one-third">one-third</div>
-					<div class="column-one-fourth">one-fourth</div>
-				</div>
-
-				<div class="row">
-					<div class="column-one-sixth">one-sixth</div>
-					<div class="column-one-sixth">one-sixth</div>
-					<div class="column-one-sixth">one-sixth</div>
-					<div class="column-one-sixth">one-sixth</div>
-					<div class="column-one-sixth">one-sixth</div>
-					<div class="column-one-sixth">one-sixth</div>
-				</div>
-
-				<div class="row">
-					<div class="column-one-sixth">one-sixth</div>
-					<div class="column-one-sixth">one-sixth</div>
-					<div class="column-one-sixth">one-sixth</div>
-					<div class="column-one-sixth">one-sixth</div>
-					<div class="column-one-third">one-third</div>
-				</div>
-
-				<div class="row">
-					<div class="column-five-sixths">five-sixths</div>
-					<div class="column-one-sixth">one-sixth</div>
-				</div>
-				<div class="row">
-					<div class="column-one-fourth">one-fourth</div>
-					<div class="column-three-fourths">three fourths</div>
-				</div>
-				<div class="row">
-					<div class="column-one-third">one-third</div>
-					<div class="column-two-thirds">two-thirds</div>
-				</div>
+                <div class="row">
+                    <div class="column-one-sixth">one-sixth</div>
+                    <div class="column-one-sixth">one-sixth</div>
+                    <div class="column-one-sixth">one-sixth</div>
+                    <div class="column-one-sixth">one-sixth</div>
+                    <div class="column-one-sixth">one-sixth</div>
+                    <div class="column-one-sixth">one-sixth</div>
+                </div>
+                <div class="row">
+                    <div class="column-one-third">one-third</div>
+                    <div class="column-two-thirds">two-thirds</div>
+                </div>
+                <div class="row">
+                    <div class="column-one-fourth">one-fourth</div>
+                    <div class="column-three-fourths">three fourths</div>
+                </div>
+                <div class="row">
+                    <div class="column-one-sixth">one-sixth</div>
+                    <div class="column-one-sixth">one-sixth</div>
+                    <div class="column-one-sixth">one-sixth</div>
+                    <div class="column-one-sixth">one-sixth</div>
+                    <div class="column-one-third">one-third</div>
+                </div>
+                <div class="row">
+                    <div class="column-five-sixths">five-sixths</div>
+                    <div class="column-one-sixth">one-sixth</div>
+                </div>
+                <div class="row">
+                    <div class="column-one-fourth">one-fourth</div>
+                    <div class="column-one-sixth">one-sixth</div>
+                    <div class="column-one-third">one-third</div>
+                    <div class="column-one-fourth">one-fourth</div>
+                </div>
 			</div>
 
-
-			<div class="row">
-				<h3><i class="fa fa-step-forward"></i> Offsetting</h3>
-
-				<div class="column-one-half">
-					<p>
-						Columns inside the row grid may have a displacement or offset that can be set by adding another
-						class name following the form: shift-SIZE. For instance, some offsetting classnames would be:
-						<br />
-						<code>.shift-one-sixth</code>, <code>.shift-one-fourth</code>, <code>.shift-one-third</code>...
-					</p>
-				</div>
-				<div class="column-one-half">
-<pre class="prettyprint"><code>&lt;!-- A half-sized column with left displacement by 1/2 --&gt;
-&lt;div class="row"&gt;
-	&lt;div class="column-one-half shift-one-half"&gt;by 1/2&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-				</div>
-			</div>
+            <h3>Offset Examples</h3>
+            <pre class="prettyprint lang-html"><code>&lt;div class="row"&gt;&lt;div class="column-five-sixths shift-one-sixth"&gt;by 1/6&lt;/div&gt;&lt;/div&gt;
+&lt;div class="row"&gt;&lt;div class="column-three-fourths shift-one-fourth"&gt;by 1/4&lt;/div&gt;&lt;/div&gt;
+&lt;div class="row"&gt;&lt;div class="column-two-thirds shift-one-third"&gt;by 1/3&lt;/div&gt;&lt;/div&gt;
+&lt;div class="row"&gt;&lt;div class="column-one-half shift-one-half"&gt;by 1/2&lt;/div&gt;&lt;/div&gt;
+&lt;div class="row"&gt;&lt;div class="column-one-third shift-two-thirds"&gt;by 2/3&lt;/div&gt;&lt;/div&gt;
+&lt;div class="row"&gt;&lt;div class="column-one-fourth shift-three-fourths"&gt;by 3/4&lt;/div&gt;&lt;/div&gt;
+&lt;div class="row"&gt;&lt;div class="column-one-sixth shift-five-sixths"&gt;by 5/6&lt;/div&gt;&lt;/div&gt;</code></pre>
 
 			<div class="grid">
 				<div class="row"><div class="column-five-sixths shift-one-sixth">by 1/6</div></div>
@@ -244,9 +537,109 @@
 				<div class="row"><div class="column-one-sixth shift-five-sixths">by 5/6</div></div>
 			</div>
 
+            <div class="row">
+                <div class="column-one-half shift-one-fourth">
+                    <a href="#helper-classes" class="button full-width">Next Step : Helper Classes <i class="fa fa-chevron-right"></i></a>
+                </div>
+            </div>
 		</section>
 
-		<section id="text-and-typography">
+        <section id="helper-classes">
+            <h2><i class="fa fa-medkit"></i> Helper Classes</h2>
+            <h3><i class="fa fa-css3"></i> CSS Classes</h3>
+            <p>
+                Apart of the basic structural grid classes defined on the previous section
+                <a href="#the-grid">Understanding The Grid</a>, there's a small set of helper classes :
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Class Name</th>
+                        <th>Definition</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>.button</strong></td><td>to style a HTML hyperlink tag <code>&lt;a&gt;</code> and make it look like a button input</td></tr>
+                    <tr><td><strong>.full-width</strong></td><td>( 100% width )</td></tr>
+                    <tr><td><strong>.max-full-width</strong></td><td>( 100% maximum width )</td></tr>
+                    <tr><td><strong>.pull-right</strong></td><td>floats content to the right</td></tr>
+                    <tr><td><strong>.pull-left</strong></td><td>floats content to the left</td></tr>
+                    <tr><td><strong>.clearfix</strong></td><td>Self Clearing Goodness Hack</td></tr>
+                </tbody>
+            </table>
+
+            <h3><i class="fa fa-tablet"></i> Media Query Variables</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>LESS-Variable</th>
+                        <th>Definition</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>@mobile</strong></td>
+                        <td>Default styling, it targets devices with the maximum width defined on the
+                        <code>@armazon-mobile-breakpoint</code> variable (580 pixels by default).
+                        <br />You shouldn't ever use this one on a mobile-first approach.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>@non-mobile</strong></td>
+                        <td>targets devices with a viewport width bigger than the one defined on
+                        <code>@armazon-mobile-breakpoint</code> ( 580 by default )
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>@tablet</strong></td>
+                        <td>targets devices with widths between the values defined on <code>@armazon-mobile-breakpoint</code> and
+                        <code>@armazon-desktop-breakpoint</code> <br />( by default that will be < than 960 and > 580 ).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>@desktop</strong></td>
+                        <td>for devices with a viewport width larger than the defined on the <code>@armazon-desktop-breakpoint</code>
+                        variable ( 960 pixels by default )
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                Those have to be used along the CSS @media rule. The best way to structure the use of media queries on a mobile first approach
+                is to create the queries close to the relevant code (which should be the ones used on mobile devices by default).
+                For example, if you want to change the styles for buttons on big devices, paste the non-mobile query code up in the buttons
+                section and style it there :
+            </p>
+<pre class="prettyprint lang-less"><code>.button {
+    // Common rules for all media
+    color: #c00;
+    height: 30px;
+    font-size: 14px;
+
+    @media @non-mobile {
+        // Targeting non-mobile devices
+        height: 40px;
+        font-size: 18px;
+    }
+}</code></pre>
+
+            <p>
+                The less media queries are located at the top of the <code>armazon.less</code>. You can modify and extend them as you wish.
+            </p>
+<pre class="prettyprint lang-less"><code>@mobile     : ~"all and (max-width: @{armazon-mobile-breakpoint}px)";   // Default
+@non-mobile : ~"all and (min-width: @{armazon-mobile-breakpoint}px)";   // Matchs both @tablet and @desktop
+@tablet     : ~"all and (min-width: @{armazon-mobile-breakpoint}px) and (max-width: @{armazon-desktop-breakpoint}px)";
+@desktop    : ~"all and (min-width: @{armazon-desktop-breakpoint}px)";
+</code></pre>
+            <div class="row">
+                <div class="column-one-half shift-one-fourth">
+                    <a href="#html-elements" class="button full-width">Next Step : HTML Elements <i class="fa fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+		<section id="html-elements">
 
 			<h2><i class="fa fa-font"></i> Typography &amp; Text Elements</h2>
 
@@ -360,9 +753,7 @@ $_QUERY = trim( $_QUERY, '/' );</code></pre>
 					<pre>pre code block with plain text within it.</pre>
 				</div>
 			</div>
-		</section>
 
-		<section id="lists">
 
 			<h2><i class="fa fa-list"></i> Lists</h2>
 			<div class="row">
@@ -478,11 +869,9 @@ $_QUERY = trim( $_QUERY, '/' );</code></pre>
 					</ol>
 				</div>
 			</div>
-		</section>
 
-		<section id="tables">
+
 			<h2><i class="fa fa-table"></i> Tables</h2>
-
 			<table>
 				<thead>
 					<tr>
@@ -588,13 +977,7 @@ $_QUERY = trim( $_QUERY, '/' );</code></pre>
 					</table>
 
 
-		</section>
-
-
-		<section id="forms">
-
 			<h2><i class="fa fa-check-square-o"></i> Form Elements</h2>
-
 			<form method="POST" action="index.html#forms" class="row">
 
 				<div class="column-one-third">
