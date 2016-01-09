@@ -350,6 +350,14 @@ table {
   width: 100%;
   font-size: 1.4rem;
 }
+table caption {
+  text-align: left;
+  padding: 0.9rem 1.8rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+  letter-spacing: .05rem;
+  text-transform: uppercase;
+}
 table th,
 table td {
   padding: 1.2rem 1.8rem;
@@ -824,22 +832,6 @@ samp {
 b,
 strong {
   font-weight: 600;
-}
-/*
-section > h2,
-section > .row > h3,
-section > .row > [class^="column-"] > h4:nth-child(1) {
-	margin: 0 0 @armazon-margin 0;
-	color: #333;
-}
-*/
-caption {
-  text-align: left;
-  padding: 0.9rem 1.8rem;
-  font-weight: bold;
-  font-size: 1.3rem;
-  letter-spacing: .05rem;
-  text-transform: uppercase;
 }
 pre.prettyprint {
   padding: 0 !important;
