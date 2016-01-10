@@ -83,6 +83,10 @@ a:active, a:hover {
 	color: @armazon-color-foreground;
 	border-bottom: solid @armazon-color-primary 1px;
 }
+a:focus{
+	outline: solid fade(@armazon-color-primary, 50%) 1px;
+	box-shadow: 0 0 5px 2px fade(@armazon-color-primary, 30%);
+}
 a, a * {
 	.transition();
 }

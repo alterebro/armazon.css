@@ -66,6 +66,10 @@ a:hover {
   color: #262524;
   border-bottom: solid #229def 1px;
 }
+a:focus {
+  outline: solid rgba(34, 157, 239, 0.5) 1px;
+  box-shadow: 0 0 5px 2px rgba(34, 157, 239, 0.3);
+}
 a,
 a * {
   -webkit-transition: all 0.25s ease-out;
