@@ -181,6 +181,55 @@ ul#html-elements-sidebar-nav {
 	}
 }
 
+ul#social-sharing {
+	margin: 0 0 @armazon-margin/3 0;
+	padding: 0;
+
+	li {
+		list-style: none;
+		display: inline-block;
+		margin: 0 2px 5px 0;
+		padding: 0;
+		a {
+			color: #fff;
+			text-shadow: none;
+			text-transform: uppercase;
+			height: 30px;
+			line-height: 30px;
+			display: inline-block;
+
+			i {
+				line-height: 30px;
+				height: 30px;
+				width: 30px;
+				text-align: center;
+			}
+			span {
+				display: none;
+			}
+			@media @non-mobile {
+				span {
+					display: inline-block;
+					font-size: 1.1rem;
+					padding: 0 1rem 0 .5rem;
+					background: rgba(0, 0, 0, .05);
+				}
+			}
+		}
+		a.facebook { background: #3b5998; }
+		a.twitter { background: #00aced; }
+		a.googleplus { background: #dd4b39; }
+		a.linkedin { background: #007bb5; }
+		a.pinterest { background: #cb2027; }
+		a.tumblr { background: #32506d; }
+		a.email { background: #999; }
+		a:hover {
+			background: #000;
+			border: none;
+		}
+	}
+}
+
 pre.prettyprint {
 	padding: 0 !important;
 	border: none !important;

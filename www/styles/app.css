@@ -850,6 +850,66 @@ ul#html-elements-sidebar-nav ul {
   padding: 0;
   font-size: 85%;
 }
+ul#social-sharing {
+  margin: 0 0 1.2rem 0;
+  padding: 0;
+}
+ul#social-sharing li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 2px 5px 0;
+  padding: 0;
+}
+ul#social-sharing li a {
+  color: #fff;
+  text-shadow: none;
+  text-transform: uppercase;
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+}
+ul#social-sharing li a i {
+  line-height: 30px;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+}
+ul#social-sharing li a span {
+  display: none;
+}
+@media all and (min-width: 580px) {
+  ul#social-sharing li a span {
+    display: inline-block;
+    font-size: 1.1rem;
+    padding: 0 1rem 0 .5rem;
+    background: rgba(0, 0, 0, 0.05);
+  }
+}
+ul#social-sharing li a.facebook {
+  background: #3b5998;
+}
+ul#social-sharing li a.twitter {
+  background: #00aced;
+}
+ul#social-sharing li a.googleplus {
+  background: #dd4b39;
+}
+ul#social-sharing li a.linkedin {
+  background: #007bb5;
+}
+ul#social-sharing li a.pinterest {
+  background: #cb2027;
+}
+ul#social-sharing li a.tumblr {
+  background: #32506d;
+}
+ul#social-sharing li a.email {
+  background: #999;
+}
+ul#social-sharing li a:hover {
+  background: #000;
+  border: none;
+}
 pre.prettyprint {
   padding: 0 !important;
   border: none !important;
