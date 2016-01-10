@@ -4,6 +4,7 @@ function foreach(selector, fn) {
 		fn(elements[i], i);
 	}
 }
+
 function contains(arr, obj) {
 	var i = arr.length;
 	while (i--) {
@@ -13,6 +14,7 @@ function contains(arr, obj) {
 	}
 	return false;
 }
+
 function addclass(el, classname) {
 	if (el.classList) {
 		el.classList.add(classname);
@@ -20,6 +22,7 @@ function addclass(el, classname) {
 		el.className += ' ' + classname;
 	}
 }
+
 function removeclass(el, classname) {
 	if (el.classList) {
 		el.classList.remove(classname);
@@ -28,18 +31,22 @@ function removeclass(el, classname) {
 	}
 }
 
+function check_url_hash() {
+	var h = window.location.hash.substring(1).split('.');
+		hash = h[0];
+		subhash = (!!h[1]) ? h[1] : false;
+	var init_value = ( !!hash && contains(sections, hash) ) ? hash : false;
+	if (init_value) { open_section( init_value, subhash ); }
+	return [init_value, subhash];
+}
 
-function open_section(section) {
+function open_section(section, subsection) {
 
-	if(history.pushState) {
-		history.pushState(null, null, '#'+section);
-	} else {
-		window.location.hash = '#'+section;
-	}
+	var the_hash = "#" + section;
+		the_hash += ( !!subsection ) ? '.'+subsection : '';
+		location.hash = the_hash;
 
-	foreach('section', function(el, i) {
-		el.style.display = 'none';
-	});
+	foreach('section', function(el, i) { el.style.display = 'none'; });
 	document.getElementById(section).style.display = 'block';
 
 	// active menu item class
@@ -53,32 +60,33 @@ var sections = [];
 
 window.onload = function() {
 
-	//var sections = [];
+	// fill sections[...]
 	foreach('section', function(el, i) {
 		sections.push( el.getAttribute('id') );
 	});
 
-	var hash = window.location.hash.substring(1);
-	var init_value = ( !!hash && contains(sections, hash) ) ? hash : sections[0];
-	open_section( init_value );
+	// get hash
+	var hash_value = check_url_hash();
+		init_value = hash_value[0];
 
 	foreach('header[role="banner"] nav ul a', function(el, i) {
 
 		// active item
 		if ( (el.href).lastIndexOf('#'+init_value) > 0 ) { addclass(el, 'active'); }
-
 		// link action
 		el.onclick = function(e) {
 			e.preventDefault();
 			open_section( this.href.substring(this.href.indexOf('#')+1) );
-			return false;
 		}
 	});
-	// window.setTimeout(function(){ document.body.scrollTop = document.documentElement.scrollTop = 0; }, 1);
+
+	// no proper url hash
+	if ( !init_value ) {
+		open_section( sections[0] );
+		if (history.pushState) { history.pushState(null, null, '#'+sections[0]); }
+		else { window.location.hash = '#'+sections[0]; }
+		window.setTimeout(function(){ document.body.scrollTop = document.documentElement.scrollTop = 0; }, 1);
+	}
 }
 
-window.onhashchange = function(e) {
-	var hash = window.location.hash.substring(1);
-	var init_value = ( !!hash && contains(sections, hash) ) ? hash : sections[0];
-	open_section( init_value );
-}
+window.onhashchange = function(e) { check_url_hash(); }
