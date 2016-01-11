@@ -1,10 +1,10 @@
 
-# armazon.css 
+# armazon.css
 
-**armazon.css** is a lightweight, minimal and supersimple CSS3 Boilerplate Micro Framework built on LESS that provides an adaptive grid system, cross browser consistency and beautified styles for the standard HTML elements, a basic group of CSS classes and a little set of less varables where you can fully customize the CSS output.
+**armazon.css** is a lightweight, minimal and supersimple CSS3 Boilerplate Micro Framework built on LESS that provides an adaptive grid system, cross browser consistency and beautified styles for the standard HTML elements, a basic group of CSS classes and a little set of less variables where you can fully customize the CSS output.
 
 
-#### Full Documentation is on the project website : [http://alterebro.github.io/armazon.css](http://alterebro.github.io/armazon.css/)
+### Full Documentation is on the project website : [http://alterebro.github.io/armazon.css](http://alterebro.github.io/armazon.css/)
 
 <img src="http://alterebro.github.io/armazon.css/www/images/armazon.png" width="100" />
 
@@ -33,6 +33,18 @@
 3. **Done**, you can now start your development.
 
 
----
+## How does it work?
 
-#### Further info is located on the project website : [http://alterebro.github.io/armazon.css/](http://alterebro.github.io/armazon.css/)
+The responsive fluid grid system provided in **armazon.css** is based on a **6 columns layout**. In order to create a 'column view', you need to create a 'row container element' using the class named `row` and put inside 'column elements' using a class with the naming convention `column-FRACTION-SIZE`, for example, if you want to create two columns 50% wide each one, you'll do:
+
+```html
+<div class="row">
+	<div class="column-one-half">...</div>
+	<div class="column-one-half">...</div>
+</div>
+```
+
+The class names availables for the columns are : `column-one-sixth`, `column-one-fourth`, `column-one-third`, `column-one-half`, `column-two-thirds`, `column-three-fourths` and `column-five-sixths`.
+
+
+### Extended info about armazon.css : [http://alterebro.github.io/armazon.css/](http://alterebro.github.io/armazon.css/)
