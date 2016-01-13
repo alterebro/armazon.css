@@ -16,13 +16,13 @@
 
 	- Puedes instalarlo usando [bower](http://bower.io/) : `$ bower install armazon.css`
 	- Puedes descargar y usar una copia del archivo precompilado y minificado desde el repositorio principal alojado en GitHub : **[armazon.min.css @GitHub](https://raw.githubusercontent.com/alterebro/armazon.css/master/armazon/armazon.min.css)**
-	- O usar el archivo alojado en el CDN de rawgit : **[rawgit CDN's armazon.min.css](https://cdn.rawgit.com/alterebro/armazon.css/v0.3.0/armazon/armazon.min.css)**
+	- O usar el archivo alojado en el CDN de rawgit : **[rawgit CDN's armazon.min.css](https://cdn.rawgit.com/alterebro/armazon.css/v0.3.1/armazon/armazon.min.css)**
 
 	```html
 	<!-- Usando bower o una copia del archivo descargado: -->
 	<link rel="stylesheet" type="text/css" href="ruta/a/tu/armazon.min.css" />
 	<!-- Usando el archivo alojado en el CDN: -->
-	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/alterebro/armazon.css/v0.3.0/armazon/armazon.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/alterebro/armazon.css/v0.3.1/armazon/armazon.min.css" />
 	```
 
 2. Incluye una etiqueta **meta viewport**:
