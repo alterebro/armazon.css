@@ -1,6 +1,8 @@
 
 # armazon.css
 
+[ [English](https://github.com/alterebro/armazon.css/blob/master/README.md) ]
+
 **armazon.css** es una plantilla reutilizable y micro framework muy simple y ligero creado con LESS que proporciona un sistema de rejilla adaptable, consistencia entre navegadores y estilos mejorados para todos los elementos estandar de HTML, un grupo básico de clases CSS y un pequeño conjunto de variables en LESS donde podrás personalizar el archivo CSS resultante.
 
 ### La documentación completa se encuentra en la web del proyecto : [http://alterebro.github.io/armazon.css](http://alterebro.github.io/armazon.css/)
