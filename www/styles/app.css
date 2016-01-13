@@ -543,31 +543,31 @@ form {
     margin-right: 0;
   }
   .column-one-sixth,
-  .column-un-sexto {
+  .columna-un-sexto {
     width: 13.66%;
   }
   .column-one-fourth,
-  .column-un-cuarto {
+  .columna-un-cuarto {
     width: 22.3%;
   }
   .column-one-third,
-  .column-un-tercio {
+  .columna-un-tercio {
     width: 30.93%;
   }
   .column-one-half,
-  .column-una-mitad {
+  .columna-una-mitad {
     width: 48.2%;
   }
   .column-two-thirds,
-  .column-dos-tercios {
+  .columna-dos-tercios {
     width: 65.46%;
   }
   .column-three-fourths,
-  .column-tres-cuartos {
+  .columna-tres-cuartos {
     width: 74.1%;
   }
   .column-five-sixths,
-  .column-cinco-sextos {
+  .columna-cinco-sextos {
     width: 82.73%;
   }
   .shift-one-sixth,
@@ -650,16 +650,20 @@ form {
     clear: both;
   }
 }
-.full-width {
+.full-width,
+.ancho-completo {
   width: 100%;
 }
-.max-full-width {
+.max-full-width,
+.ancho-completo-max {
   max-width: 100%;
 }
-.pull-right {
+.pull-right,
+.empuja-derecha {
   float: right;
 }
-.pull-left {
+.pull-left,
+.empuja-izquierda {
   float: left;
 }
 .clearfix {

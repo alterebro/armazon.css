@@ -34,11 +34,20 @@ function removeclass(el, classname) {
 
 // Social Networks Sharing
 function share(network) {
+
+	var the_lang = (typeof lang != 'undefined') ? lang : 'en';
+
 	var config = {
 		url : 'http://alterebro.github.io/armazon.css/',
 		title : 'armazon.css - lightweight and super simple CSS3 Boilerplate Micro Framework built on LESS',
 		content : 'Minimal and supersimple CSS Boilerplate Micro Framework that provides a customizable adaptive grid system, cross browser consistency and improved styling for the standard HTML elements.',
 		image : 'http://alterebro.github.io/armazon.css/www/images/armazon-css.jpg'
+	}
+
+	if ( the_lang == 'es' ) {
+
+		config['title'] = 'armazon.css - Micro Framework CSS simple y ligero basado en normalize.css y Skeleton';
+		config['content'] = 'Plantilla reutilizable y Micro Framework CSS muy simple y ligero que proporciona un sistema de rejilla adaptable y personalizable, consistencia entre navegadores y estilos mejorados para los elementos estandar de HTML';
 	}
 
     var network_base_urls = {

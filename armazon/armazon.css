@@ -648,16 +648,20 @@ form {
     clear: both;
   }
 }
-.full-width {
+.full-width,
+.ancho-completo {
   width: 100%;
 }
-.max-full-width {
+.max-full-width,
+.ancho-completo-max {
   max-width: 100%;
 }
-.pull-right {
+.pull-right,
+.empuja-derecha {
   float: right;
 }
-.pull-left {
+.pull-left,
+.empuja-izquierda {
   float: left;
 }
 .clearfix {
